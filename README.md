@@ -27,7 +27,7 @@ Pointer<Pix> ppix = LibLept.pixCreate(640, 480, 8);
 LibLept.pixDestroy(Pointer.pointerToPointer(ppix));
 ~~~
 
-You can convert a `BufferedImage` to a instance of `Pix` and vice versa:
+You can convert a `BufferedImage` to an instance of `Pix` and vice versa:
 
 ~~~ java
 BufferedImage img = ImageIO.read(Paths.get("input.png").toFile());
