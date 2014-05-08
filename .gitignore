@@ -1,0 +1,14 @@
+# eclipse
+.classpath
+.project
+
+# binary files
+*.jar
+*.dll
+
+# tool directories
+.gradle
+.settings
+
+# compilation results
+bin
