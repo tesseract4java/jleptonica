@@ -28,10 +28,11 @@ import org.bridj.util.DefaultParameterizedType;
  */
 @Library("leptonica")
 @Runtime(CRuntime.class)
-public class LeptonicaLibrary {
+public class LibLept {
     static {
         BridJ.register();
     }
+
     public static final int L_NOT_FOUND = 0;
     public static final int L_FOUND = 1;
     /** Get the severity from the environment */
@@ -641,10 +642,10 @@ public class LeptonicaLibrary {
      * pixels, not bits
      */
     public static final int ADDED_BORDER = 32;
-    public static final int L_RED_SHIFT = 8 * (4 - 1 - (int) (LeptonicaLibrary.COLOR_RED));
-    public static final int L_GREEN_SHIFT = 8 * (4 - 1 - (int) (LeptonicaLibrary.COLOR_GREEN));
-    public static final int L_BLUE_SHIFT = 8 * (4 - 1 - (int) (LeptonicaLibrary.COLOR_BLUE));
-    public static final int L_ALPHA_SHIFT = 8 * (4 - 1 - (int) (LeptonicaLibrary.L_ALPHA_CHANNEL));
+    public static final int L_RED_SHIFT = 8 * (4 - 1 - (int) (LibLept.COLOR_RED));
+    public static final int L_GREEN_SHIFT = 8 * (4 - 1 - (int) (LibLept.COLOR_GREEN));
+    public static final int L_BLUE_SHIFT = 8 * (4 - 1 - (int) (LibLept.COLOR_BLUE));
+    public static final int L_ALPHA_SHIFT = 8 * (4 - 1 - (int) (LibLept.L_ALPHA_CHANNEL));
     /**
      * Notes:<br>
      * (1) These numbers are ad-hoc, but they do add up to 1.<br>
@@ -2440,7 +2441,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:125</i>
      */
     public static int bbufferReadStream(Pointer<ByteBuffer> bb,
-            Pointer<LeptonicaLibrary.FILE> fp, int nbytes) {
+            Pointer<LibLept.FILE> fp, int nbytes) {
         return bbufferReadStream(Pointer.getPeer(bb), Pointer.getPeer(fp),
                 nbytes);
     }
@@ -2472,7 +2473,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:127</i>
      */
     public static int bbufferWriteStream(Pointer<ByteBuffer> bb,
-            Pointer<LeptonicaLibrary.FILE> fp, @Ptr long nbytes,
+            Pointer<LibLept.FILE> fp, @Ptr long nbytes,
             Pointer<SizeT> pnout) {
         return bbufferWriteStream(Pointer.getPeer(bb), Pointer.getPeer(fp),
                 nbytes, Pointer.getPeer(pnout));
@@ -3535,7 +3536,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:185</i>
      */
     public static Pointer<Pix> pixReadStreamBmp(
-            Pointer<LeptonicaLibrary.FILE> fp) {
+            Pointer<LibLept.FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 pixReadStreamBmp(Pointer.getPeer(fp)), Pix.class);
     }
@@ -3549,7 +3550,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:186</i>
      */
-    public static int pixWriteStreamBmp(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int pixWriteStreamBmp(Pointer<LibLept.FILE> fp,
             Pointer<Pix> pix) {
         return pixWriteStreamBmp(Pointer.getPeer(fp), Pointer.getPeer(pix));
     }
@@ -4267,7 +4268,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:236</i>
      */
     public static Pointer<Boxaa> boxaaReadStream(
-            Pointer<LeptonicaLibrary.FILE> fp) {
+            Pointer<LibLept.FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 boxaaReadStream(Pointer.getPeer(fp)), Boxaa.class);
     }
@@ -4293,7 +4294,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:238</i>
      */
-    public static int boxaaWriteStream(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int boxaaWriteStream(Pointer<LibLept.FILE> fp,
             Pointer<Boxaa> baa) {
         return boxaaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(baa));
     }
@@ -4320,7 +4321,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:240</i>
      */
-    public static Pointer<Boxa> boxaReadStream(Pointer<LeptonicaLibrary.FILE> fp) {
+    public static Pointer<Boxa> boxaReadStream(Pointer<LibLept.FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 boxaReadStream(Pointer.getPeer(fp)), Boxa.class);
     }
@@ -4361,7 +4362,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:243</i>
      */
-    public static int boxaWriteStream(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int boxaWriteStream(Pointer<LibLept.FILE> fp,
             Pointer<Boxa> boxa) {
         return boxaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(boxa));
     }
@@ -4390,7 +4391,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:245</i>
      */
-    public static int boxPrintStreamInfo(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int boxPrintStreamInfo(Pointer<LibLept.FILE> fp,
             Pointer<Box> box) {
         return boxPrintStreamInfo(Pointer.getPeer(fp), Pointer.getPeer(box));
     }
@@ -5998,7 +5999,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:336</i>
      */
     public static Pointer<L_Bytea> l_byteaInitFromStream(
-            Pointer<LeptonicaLibrary.FILE> fp) {
+            Pointer<LibLept.FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 l_byteaInitFromStream(Pointer.getPeer(fp)), L_Bytea.class);
     }
@@ -6180,7 +6181,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:348</i>
      */
-    public static int l_byteaWriteStream(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int l_byteaWriteStream(Pointer<LibLept.FILE> fp,
             Pointer<L_Bytea> ba, @Ptr long startloc, @Ptr long endloc) {
         return l_byteaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(ba),
                 startloc, endloc);
@@ -6575,7 +6576,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:375</i>
      */
-    public static int ccbaWriteStream(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int ccbaWriteStream(Pointer<LibLept.FILE> fp,
             Pointer<CCBorda> ccba) {
         return ccbaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(ccba));
     }
@@ -6603,7 +6604,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:377</i>
      */
     public static Pointer<CCBorda> ccbaReadStream(
-            Pointer<LeptonicaLibrary.FILE> fp) {
+            Pointer<LibLept.FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 ccbaReadStream(Pointer.getPeer(fp)), CCBorda.class);
     }
@@ -7755,7 +7756,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:444</i>
      */
     public static Pointer<PixColormap> pixcmapReadStream(
-            Pointer<LeptonicaLibrary.FILE> fp) {
+            Pointer<LibLept.FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 pixcmapReadStream(Pointer.getPeer(fp)), PixColormap.class);
     }
@@ -7770,7 +7771,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:445</i>
      */
-    public static int pixcmapWriteStream(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int pixcmapWriteStream(Pointer<LibLept.FILE> fp,
             Pointer<PixColormap> cmap) {
         return pixcmapWriteStream(Pointer.getPeer(fp), Pointer.getPeer(cmap));
     }
@@ -10198,7 +10199,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:584</i>
      */
     public static Pointer<L_Dewarp> dewarpReadStream(
-            Pointer<LeptonicaLibrary.FILE> fp) {
+            Pointer<LibLept.FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 dewarpReadStream(Pointer.getPeer(fp)), L_Dewarp.class);
     }
@@ -10226,7 +10227,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:586</i>
      */
-    public static int dewarpWriteStream(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int dewarpWriteStream(Pointer<LibLept.FILE> fp,
             Pointer<L_Dewarp> dew) {
         return dewarpWriteStream(Pointer.getPeer(fp), Pointer.getPeer(dew));
     }
@@ -10254,7 +10255,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:588</i>
      */
     public static Pointer<L_Dewarpa> dewarpaReadStream(
-            Pointer<LeptonicaLibrary.FILE> fp) {
+            Pointer<LibLept.FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 dewarpaReadStream(Pointer.getPeer(fp)), L_Dewarpa.class);
     }
@@ -10283,7 +10284,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:590</i>
      */
-    public static int dewarpaWriteStream(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int dewarpaWriteStream(Pointer<LibLept.FILE> fp,
             Pointer<L_Dewarpa> dewa) {
         return dewarpaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(dewa));
     }
@@ -10550,7 +10551,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:607</i>
      */
-    public static int dewarpaInfo(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int dewarpaInfo(Pointer<LibLept.FILE> fp,
             Pointer<L_Dewarpa> dewa) {
         return dewarpaInfo(Pointer.getPeer(fp), Pointer.getPeer(dewa));
     }
@@ -11006,7 +11007,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:638</i>
      */
     public static Pointer<L_Dna> l_dnaReadStream(
-            Pointer<LeptonicaLibrary.FILE> fp) {
+            Pointer<LibLept.FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 l_dnaReadStream(Pointer.getPeer(fp)), L_Dna.class);
     }
@@ -11032,7 +11033,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:640</i>
      */
-    public static int l_dnaWriteStream(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int l_dnaWriteStream(Pointer<LibLept.FILE> fp,
             Pointer<L_Dna> da) {
         return l_dnaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(da));
     }
@@ -11203,7 +11204,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:652</i>
      */
     public static Pointer<L_Dnaa> l_dnaaReadStream(
-            Pointer<LeptonicaLibrary.FILE> fp) {
+            Pointer<LibLept.FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 l_dnaaReadStream(Pointer.getPeer(fp)), L_Dnaa.class);
     }
@@ -11231,7 +11232,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:654</i>
      */
-    public static int l_dnaaWriteStream(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int l_dnaaWriteStream(Pointer<LibLept.FILE> fp,
             Pointer<L_Dnaa> daa) {
         return l_dnaaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(daa));
     }
@@ -12979,7 +12980,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:764</i>
      */
-    public static Pointer<FPix> fpixReadStream(Pointer<LeptonicaLibrary.FILE> fp) {
+    public static Pointer<FPix> fpixReadStream(Pointer<LibLept.FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 fpixReadStream(Pointer.getPeer(fp)), FPix.class);
     }
@@ -13005,7 +13006,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:766</i>
      */
-    public static int fpixWriteStream(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int fpixWriteStream(Pointer<LibLept.FILE> fp,
             Pointer<FPix> fpix) {
         return fpixWriteStream(Pointer.getPeer(fp), Pointer.getPeer(fpix));
     }
@@ -13049,7 +13050,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:769</i>
      */
-    public static Pointer<DPix> dpixReadStream(Pointer<LeptonicaLibrary.FILE> fp) {
+    public static Pointer<DPix> dpixReadStream(Pointer<LibLept.FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 dpixReadStream(Pointer.getPeer(fp)), DPix.class);
     }
@@ -13075,7 +13076,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:771</i>
      */
-    public static int dpixWriteStream(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int dpixWriteStream(Pointer<LibLept.FILE> fp,
             Pointer<DPix> dpix) {
         return dpixWriteStream(Pointer.getPeer(fp), Pointer.getPeer(dpix));
     }
@@ -13106,7 +13107,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:773</i>
      */
-    public static int fpixPrintStream(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int fpixPrintStream(Pointer<LibLept.FILE> fp,
             Pointer<FPix> fpix, int factor) {
         return fpixPrintStream(Pointer.getPeer(fp), Pointer.getPeer(fpix),
                 factor);
@@ -13736,7 +13737,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:811</i>
      */
     public static Pointer<Pix> pixReadStreamGif(
-            Pointer<LeptonicaLibrary.FILE> fp) {
+            Pointer<LibLept.FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 pixReadStreamGif(Pointer.getPeer(fp)), Pix.class);
     }
@@ -13750,7 +13751,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:812</i>
      */
-    public static int pixWriteStreamGif(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int pixWriteStreamGif(Pointer<LibLept.FILE> fp,
             Pointer<Pix> pix) {
         return pixWriteStreamGif(Pointer.getPeer(fp), Pointer.getPeer(pix));
     }
@@ -15604,7 +15605,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:921</i>
      */
-    public static int lheapPrint(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int lheapPrint(Pointer<LibLept.FILE> fp,
             Pointer<L_Heap> lh) {
         return lheapPrint(Pointer.getPeer(fp), Pointer.getPeer(lh));
     }
@@ -16028,7 +16029,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:947</i>
      */
-    public static int freadHeaderJp2k(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int freadHeaderJp2k(Pointer<LibLept.FILE> fp,
             Pointer<Integer> pw, Pointer<Integer> ph, Pointer<Integer> pspp) {
         return freadHeaderJp2k(Pointer.getPeer(fp), Pointer.getPeer(pw),
                 Pointer.getPeer(ph), Pointer.getPeer(pspp));
@@ -16081,7 +16082,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:950</i>
      */
     public static Pointer<Pix> pixReadStreamJpeg(
-            Pointer<LeptonicaLibrary.FILE> fp, int cmflag, int reduction,
+            Pointer<LibLept.FILE> fp, int cmflag, int reduction,
             Pointer<Integer> pnwarn, int hint) {
         return (Pointer) Pointer.pointerToAddress(
                 pixReadStreamJpeg(Pointer.getPeer(fp), cmflag, reduction,
@@ -16120,7 +16121,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:952</i>
      */
-    public static int freadHeaderJpeg(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int freadHeaderJpeg(Pointer<LibLept.FILE> fp,
             Pointer<Integer> pw, Pointer<Integer> ph, Pointer<Integer> pspp,
             Pointer<Integer> pycck, Pointer<Integer> pcmyk) {
         return freadHeaderJpeg(Pointer.getPeer(fp), Pointer.getPeer(pw),
@@ -16138,7 +16139,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:953</i>
      */
-    public static int fgetJpegResolution(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int fgetJpegResolution(Pointer<LibLept.FILE> fp,
             Pointer<Integer> pxres, Pointer<Integer> pyres) {
         return fgetJpegResolution(Pointer.getPeer(fp), Pointer.getPeer(pxres),
                 Pointer.getPeer(pyres));
@@ -16154,7 +16155,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:954</i>
      */
-    public static int fgetJpegComment(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int fgetJpegComment(Pointer<LibLept.FILE> fp,
             Pointer<Pointer<Byte>> pcomment) {
         return fgetJpegComment(Pointer.getPeer(fp), Pointer.getPeer(pcomment));
     }
@@ -16184,7 +16185,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:956</i>
      */
-    public static int pixWriteStreamJpeg(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int pixWriteStreamJpeg(Pointer<LibLept.FILE> fp,
             Pointer<Pix> pix, int quality, int progressive) {
         return pixWriteStreamJpeg(Pointer.getPeer(fp), Pointer.getPeer(pix),
                 quality, progressive);
@@ -16510,7 +16511,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:976</i>
      */
     public static Pointer<L_Kernel> kernelReadStream(
-            Pointer<LeptonicaLibrary.FILE> fp) {
+            Pointer<LibLept.FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 kernelReadStream(Pointer.getPeer(fp)), L_Kernel.class);
     }
@@ -16538,7 +16539,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:978</i>
      */
-    public static int kernelWriteStream(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int kernelWriteStream(Pointer<LibLept.FILE> fp,
             Pointer<L_Kernel> kel) {
         return kernelWriteStream(Pointer.getPeer(fp), Pointer.getPeer(kel));
     }
@@ -16998,7 +16999,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:1006</i>
      */
     public static Pointer<Pix> pixDilate(Pointer<Pix> pixd, Pointer<Pix> pixs,
-            Pointer<LeptonicaLibrary.SEL> sel) {
+            Pointer<LibLept.SEL> sel) {
         return (Pointer) Pointer.pointerToAddress(
                 pixDilate(Pointer.getPeer(pixd), Pointer.getPeer(pixs),
                         Pointer.getPeer(sel)), Pix.class);
@@ -17015,7 +17016,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:1007</i>
      */
     public static Pointer<Pix> pixErode(Pointer<Pix> pixd, Pointer<Pix> pixs,
-            Pointer<LeptonicaLibrary.SEL> sel) {
+            Pointer<LibLept.SEL> sel) {
         return (Pointer) Pointer.pointerToAddress(
                 pixErode(Pointer.getPeer(pixd), Pointer.getPeer(pixs),
                         Pointer.getPeer(sel)), Pix.class);
@@ -17032,7 +17033,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:1008</i>
      */
     public static Pointer<Pix> pixHMT(Pointer<Pix> pixd, Pointer<Pix> pixs,
-            Pointer<LeptonicaLibrary.SEL> sel) {
+            Pointer<LibLept.SEL> sel) {
         return (Pointer) Pointer.pointerToAddress(
                 pixHMT(Pointer.getPeer(pixd), Pointer.getPeer(pixs),
                         Pointer.getPeer(sel)), Pix.class);
@@ -17049,7 +17050,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:1009</i>
      */
     public static Pointer<Pix> pixOpen(Pointer<Pix> pixd, Pointer<Pix> pixs,
-            Pointer<LeptonicaLibrary.SEL> sel) {
+            Pointer<LibLept.SEL> sel) {
         return (Pointer) Pointer.pointerToAddress(
                 pixOpen(Pointer.getPeer(pixd), Pointer.getPeer(pixs),
                         Pointer.getPeer(sel)), Pix.class);
@@ -17066,7 +17067,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:1010</i>
      */
     public static Pointer<Pix> pixClose(Pointer<Pix> pixd, Pointer<Pix> pixs,
-            Pointer<LeptonicaLibrary.SEL> sel) {
+            Pointer<LibLept.SEL> sel) {
         return (Pointer) Pointer.pointerToAddress(
                 pixClose(Pointer.getPeer(pixd), Pointer.getPeer(pixs),
                         Pointer.getPeer(sel)), Pix.class);
@@ -17083,7 +17084,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:1011</i>
      */
     public static Pointer<Pix> pixCloseSafe(Pointer<Pix> pixd,
-            Pointer<Pix> pixs, Pointer<LeptonicaLibrary.SEL> sel) {
+            Pointer<Pix> pixs, Pointer<LibLept.SEL> sel) {
         return (Pointer) Pointer.pointerToAddress(
                 pixCloseSafe(Pointer.getPeer(pixd), Pointer.getPeer(pixs),
                         Pointer.getPeer(sel)), Pix.class);
@@ -17101,7 +17102,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:1012</i>
      */
     public static Pointer<Pix> pixOpenGeneralized(Pointer<Pix> pixd,
-            Pointer<Pix> pixs, Pointer<LeptonicaLibrary.SEL> sel) {
+            Pointer<Pix> pixs, Pointer<LibLept.SEL> sel) {
         return (Pointer) Pointer.pointerToAddress(
                 pixOpenGeneralized(Pointer.getPeer(pixd),
                         Pointer.getPeer(pixs), Pointer.getPeer(sel)), Pix.class);
@@ -17119,7 +17120,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:1013</i>
      */
     public static Pointer<Pix> pixCloseGeneralized(Pointer<Pix> pixd,
-            Pointer<Pix> pixs, Pointer<LeptonicaLibrary.SEL> sel) {
+            Pointer<Pix> pixs, Pointer<LibLept.SEL> sel) {
         return (Pointer) Pointer.pointerToAddress(
                 pixCloseGeneralized(Pointer.getPeer(pixd),
                         Pointer.getPeer(pixs), Pointer.getPeer(sel)), Pix.class);
@@ -17227,8 +17228,8 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:1019</i>
      */
     public static int selectComposableSels(int size, int direction,
-            Pointer<Pointer<LeptonicaLibrary.SEL>> psel1,
-            Pointer<Pointer<LeptonicaLibrary.SEL>> psel2) {
+            Pointer<Pointer<LibLept.SEL>> psel1,
+            Pointer<Pointer<LibLept.SEL>> psel2) {
         return selectComposableSels(size, direction, Pointer.getPeer(psel1),
                 Pointer.getPeer(psel2));
     }
@@ -18440,7 +18441,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1093</i>
      */
-    public static Pointer<Numa> numaReadStream(Pointer<LeptonicaLibrary.FILE> fp) {
+    public static Pointer<Numa> numaReadStream(Pointer<LibLept.FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 numaReadStream(Pointer.getPeer(fp)), Numa.class);
     }
@@ -18466,7 +18467,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1095</i>
      */
-    public static int numaWriteStream(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int numaWriteStream(Pointer<LibLept.FILE> fp,
             Pointer<Numa> na) {
         return numaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(na));
     }
@@ -18692,7 +18693,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:1111</i>
      */
     public static Pointer<Numaa> numaaReadStream(
-            Pointer<LeptonicaLibrary.FILE> fp) {
+            Pointer<LibLept.FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 numaaReadStream(Pointer.getPeer(fp)), Numaa.class);
     }
@@ -18718,7 +18719,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1113</i>
      */
-    public static int numaaWriteStream(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int numaaWriteStream(Pointer<LibLept.FILE> fp,
             Pointer<Numaa> naa) {
         return numaaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(naa));
     }
@@ -21039,7 +21040,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1248</i>
      */
-    public static int pixWriteStreamPdf(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int pixWriteStreamPdf(Pointer<LibLept.FILE> fp,
             Pointer<Pix> pix, int res, Pointer<Byte> title) {
         return pixWriteStreamPdf(Pointer.getPeer(fp), Pointer.getPeer(pix),
                 res, Pointer.getPeer(title));
@@ -21299,8 +21300,8 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:1263</i>
      */
     public static void setPixMemoryManager(
-            Pointer<LeptonicaLibrary.setPixMemoryManager_allocator_callback> allocator,
-            Pointer<LeptonicaLibrary.setPixMemoryManager_deallocator_callback> deallocator) {
+            Pointer<LibLept.setPixMemoryManager_allocator_callback> allocator,
+            Pointer<LibLept.setPixMemoryManager_deallocator_callback> deallocator) {
         setPixMemoryManager(Pointer.getPeer(allocator),
                 Pointer.getPeer(deallocator));
     }
@@ -22000,7 +22001,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1316</i>
      */
-    public static int pixPrintStreamInfo(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int pixPrintStreamInfo(Pointer<LibLept.FILE> fp,
             Pointer<Pix> pix, Pointer<Byte> text) {
         return pixPrintStreamInfo(Pointer.getPeer(fp), Pointer.getPeer(pix),
                 Pointer.getPeer(text));
@@ -25461,7 +25462,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1530</i>
      */
-    public static Pointer<Pixa> pixaReadStream(Pointer<LeptonicaLibrary.FILE> fp) {
+    public static Pointer<Pixa> pixaReadStream(Pointer<LibLept.FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 pixaReadStream(Pointer.getPeer(fp)), Pixa.class);
     }
@@ -25487,7 +25488,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1532</i>
      */
-    public static int pixaWriteStream(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int pixaWriteStream(Pointer<LibLept.FILE> fp,
             Pointer<Pixa> pixa) {
         return pixaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(pixa));
     }
@@ -25534,7 +25535,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:1535</i>
      */
     public static Pointer<Pixaa> pixaaReadStream(
-            Pointer<LeptonicaLibrary.FILE> fp) {
+            Pointer<LibLept.FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 pixaaReadStream(Pointer.getPeer(fp)), Pixaa.class);
     }
@@ -25560,7 +25561,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1537</i>
      */
-    public static int pixaaWriteStream(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int pixaaWriteStream(Pointer<LibLept.FILE> fp,
             Pointer<Pixaa> paa) {
         return pixaaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(paa));
     }
@@ -27469,7 +27470,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:1653</i>
      */
     public static Pointer<PixaComp> pixacompReadStream(
-            Pointer<LeptonicaLibrary.FILE> fp) {
+            Pointer<LibLept.FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 pixacompReadStream(Pointer.getPeer(fp)), PixaComp.class);
     }
@@ -27499,7 +27500,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1655</i>
      */
-    public static int pixacompWriteStream(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int pixacompWriteStream(Pointer<LibLept.FILE> fp,
             Pointer<PixaComp> pixac) {
         return pixacompWriteStream(Pointer.getPeer(fp), Pointer.getPeer(pixac));
     }
@@ -27555,7 +27556,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:1658</i>
      */
     public static int pixacompWriteStreamInfo(
-            Pointer<LeptonicaLibrary.FILE> fp, Pointer<PixaComp> pixac,
+            Pointer<LibLept.FILE> fp, Pointer<PixaComp> pixac,
             Pointer<Byte> text) {
         return pixacompWriteStreamInfo(Pointer.getPeer(fp),
                 Pointer.getPeer(pixac), Pointer.getPeer(text));
@@ -27571,7 +27572,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1659</i>
      */
-    public static int pixcompWriteStreamInfo(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int pixcompWriteStreamInfo(Pointer<LibLept.FILE> fp,
             Pointer<PixComp> pixc, Pointer<Byte> text) {
         return pixcompWriteStreamInfo(Pointer.getPeer(fp),
                 Pointer.getPeer(pixc), Pointer.getPeer(text));
@@ -28510,7 +28511,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:1717</i>
      */
     public static Pointer<Pix> pixReadStreamPng(
-            Pointer<LeptonicaLibrary.FILE> fp) {
+            Pointer<LibLept.FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 pixReadStreamPng(Pointer.getPeer(fp)), Pix.class);
     }
@@ -28545,7 +28546,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1719</i>
      */
-    public static int freadHeaderPng(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int freadHeaderPng(Pointer<LibLept.FILE> fp,
             Pointer<Integer> pw, Pointer<Integer> ph, Pointer<Integer> pbps,
             Pointer<Integer> pspp, Pointer<Integer> piscmap) {
         return freadHeaderPng(Pointer.getPeer(fp), Pointer.getPeer(pw),
@@ -28582,7 +28583,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1721</i>
      */
-    public static int fgetPngResolution(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int fgetPngResolution(Pointer<LibLept.FILE> fp,
             Pointer<Integer> pxres, Pointer<Integer> pyres) {
         return fgetPngResolution(Pointer.getPeer(fp), Pointer.getPeer(pxres),
                 Pointer.getPeer(pyres));
@@ -28614,7 +28615,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1723</i>
      */
-    public static int pixWriteStreamPng(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int pixWriteStreamPng(Pointer<LibLept.FILE> fp,
             Pointer<Pix> pix, float gamma) {
         return pixWriteStreamPng(Pointer.getPeer(fp), Pointer.getPeer(pix),
                 gamma);
@@ -28682,7 +28683,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:1728</i>
      */
     public static Pointer<Pix> pixReadStreamPnm(
-            Pointer<LeptonicaLibrary.FILE> fp) {
+            Pointer<LibLept.FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 pixReadStreamPnm(Pointer.getPeer(fp)), Pix.class);
     }
@@ -28719,7 +28720,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1730</i>
      */
-    public static int freadHeaderPnm(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int freadHeaderPnm(Pointer<LibLept.FILE> fp,
             Pointer<Integer> pw, Pointer<Integer> ph, Pointer<Integer> pd,
             Pointer<Integer> ptype, Pointer<Integer> pbps, Pointer<Integer> pspp) {
         return freadHeaderPnm(Pointer.getPeer(fp), Pointer.getPeer(pw),
@@ -28738,7 +28739,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1731</i>
      */
-    public static int pixWriteStreamPnm(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int pixWriteStreamPnm(Pointer<LibLept.FILE> fp,
             Pointer<Pix> pix) {
         return pixWriteStreamPnm(Pointer.getPeer(fp), Pointer.getPeer(pix));
     }
@@ -28752,7 +28753,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1732</i>
      */
-    public static int pixWriteStreamAsciiPnm(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int pixWriteStreamAsciiPnm(Pointer<LibLept.FILE> fp,
             Pointer<Pix> pix) {
         return pixWriteStreamAsciiPnm(Pointer.getPeer(fp), Pointer.getPeer(pix));
     }
@@ -29236,7 +29237,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1759</i>
      */
-    public static int pixWriteStreamPS(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int pixWriteStreamPS(Pointer<LibLept.FILE> fp,
             Pointer<Pix> pix, Pointer<Box> box, int res, float scale) {
         return pixWriteStreamPS(Pointer.getPeer(fp), Pointer.getPeer(pix),
                 Pointer.getPeer(box), res, scale);
@@ -30061,7 +30062,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1810</i>
      */
-    public static Pointer<Pta> ptaReadStream(Pointer<LeptonicaLibrary.FILE> fp) {
+    public static Pointer<Pta> ptaReadStream(Pointer<LibLept.FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 ptaReadStream(Pointer.getPeer(fp)), Pta.class);
     }
@@ -30091,7 +30092,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1812</i>
      */
-    public static int ptaWriteStream(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int ptaWriteStream(Pointer<LibLept.FILE> fp,
             Pointer<Pta> pta, int type) {
         return ptaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(pta), type);
     }
@@ -30260,7 +30261,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1824</i>
      */
-    public static Pointer<Ptaa> ptaaReadStream(Pointer<LeptonicaLibrary.FILE> fp) {
+    public static Pointer<Ptaa> ptaaReadStream(Pointer<LibLept.FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 ptaaReadStream(Pointer.getPeer(fp)), Ptaa.class);
     }
@@ -30290,7 +30291,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1826</i>
      */
-    public static int ptaaWriteStream(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int ptaaWriteStream(Pointer<LibLept.FILE> fp,
             Pointer<Ptaa> ptaa, int type) {
         return ptaaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(ptaa), type);
     }
@@ -31475,7 +31476,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1901</i>
      */
-    public static int lqueuePrint(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int lqueuePrint(Pointer<LibLept.FILE> fp,
             Pointer<L_Queue> lq) {
         return lqueuePrint(Pointer.getPeer(fp), Pointer.getPeer(lq));
     }
@@ -31870,7 +31871,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1923</i>
      */
-    public static Pointer<Pix> pixReadStream(Pointer<LeptonicaLibrary.FILE> fp,
+    public static Pointer<Pix> pixReadStream(Pointer<LibLept.FILE> fp,
             int hint) {
         return (Pointer) Pointer.pointerToAddress(
                 pixReadStream(Pointer.getPeer(fp), hint), Pix.class);
@@ -31924,7 +31925,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1926</i>
      */
-    public static int findFileFormatStream(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int findFileFormatStream(Pointer<LibLept.FILE> fp,
             Pointer<Integer> pformat) {
         return findFileFormatStream(Pointer.getPeer(fp),
                 Pointer.getPeer(pformat));
@@ -31955,7 +31956,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1928</i>
      */
-    public static int fileFormatIsTiff(Pointer<LeptonicaLibrary.FILE> fp) {
+    public static int fileFormatIsTiff(Pointer<LibLept.FILE> fp) {
         return fileFormatIsTiff(Pointer.getPeer(fp));
     }
 
@@ -32357,7 +32358,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:1954</i>
      */
     public static Pointer<L_Recoga> recogaReadStream(
-            Pointer<LeptonicaLibrary.FILE> fp) {
+            Pointer<LibLept.FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 recogaReadStream(Pointer.getPeer(fp)), L_Recoga.class);
     }
@@ -32386,7 +32387,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1956</i>
      */
-    public static int recogaWriteStream(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int recogaWriteStream(Pointer<LibLept.FILE> fp,
             Pointer<L_Recoga> recoga, Pointer<Byte> filename) {
         return recogaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(recoga),
                 Pointer.getPeer(filename));
@@ -32432,7 +32433,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:1959</i>
      */
     public static Pointer<L_Recog> recogReadStream(
-            Pointer<LeptonicaLibrary.FILE> fp) {
+            Pointer<LibLept.FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 recogReadStream(Pointer.getPeer(fp)), L_Recog.class);
     }
@@ -32460,7 +32461,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1961</i>
      */
-    public static int recogWriteStream(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int recogWriteStream(Pointer<LibLept.FILE> fp,
             Pointer<L_Recog> recog, Pointer<Byte> filename) {
         return recogWriteStream(Pointer.getPeer(fp), Pointer.getPeer(recog),
                 Pointer.getPeer(filename));
@@ -33211,7 +33212,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2005</i>
      */
-    public static int recogaShowContent(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int recogaShowContent(Pointer<LibLept.FILE> fp,
             Pointer<L_Recoga> recoga, int display) {
         return recogaShowContent(Pointer.getPeer(fp), Pointer.getPeer(recoga),
                 display);
@@ -33227,7 +33228,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2006</i>
      */
-    public static int recogShowContent(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int recogShowContent(Pointer<LibLept.FILE> fp,
             Pointer<L_Recog> recog, int display) {
         return recogShowContent(Pointer.getPeer(fp), Pointer.getPeer(recog),
                 display);
@@ -34826,7 +34827,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:2102</i>
      */
     public static Pointer<Sarray> sarrayReadStream(
-            Pointer<LeptonicaLibrary.FILE> fp) {
+            Pointer<LibLept.FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 sarrayReadStream(Pointer.getPeer(fp)), Sarray.class);
     }
@@ -34854,7 +34855,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2104</i>
      */
-    public static int sarrayWriteStream(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int sarrayWriteStream(Pointer<LibLept.FILE> fp,
             Pointer<Sarray> sa) {
         return sarrayWriteStream(Pointer.getPeer(fp), Pointer.getPeer(sa));
     }
@@ -36648,11 +36649,11 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2211</i>
      */
-    public static Pointer<LeptonicaLibrary.SEL> selCreate(int height,
+    public static Pointer<LibLept.SEL> selCreate(int height,
             int width, Pointer<Byte> name) {
         return (Pointer) Pointer.pointerToAddress(
                 selCreate(height, width, Pointer.getPeer(name)),
-                LeptonicaLibrary.SEL.class);
+                LibLept.SEL.class);
     }
 
     @Ptr
@@ -36664,7 +36665,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2212</i>
      */
-    public static void selDestroy(Pointer<Pointer<LeptonicaLibrary.SEL>> psel) {
+    public static void selDestroy(Pointer<Pointer<LibLept.SEL>> psel) {
         selDestroy(Pointer.getPeer(psel));
     }
 
@@ -36676,10 +36677,10 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2213</i>
      */
-    public static Pointer<LeptonicaLibrary.SEL> selCopy(
-            Pointer<LeptonicaLibrary.SEL> sel) {
+    public static Pointer<LibLept.SEL> selCopy(
+            Pointer<LibLept.SEL> sel) {
         return (Pointer) Pointer.pointerToAddress(
-                selCopy(Pointer.getPeer(sel)), LeptonicaLibrary.SEL.class);
+                selCopy(Pointer.getPeer(sel)), LibLept.SEL.class);
     }
 
     @Ptr
@@ -36693,11 +36694,11 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2214</i>
      */
-    public static Pointer<LeptonicaLibrary.SEL> selCreateBrick(int h, int w,
+    public static Pointer<LibLept.SEL> selCreateBrick(int h, int w,
             int cy, int cx, int type) {
         return (Pointer) Pointer.pointerToAddress(
                 selCreateBrick$2(h, w, cy, cx, type),
-                LeptonicaLibrary.SEL.class);
+                LibLept.SEL.class);
     }
 
     @Ptr
@@ -36712,11 +36713,11 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2215</i>
      */
-    public static Pointer<LeptonicaLibrary.SEL> selCreateComb(int factor1,
+    public static Pointer<LibLept.SEL> selCreateComb(int factor1,
             int factor2, int direction) {
         return (Pointer) Pointer.pointerToAddress(
                 selCreateComb$2(factor1, factor2, direction),
-                LeptonicaLibrary.SEL.class);
+                LibLept.SEL.class);
     }
 
     @Ptr
@@ -36749,7 +36750,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:2217</i>
      */
     public static int selaAddSel(Pointer<Sela> sela,
-            Pointer<LeptonicaLibrary.SEL> sel, Pointer<Byte> selname,
+            Pointer<LibLept.SEL> sel, Pointer<Byte> selname,
             int copyflag) {
         return selaAddSel(Pointer.getPeer(sela), Pointer.getPeer(sel),
                 Pointer.getPeer(selname), copyflag);
@@ -36776,11 +36777,11 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2219</i>
      */
-    public static Pointer<LeptonicaLibrary.SEL> selaGetSel(Pointer<Sela> sela,
+    public static Pointer<LibLept.SEL> selaGetSel(Pointer<Sela> sela,
             int i) {
         return (Pointer) Pointer.pointerToAddress(
                 selaGetSel(Pointer.getPeer(sela), i),
-                LeptonicaLibrary.SEL.class);
+                LibLept.SEL.class);
     }
 
     @Ptr
@@ -36792,7 +36793,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2220</i>
      */
-    public static Pointer<Byte> selGetName(Pointer<LeptonicaLibrary.SEL> sel) {
+    public static Pointer<Byte> selGetName(Pointer<LibLept.SEL> sel) {
         return (Pointer) Pointer.pointerToAddress(
                 selGetName(Pointer.getPeer(sel)), Byte.class);
     }
@@ -36806,7 +36807,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2221</i>
      */
-    public static int selSetName(Pointer<LeptonicaLibrary.SEL> sel,
+    public static int selSetName(Pointer<LibLept.SEL> sel,
             Pointer<Byte> name) {
         return selSetName(Pointer.getPeer(sel), Pointer.getPeer(name));
     }
@@ -36822,7 +36823,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:2222</i>
      */
     public static int selaFindSelByName(Pointer<Sela> sela, Pointer<Byte> name,
-            Pointer<Integer> pindex, Pointer<Pointer<LeptonicaLibrary.SEL>> psel) {
+            Pointer<Integer> pindex, Pointer<Pointer<LibLept.SEL>> psel) {
         return selaFindSelByName(Pointer.getPeer(sela), Pointer.getPeer(name),
                 Pointer.getPeer(pindex), Pointer.getPeer(psel));
     }
@@ -36837,7 +36838,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2223</i>
      */
-    public static int selGetElement(Pointer<LeptonicaLibrary.SEL> sel, int row,
+    public static int selGetElement(Pointer<LibLept.SEL> sel, int row,
             int col, Pointer<Integer> ptype) {
         return selGetElement(Pointer.getPeer(sel), row, col,
                 Pointer.getPeer(ptype));
@@ -36853,7 +36854,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2224</i>
      */
-    public static int selSetElement(Pointer<LeptonicaLibrary.SEL> sel, int row,
+    public static int selSetElement(Pointer<LibLept.SEL> sel, int row,
             int col, int type) {
         return selSetElement(Pointer.getPeer(sel), row, col, type);
     }
@@ -36869,7 +36870,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2225</i>
      */
-    public static int selGetParameters(Pointer<LeptonicaLibrary.SEL> sel,
+    public static int selGetParameters(Pointer<LibLept.SEL> sel,
             Pointer<Integer> psy, Pointer<Integer> psx, Pointer<Integer> pcy,
             Pointer<Integer> pcx) {
         return selGetParameters(Pointer.getPeer(sel), Pointer.getPeer(psy),
@@ -36887,7 +36888,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2226</i>
      */
-    public static int selSetOrigin(Pointer<LeptonicaLibrary.SEL> sel, int cy,
+    public static int selSetOrigin(Pointer<LibLept.SEL> sel, int cy,
             int cx) {
         return selSetOrigin(Pointer.getPeer(sel), cy, cx);
     }
@@ -36901,7 +36902,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2227</i>
      */
-    public static int selGetTypeAtOrigin(Pointer<LeptonicaLibrary.SEL> sel,
+    public static int selGetTypeAtOrigin(Pointer<LibLept.SEL> sel,
             Pointer<Integer> ptype) {
         return selGetTypeAtOrigin(Pointer.getPeer(sel), Pointer.getPeer(ptype));
     }
@@ -36989,7 +36990,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2232</i>
      */
-    public static int selFindMaxTranslations(Pointer<LeptonicaLibrary.SEL> sel,
+    public static int selFindMaxTranslations(Pointer<LibLept.SEL> sel,
             Pointer<Integer> pxp, Pointer<Integer> pyp, Pointer<Integer> pxn,
             Pointer<Integer> pyn) {
         return selFindMaxTranslations(Pointer.getPeer(sel),
@@ -37006,11 +37007,11 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2233</i>
      */
-    public static Pointer<LeptonicaLibrary.SEL> selRotateOrth(
-            Pointer<LeptonicaLibrary.SEL> sel, int quads) {
+    public static Pointer<LibLept.SEL> selRotateOrth(
+            Pointer<LibLept.SEL> sel, int quads) {
         return (Pointer) Pointer.pointerToAddress(
                 selRotateOrth(Pointer.getPeer(sel), quads),
-                LeptonicaLibrary.SEL.class);
+                LibLept.SEL.class);
     }
 
     @Ptr
@@ -37036,7 +37037,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2235</i>
      */
-    public static Pointer<Sela> selaReadStream(Pointer<LeptonicaLibrary.FILE> fp) {
+    public static Pointer<Sela> selaReadStream(Pointer<LibLept.FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 selaReadStream(Pointer.getPeer(fp)), Sela.class);
     }
@@ -37050,9 +37051,9 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2236</i>
      */
-    public static Pointer<LeptonicaLibrary.SEL> selRead(Pointer<Byte> fname) {
+    public static Pointer<LibLept.SEL> selRead(Pointer<Byte> fname) {
         return (Pointer) Pointer.pointerToAddress(
-                selRead(Pointer.getPeer(fname)), LeptonicaLibrary.SEL.class);
+                selRead(Pointer.getPeer(fname)), LibLept.SEL.class);
     }
 
     @Ptr
@@ -37064,10 +37065,10 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2237</i>
      */
-    public static Pointer<LeptonicaLibrary.SEL> selReadStream(
-            Pointer<LeptonicaLibrary.FILE> fp) {
+    public static Pointer<LibLept.SEL> selReadStream(
+            Pointer<LibLept.FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
-                selReadStream(Pointer.getPeer(fp)), LeptonicaLibrary.SEL.class);
+                selReadStream(Pointer.getPeer(fp)), LibLept.SEL.class);
     }
 
     @Ptr
@@ -37091,7 +37092,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2239</i>
      */
-    public static int selaWriteStream(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int selaWriteStream(Pointer<LibLept.FILE> fp,
             Pointer<Sela> sela) {
         return selaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(sela));
     }
@@ -37105,7 +37106,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:2240</i>
      */
     public static int selWrite(Pointer<Byte> fname,
-            Pointer<LeptonicaLibrary.SEL> sel) {
+            Pointer<LibLept.SEL> sel) {
         return selWrite(Pointer.getPeer(fname), Pointer.getPeer(sel));
     }
 
@@ -37117,8 +37118,8 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2241</i>
      */
-    public static int selWriteStream(Pointer<LeptonicaLibrary.FILE> fp,
-            Pointer<LeptonicaLibrary.SEL> sel) {
+    public static int selWriteStream(Pointer<LibLept.FILE> fp,
+            Pointer<LibLept.SEL> sel) {
         return selWriteStream(Pointer.getPeer(fp), Pointer.getPeer(sel));
     }
 
@@ -37132,11 +37133,11 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2242</i>
      */
-    public static Pointer<LeptonicaLibrary.SEL> selCreateFromString(
+    public static Pointer<LibLept.SEL> selCreateFromString(
             Pointer<Byte> text, int h, int w, Pointer<Byte> name) {
         return (Pointer) Pointer.pointerToAddress(
                 selCreateFromString(Pointer.getPeer(text), h, w,
-                        Pointer.getPeer(name)), LeptonicaLibrary.SEL.class);
+                        Pointer.getPeer(name)), LibLept.SEL.class);
     }
 
     @Ptr
@@ -37150,7 +37151,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:2243</i>
      */
     public static Pointer<Byte> selPrintToString(
-            Pointer<LeptonicaLibrary.SEL> sel) {
+            Pointer<LibLept.SEL> sel) {
         return (Pointer) Pointer.pointerToAddress(
                 selPrintToString(Pointer.getPeer(sel)), Byte.class);
     }
@@ -37179,11 +37180,11 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2245</i>
      */
-    public static Pointer<LeptonicaLibrary.SEL> selCreateFromPta(
+    public static Pointer<LibLept.SEL> selCreateFromPta(
             Pointer<Pta> pta, int cy, int cx, Pointer<Byte> name) {
         return (Pointer) Pointer.pointerToAddress(
                 selCreateFromPta(Pointer.getPeer(pta), cy, cx,
-                        Pointer.getPeer(name)), LeptonicaLibrary.SEL.class);
+                        Pointer.getPeer(name)), LibLept.SEL.class);
     }
 
     @Ptr
@@ -37197,11 +37198,11 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2246</i>
      */
-    public static Pointer<LeptonicaLibrary.SEL> selCreateFromPix(
+    public static Pointer<LibLept.SEL> selCreateFromPix(
             Pointer<Pix> pix, int cy, int cx, Pointer<Byte> name) {
         return (Pointer) Pointer.pointerToAddress(
                 selCreateFromPix(Pointer.getPeer(pix), cy, cx,
-                        Pointer.getPeer(name)), LeptonicaLibrary.SEL.class);
+                        Pointer.getPeer(name)), LibLept.SEL.class);
     }
 
     @Ptr
@@ -37214,11 +37215,11 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2247</i>
      */
-    public static Pointer<LeptonicaLibrary.SEL> selReadFromColorImage(
+    public static Pointer<LibLept.SEL> selReadFromColorImage(
             Pointer<Byte> pathname) {
         return (Pointer) Pointer.pointerToAddress(
                 selReadFromColorImage(Pointer.getPeer(pathname)),
-                LeptonicaLibrary.SEL.class);
+                LibLept.SEL.class);
     }
 
     @Ptr
@@ -37230,11 +37231,11 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2248</i>
      */
-    public static Pointer<LeptonicaLibrary.SEL> selCreateFromColorPix(
+    public static Pointer<LibLept.SEL> selCreateFromColorPix(
             Pointer<Pix> pixs, Pointer<Byte> selname) {
         return (Pointer) Pointer.pointerToAddress(
                 selCreateFromColorPix(Pointer.getPeer(pixs),
-                        Pointer.getPeer(selname)), LeptonicaLibrary.SEL.class);
+                        Pointer.getPeer(selname)), LibLept.SEL.class);
     }
 
     @Ptr
@@ -37249,7 +37250,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:2249</i>
      */
     public static Pointer<Pix> selDisplayInPix(
-            Pointer<LeptonicaLibrary.SEL> sel, int size, int gthick) {
+            Pointer<LibLept.SEL> sel, int size, int gthick) {
         return (Pointer) Pointer.pointerToAddress(
                 selDisplayInPix(Pointer.getPeer(sel), size, gthick), Pix.class);
     }
@@ -37379,14 +37380,14 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2257</i>
      */
-    public static Pointer<LeptonicaLibrary.SEL> pixGenerateSelWithRuns(
+    public static Pointer<LibLept.SEL> pixGenerateSelWithRuns(
             Pointer<Pix> pixs, int nhlines, int nvlines, int distance,
             int minlength, int toppix, int botpix, int leftpix, int rightpix,
             Pointer<Pointer<Pix>> ppixe) {
         return (Pointer) Pointer.pointerToAddress(
                 pixGenerateSelWithRuns(Pointer.getPeer(pixs), nhlines, nvlines,
                         distance, minlength, toppix, botpix, leftpix, rightpix,
-                        Pointer.getPeer(ppixe)), LeptonicaLibrary.SEL.class);
+                        Pointer.getPeer(ppixe)), LibLept.SEL.class);
     }
 
     @Ptr
@@ -37402,14 +37403,14 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2258</i>
      */
-    public static Pointer<LeptonicaLibrary.SEL> pixGenerateSelRandom(
+    public static Pointer<LibLept.SEL> pixGenerateSelRandom(
             Pointer<Pix> pixs, float hitfract, float missfract, int distance,
             int toppix, int botpix, int leftpix, int rightpix,
             Pointer<Pointer<Pix>> ppixe) {
         return (Pointer) Pointer.pointerToAddress(
                 pixGenerateSelRandom(Pointer.getPeer(pixs), hitfract,
                         missfract, distance, toppix, botpix, leftpix, rightpix,
-                        Pointer.getPeer(ppixe)), LeptonicaLibrary.SEL.class);
+                        Pointer.getPeer(ppixe)), LibLept.SEL.class);
     }
 
     @Ptr
@@ -37425,7 +37426,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2259</i>
      */
-    public static Pointer<LeptonicaLibrary.SEL> pixGenerateSelBoundary(
+    public static Pointer<LibLept.SEL> pixGenerateSelBoundary(
             Pointer<Pix> pixs, int hitdist, int missdist, int hitskip,
             int missskip, int topflag, int botflag, int leftflag,
             int rightflag, Pointer<Pointer<Pix>> ppixe) {
@@ -37433,7 +37434,7 @@ public class LeptonicaLibrary {
                 pixGenerateSelBoundary(Pointer.getPeer(pixs), hitdist,
                         missdist, hitskip, missskip, topflag, botflag,
                         leftflag, rightflag, Pointer.getPeer(ppixe)),
-                LeptonicaLibrary.SEL.class);
+                LibLept.SEL.class);
     }
 
     @Ptr
@@ -37523,7 +37524,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:2264</i>
      */
     public static Pointer<Pix> pixDisplayHitMissSel(Pointer<Pix> pixs,
-            Pointer<LeptonicaLibrary.SEL> sel, int scalefactor, int hitcolor,
+            Pointer<LibLept.SEL> sel, int scalefactor, int hitcolor,
             int misscolor) {
         return (Pointer) Pointer.pointerToAddress(
                 pixDisplayHitMissSel(Pointer.getPeer(pixs),
@@ -37932,7 +37933,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:2286</i>
      */
     public static Pointer<Pix> pixReadStreamSpix(
-            Pointer<LeptonicaLibrary.FILE> fp) {
+            Pointer<LibLept.FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 pixReadStreamSpix(Pointer.getPeer(fp)), Pix.class);
     }
@@ -37970,7 +37971,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2288</i>
      */
-    public static int freadHeaderSpix(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int freadHeaderSpix(Pointer<LibLept.FILE> fp,
             Pointer<Integer> pwidth, Pointer<Integer> pheight,
             Pointer<Integer> pbps, Pointer<Integer> pspp,
             Pointer<Integer> piscmap) {
@@ -38009,7 +38010,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2290</i>
      */
-    public static int pixWriteStreamSpix(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int pixWriteStreamSpix(Pointer<LibLept.FILE> fp,
             Pointer<Pix> pix) {
         return pixWriteStreamSpix(Pointer.getPeer(fp), Pointer.getPeer(pix));
     }
@@ -38152,7 +38153,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2300</i>
      */
-    public static int lstackPrint(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int lstackPrint(Pointer<LibLept.FILE> fp,
             Pointer<L_Stack> lstack) {
         return lstackPrint(Pointer.getPeer(fp), Pointer.getPeer(lstack));
     }
@@ -38488,7 +38489,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:2320</i>
      */
     public static Pointer<Pix> pixReadStreamTiff(
-            Pointer<LeptonicaLibrary.FILE> fp, int n) {
+            Pointer<LibLept.FILE> fp, int n) {
         return (Pointer) Pointer.pointerToAddress(
                 pixReadStreamTiff(Pointer.getPeer(fp), n), Pix.class);
     }
@@ -38543,7 +38544,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2323</i>
      */
-    public static int pixWriteStreamTiff(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int pixWriteStreamTiff(Pointer<LibLept.FILE> fp,
             Pointer<Pix> pix, int comptype) {
         return pixWriteStreamTiff(Pointer.getPeer(fp), Pointer.getPeer(pix),
                 comptype);
@@ -38607,7 +38608,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2327</i>
      */
-    public static int fprintTiffInfo(Pointer<LeptonicaLibrary.FILE> fpout,
+    public static int fprintTiffInfo(Pointer<LibLept.FILE> fpout,
             Pointer<Byte> tiffile) {
         return fprintTiffInfo(Pointer.getPeer(fpout), Pointer.getPeer(tiffile));
     }
@@ -38621,7 +38622,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2328</i>
      */
-    public static int tiffGetCount(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int tiffGetCount(Pointer<LibLept.FILE> fp,
             Pointer<Integer> pn) {
         return tiffGetCount(Pointer.getPeer(fp), Pointer.getPeer(pn));
     }
@@ -38635,7 +38636,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2329</i>
      */
-    public static int getTiffResolution(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int getTiffResolution(Pointer<LibLept.FILE> fp,
             Pointer<Integer> pxres, Pointer<Integer> pyres) {
         return getTiffResolution(Pointer.getPeer(fp), Pointer.getPeer(pxres),
                 Pointer.getPeer(pyres));
@@ -38676,7 +38677,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2331</i>
      */
-    public static int freadHeaderTiff(Pointer<LeptonicaLibrary.FILE> fp, int n,
+    public static int freadHeaderTiff(Pointer<LibLept.FILE> fp, int n,
             Pointer<Integer> pwidth, Pointer<Integer> pheight,
             Pointer<Integer> pbps, Pointer<Integer> pspp,
             Pointer<Integer> pres, Pointer<Integer> pcmap,
@@ -38723,7 +38724,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2333</i>
      */
-    public static int findTiffCompression(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int findTiffCompression(Pointer<LibLept.FILE> fp,
             Pointer<Integer> pcomptype) {
         return findTiffCompression(Pointer.getPeer(fp),
                 Pointer.getPeer(pcomptype));
@@ -39160,7 +39161,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:2359</i>
      */
     public static Pointer<Byte> l_binaryReadStream(
-            Pointer<LeptonicaLibrary.FILE> fp, Pointer<SizeT> pnbytes) {
+            Pointer<LibLept.FILE> fp, Pointer<SizeT> pnbytes) {
         return (Pointer) Pointer.pointerToAddress(
                 l_binaryReadStream(Pointer.getPeer(fp),
                         Pointer.getPeer(pnbytes)), Byte.class);
@@ -39208,7 +39209,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:2362</i>
      */
     @Ptr
-    public static long fnbytesInFile(Pointer<LeptonicaLibrary.FILE> fp) {
+    public static long fnbytesInFile(Pointer<LibLept.FILE> fp) {
         return fnbytesInFile(Pointer.getPeer(fp));
     }
 
@@ -39327,11 +39328,11 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2372</i>
      */
-    public static Pointer<LeptonicaLibrary.FILE> fopenReadStream(
+    public static Pointer<LibLept.FILE> fopenReadStream(
             Pointer<Byte> filename) {
         return (Pointer) Pointer.pointerToAddress(
                 fopenReadStream(Pointer.getPeer(filename)),
-                LeptonicaLibrary.FILE.class);
+                LibLept.FILE.class);
     }
 
     @Ptr
@@ -39344,12 +39345,12 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2373</i>
      */
-    public static Pointer<LeptonicaLibrary.FILE> fopenWriteStream(
+    public static Pointer<LibLept.FILE> fopenWriteStream(
             Pointer<Byte> filename, Pointer<Byte> modestring) {
         return (Pointer) Pointer.pointerToAddress(
                 fopenWriteStream(Pointer.getPeer(filename),
                         Pointer.getPeer(modestring)),
-                LeptonicaLibrary.FILE.class);
+                LibLept.FILE.class);
     }
 
     @Ptr
@@ -39363,11 +39364,11 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2374</i>
      */
-    public static Pointer<LeptonicaLibrary.FILE> lept_fopen(
+    public static Pointer<LibLept.FILE> lept_fopen(
             Pointer<Byte> filename, Pointer<Byte> mode) {
         return (Pointer) Pointer.pointerToAddress(
                 lept_fopen(Pointer.getPeer(filename), Pointer.getPeer(mode)),
-                LeptonicaLibrary.FILE.class);
+                LibLept.FILE.class);
     }
 
     @Ptr
@@ -39379,7 +39380,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2375</i>
      */
-    public static int lept_fclose(Pointer<LeptonicaLibrary.FILE> fp) {
+    public static int lept_fclose(Pointer<LibLept.FILE> fp) {
         return lept_fclose(Pointer.getPeer(fp));
     }
 
@@ -40038,7 +40039,7 @@ public class LeptonicaLibrary {
      * \tesseract-vs2013\liblept\include\allheaders.h:2419</i>
      */
     public static Pointer<Pix> pixReadStreamWebP(
-            Pointer<LeptonicaLibrary.FILE> fp) {
+            Pointer<LibLept.FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 pixReadStreamWebP(Pointer.getPeer(fp)), Pix.class);
     }
@@ -40103,7 +40104,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2423</i>
      */
-    public static int pixWriteStreamWebP(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int pixWriteStreamWebP(Pointer<LibLept.FILE> fp,
             Pointer<Pix> pixs, int quality, int lossless) {
         return pixWriteStreamWebP(Pointer.getPeer(fp), Pointer.getPeer(pixs),
                 quality, lossless);
@@ -40169,7 +40170,7 @@ public class LeptonicaLibrary {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2427</i>
      */
-    public static int pixWriteStream(Pointer<LeptonicaLibrary.FILE> fp,
+    public static int pixWriteStream(Pointer<LibLept.FILE> fp,
             Pointer<Pix> pix, int format) {
         return pixWriteStream(Pointer.getPeer(fp), Pointer.getPeer(pix), format);
     }
@@ -40455,7 +40456,7 @@ public class LeptonicaLibrary {
      * The run-time message severity threshold is defined in utils.c.<br>
      * C type : extern l_int32
      */
-    public LeptonicaLibrary LeptMsgSeverity(int LeptMsgSeverity) {
+    public LibLept LeptMsgSeverity(int LeptMsgSeverity) {
         try {
             {
                 BridJ.getNativeLibrary("leptonica").getSymbolPointer(
@@ -40487,7 +40488,7 @@ public class LeptonicaLibrary {
      * used in gnuplot cmd file<br>
      * C type : extern const char*[]
      */
-    public LeptonicaLibrary gplotstylenames(
+    public LibLept gplotstylenames(
             Pointer<Pointer<Byte>> gplotstylenames) {
         try {
             {
@@ -40524,7 +40525,7 @@ public class LeptonicaLibrary {
      * used in simple file input<br>
      * C type : extern const char*[]
      */
-    public LeptonicaLibrary gplotfilestyles(
+    public LibLept gplotfilestyles(
             Pointer<Pointer<Byte>> gplotfilestyles) {
         try {
             {
@@ -40561,7 +40562,7 @@ public class LeptonicaLibrary {
      * used in simple file input<br>
      * C type : extern const char*[]
      */
-    public LeptonicaLibrary gplotfileoutputs(
+    public LibLept gplotfileoutputs(
             Pointer<Pointer<Byte>> gplotfileoutputs) {
         try {
             {
