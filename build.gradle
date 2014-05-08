@@ -1,0 +1,89 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+apply plugin: 'maven'
+apply plugin: 'signing'
+
+group = 'de.vorb'
+
+version = '0.0.1'
+sourceCompatibility = 1.7
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile 'net.java.dev.jna:jna:4.1.0'
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from 'build/docs/javadoc'
+}
+
+task sourcesJar(type: Jar) {
+    from sourceSets.main.allSource
+    classifier = 'sources'
+}
+
+// assume UTF-8 source code
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+jar {
+  manifest {
+    attributes 'Implementation-Title': 'JTesseract',
+      'Implementation-Version': version
+  }
+}
+
+artifacts {
+  archives jar
+
+  archives javadocJar
+  archives sourcesJar
+}
+
+signing {
+  sign configurations.archives
+}
+
+uploadArchives {
+  repositories {
+    mavenDeployer {
+      beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+
+      repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
+        authentication(userName: sonatypeUsername, password: sonatypePassword)
+      }
+
+      pom.project {
+         name 'jleptonica'
+         packaging 'jar'
+         description 'jleptonica provides a JNA wrapper for Leptonica'
+         url 'https://github.com/tesseract4java/jleptonica'
+
+         scm {
+             url 'scm:git@github.com:tesseract4java/jleptonica.git'
+             connection 'scm:git@github.com:GradleFx/GradleFx.git'
+             developerConnection 'scm:git@github.com:GradleFx/GradleFx.git'
+         }
+
+         licenses {
+             license {
+                 name 'BSD 2-clause license'
+                 url 'http://www.leptonica.com/about-the-license.html'
+                 distribution 'repo'
+             }
+         }
+
+        developers {
+          developer {
+            id 'pvorb'
+            name 'Paul Vorbach'
+          }
+        }
+      }
+    }
+  }
+}
