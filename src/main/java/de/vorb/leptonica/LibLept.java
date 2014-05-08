@@ -40516,15 +40516,12 @@ public class LibLept {
     public LibLept gplotfileoutputs(
             Pointer<Pointer<Byte>> gplotfileoutputs) {
         try {
-            {
-                BridJ.getNativeLibrary("leptonica").getSymbolPointer(
-                        "gplotfileoutputs").as(
-                        DefaultParameterizedType.paramType(Pointer.class,
-                                DefaultParameterizedType.paramType(
-                                        Pointer.class, Byte.class))).set(
-                        gplotfileoutputs);
-                return this;
-            }
+            BridJ.getNativeLibrary("leptonica").getSymbolPointer(
+                    "gplotfileoutputs").as(
+                    DefaultParameterizedType.paramType(Pointer.class,
+                            DefaultParameterizedType.paramType(Pointer.class,
+                                    Byte.class))).set(gplotfileoutputs);
+            return this;
         } catch (Throwable $ex$) {
             throw new RuntimeException($ex$);
         }
