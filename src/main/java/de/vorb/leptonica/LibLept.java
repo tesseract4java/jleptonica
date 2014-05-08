@@ -2408,7 +2408,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:125</i>
      */
     public static int bbufferReadStream(Pointer<ByteBuffer> bb,
-            Pointer<LibLept.FILE> fp, int nbytes) {
+            Pointer<FILE> fp, int nbytes) {
         return bbufferReadStream(Pointer.getPeer(bb), Pointer.getPeer(fp),
                 nbytes);
     }
@@ -2440,7 +2440,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:127</i>
      */
     public static int bbufferWriteStream(Pointer<ByteBuffer> bb,
-            Pointer<LibLept.FILE> fp, @Ptr long nbytes,
+            Pointer<FILE> fp, @Ptr long nbytes,
             Pointer<SizeT> pnout) {
         return bbufferWriteStream(Pointer.getPeer(bb), Pointer.getPeer(fp),
                 nbytes, Pointer.getPeer(pnout));
@@ -3503,7 +3503,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:185</i>
      */
     public static Pointer<Pix> pixReadStreamBmp(
-            Pointer<LibLept.FILE> fp) {
+            Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 pixReadStreamBmp(Pointer.getPeer(fp)), Pix.class);
     }
@@ -3517,7 +3517,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:186</i>
      */
-    public static int pixWriteStreamBmp(Pointer<LibLept.FILE> fp,
+    public static int pixWriteStreamBmp(Pointer<FILE> fp,
             Pointer<Pix> pix) {
         return pixWriteStreamBmp(Pointer.getPeer(fp), Pointer.getPeer(pix));
     }
@@ -4235,7 +4235,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:236</i>
      */
     public static Pointer<Boxaa> boxaaReadStream(
-            Pointer<LibLept.FILE> fp) {
+            Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 boxaaReadStream(Pointer.getPeer(fp)), Boxaa.class);
     }
@@ -4261,7 +4261,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:238</i>
      */
-    public static int boxaaWriteStream(Pointer<LibLept.FILE> fp,
+    public static int boxaaWriteStream(Pointer<FILE> fp,
             Pointer<Boxaa> baa) {
         return boxaaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(baa));
     }
@@ -4288,7 +4288,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:240</i>
      */
-    public static Pointer<Boxa> boxaReadStream(Pointer<LibLept.FILE> fp) {
+    public static Pointer<Boxa> boxaReadStream(Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 boxaReadStream(Pointer.getPeer(fp)), Boxa.class);
     }
@@ -4329,7 +4329,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:243</i>
      */
-    public static int boxaWriteStream(Pointer<LibLept.FILE> fp,
+    public static int boxaWriteStream(Pointer<FILE> fp,
             Pointer<Boxa> boxa) {
         return boxaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(boxa));
     }
@@ -4358,7 +4358,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:245</i>
      */
-    public static int boxPrintStreamInfo(Pointer<LibLept.FILE> fp,
+    public static int boxPrintStreamInfo(Pointer<FILE> fp,
             Pointer<Box> box) {
         return boxPrintStreamInfo(Pointer.getPeer(fp), Pointer.getPeer(box));
     }
@@ -5966,7 +5966,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:336</i>
      */
     public static Pointer<L_Bytea> l_byteaInitFromStream(
-            Pointer<LibLept.FILE> fp) {
+            Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 l_byteaInitFromStream(Pointer.getPeer(fp)), L_Bytea.class);
     }
@@ -6148,7 +6148,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:348</i>
      */
-    public static int l_byteaWriteStream(Pointer<LibLept.FILE> fp,
+    public static int l_byteaWriteStream(Pointer<FILE> fp,
             Pointer<L_Bytea> ba, @Ptr long startloc, @Ptr long endloc) {
         return l_byteaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(ba),
                 startloc, endloc);
@@ -6543,7 +6543,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:375</i>
      */
-    public static int ccbaWriteStream(Pointer<LibLept.FILE> fp,
+    public static int ccbaWriteStream(Pointer<FILE> fp,
             Pointer<CCBorda> ccba) {
         return ccbaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(ccba));
     }
@@ -6571,7 +6571,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:377</i>
      */
     public static Pointer<CCBorda> ccbaReadStream(
-            Pointer<LibLept.FILE> fp) {
+            Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 ccbaReadStream(Pointer.getPeer(fp)), CCBorda.class);
     }
@@ -7723,7 +7723,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:444</i>
      */
     public static Pointer<PixColormap> pixcmapReadStream(
-            Pointer<LibLept.FILE> fp) {
+            Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 pixcmapReadStream(Pointer.getPeer(fp)), PixColormap.class);
     }
@@ -7738,7 +7738,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:445</i>
      */
-    public static int pixcmapWriteStream(Pointer<LibLept.FILE> fp,
+    public static int pixcmapWriteStream(Pointer<FILE> fp,
             Pointer<PixColormap> cmap) {
         return pixcmapWriteStream(Pointer.getPeer(fp), Pointer.getPeer(cmap));
     }
@@ -10166,7 +10166,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:584</i>
      */
     public static Pointer<L_Dewarp> dewarpReadStream(
-            Pointer<LibLept.FILE> fp) {
+            Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 dewarpReadStream(Pointer.getPeer(fp)), L_Dewarp.class);
     }
@@ -10194,7 +10194,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:586</i>
      */
-    public static int dewarpWriteStream(Pointer<LibLept.FILE> fp,
+    public static int dewarpWriteStream(Pointer<FILE> fp,
             Pointer<L_Dewarp> dew) {
         return dewarpWriteStream(Pointer.getPeer(fp), Pointer.getPeer(dew));
     }
@@ -10222,7 +10222,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:588</i>
      */
     public static Pointer<L_Dewarpa> dewarpaReadStream(
-            Pointer<LibLept.FILE> fp) {
+            Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 dewarpaReadStream(Pointer.getPeer(fp)), L_Dewarpa.class);
     }
@@ -10251,7 +10251,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:590</i>
      */
-    public static int dewarpaWriteStream(Pointer<LibLept.FILE> fp,
+    public static int dewarpaWriteStream(Pointer<FILE> fp,
             Pointer<L_Dewarpa> dewa) {
         return dewarpaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(dewa));
     }
@@ -10518,7 +10518,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:607</i>
      */
-    public static int dewarpaInfo(Pointer<LibLept.FILE> fp,
+    public static int dewarpaInfo(Pointer<FILE> fp,
             Pointer<L_Dewarpa> dewa) {
         return dewarpaInfo(Pointer.getPeer(fp), Pointer.getPeer(dewa));
     }
@@ -10974,7 +10974,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:638</i>
      */
     public static Pointer<L_Dna> l_dnaReadStream(
-            Pointer<LibLept.FILE> fp) {
+            Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 l_dnaReadStream(Pointer.getPeer(fp)), L_Dna.class);
     }
@@ -11000,7 +11000,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:640</i>
      */
-    public static int l_dnaWriteStream(Pointer<LibLept.FILE> fp,
+    public static int l_dnaWriteStream(Pointer<FILE> fp,
             Pointer<L_Dna> da) {
         return l_dnaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(da));
     }
@@ -11171,7 +11171,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:652</i>
      */
     public static Pointer<L_Dnaa> l_dnaaReadStream(
-            Pointer<LibLept.FILE> fp) {
+            Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 l_dnaaReadStream(Pointer.getPeer(fp)), L_Dnaa.class);
     }
@@ -11199,7 +11199,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:654</i>
      */
-    public static int l_dnaaWriteStream(Pointer<LibLept.FILE> fp,
+    public static int l_dnaaWriteStream(Pointer<FILE> fp,
             Pointer<L_Dnaa> daa) {
         return l_dnaaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(daa));
     }
@@ -12947,7 +12947,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:764</i>
      */
-    public static Pointer<FPix> fpixReadStream(Pointer<LibLept.FILE> fp) {
+    public static Pointer<FPix> fpixReadStream(Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 fpixReadStream(Pointer.getPeer(fp)), FPix.class);
     }
@@ -12973,7 +12973,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:766</i>
      */
-    public static int fpixWriteStream(Pointer<LibLept.FILE> fp,
+    public static int fpixWriteStream(Pointer<FILE> fp,
             Pointer<FPix> fpix) {
         return fpixWriteStream(Pointer.getPeer(fp), Pointer.getPeer(fpix));
     }
@@ -13017,7 +13017,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:769</i>
      */
-    public static Pointer<DPix> dpixReadStream(Pointer<LibLept.FILE> fp) {
+    public static Pointer<DPix> dpixReadStream(Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 dpixReadStream(Pointer.getPeer(fp)), DPix.class);
     }
@@ -13043,7 +13043,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:771</i>
      */
-    public static int dpixWriteStream(Pointer<LibLept.FILE> fp,
+    public static int dpixWriteStream(Pointer<FILE> fp,
             Pointer<DPix> dpix) {
         return dpixWriteStream(Pointer.getPeer(fp), Pointer.getPeer(dpix));
     }
@@ -13074,7 +13074,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:773</i>
      */
-    public static int fpixPrintStream(Pointer<LibLept.FILE> fp,
+    public static int fpixPrintStream(Pointer<FILE> fp,
             Pointer<FPix> fpix, int factor) {
         return fpixPrintStream(Pointer.getPeer(fp), Pointer.getPeer(fpix),
                 factor);
@@ -13704,7 +13704,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:811</i>
      */
     public static Pointer<Pix> pixReadStreamGif(
-            Pointer<LibLept.FILE> fp) {
+            Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 pixReadStreamGif(Pointer.getPeer(fp)), Pix.class);
     }
@@ -13718,7 +13718,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:812</i>
      */
-    public static int pixWriteStreamGif(Pointer<LibLept.FILE> fp,
+    public static int pixWriteStreamGif(Pointer<FILE> fp,
             Pointer<Pix> pix) {
         return pixWriteStreamGif(Pointer.getPeer(fp), Pointer.getPeer(pix));
     }
@@ -15572,7 +15572,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:921</i>
      */
-    public static int lheapPrint(Pointer<LibLept.FILE> fp,
+    public static int lheapPrint(Pointer<FILE> fp,
             Pointer<L_Heap> lh) {
         return lheapPrint(Pointer.getPeer(fp), Pointer.getPeer(lh));
     }
@@ -15996,7 +15996,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:947</i>
      */
-    public static int freadHeaderJp2k(Pointer<LibLept.FILE> fp,
+    public static int freadHeaderJp2k(Pointer<FILE> fp,
             Pointer<Integer> pw, Pointer<Integer> ph, Pointer<Integer> pspp) {
         return freadHeaderJp2k(Pointer.getPeer(fp), Pointer.getPeer(pw),
                 Pointer.getPeer(ph), Pointer.getPeer(pspp));
@@ -16049,7 +16049,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:950</i>
      */
     public static Pointer<Pix> pixReadStreamJpeg(
-            Pointer<LibLept.FILE> fp, int cmflag, int reduction,
+            Pointer<FILE> fp, int cmflag, int reduction,
             Pointer<Integer> pnwarn, int hint) {
         return (Pointer) Pointer.pointerToAddress(
                 pixReadStreamJpeg(Pointer.getPeer(fp), cmflag, reduction,
@@ -16088,7 +16088,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:952</i>
      */
-    public static int freadHeaderJpeg(Pointer<LibLept.FILE> fp,
+    public static int freadHeaderJpeg(Pointer<FILE> fp,
             Pointer<Integer> pw, Pointer<Integer> ph, Pointer<Integer> pspp,
             Pointer<Integer> pycck, Pointer<Integer> pcmyk) {
         return freadHeaderJpeg(Pointer.getPeer(fp), Pointer.getPeer(pw),
@@ -16106,7 +16106,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:953</i>
      */
-    public static int fgetJpegResolution(Pointer<LibLept.FILE> fp,
+    public static int fgetJpegResolution(Pointer<FILE> fp,
             Pointer<Integer> pxres, Pointer<Integer> pyres) {
         return fgetJpegResolution(Pointer.getPeer(fp), Pointer.getPeer(pxres),
                 Pointer.getPeer(pyres));
@@ -16122,7 +16122,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:954</i>
      */
-    public static int fgetJpegComment(Pointer<LibLept.FILE> fp,
+    public static int fgetJpegComment(Pointer<FILE> fp,
             Pointer<Pointer<Byte>> pcomment) {
         return fgetJpegComment(Pointer.getPeer(fp), Pointer.getPeer(pcomment));
     }
@@ -16152,7 +16152,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:956</i>
      */
-    public static int pixWriteStreamJpeg(Pointer<LibLept.FILE> fp,
+    public static int pixWriteStreamJpeg(Pointer<FILE> fp,
             Pointer<Pix> pix, int quality, int progressive) {
         return pixWriteStreamJpeg(Pointer.getPeer(fp), Pointer.getPeer(pix),
                 quality, progressive);
@@ -16478,7 +16478,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:976</i>
      */
     public static Pointer<L_Kernel> kernelReadStream(
-            Pointer<LibLept.FILE> fp) {
+            Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 kernelReadStream(Pointer.getPeer(fp)), L_Kernel.class);
     }
@@ -16506,7 +16506,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:978</i>
      */
-    public static int kernelWriteStream(Pointer<LibLept.FILE> fp,
+    public static int kernelWriteStream(Pointer<FILE> fp,
             Pointer<L_Kernel> kel) {
         return kernelWriteStream(Pointer.getPeer(fp), Pointer.getPeer(kel));
     }
@@ -18408,7 +18408,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1093</i>
      */
-    public static Pointer<Numa> numaReadStream(Pointer<LibLept.FILE> fp) {
+    public static Pointer<Numa> numaReadStream(Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 numaReadStream(Pointer.getPeer(fp)), Numa.class);
     }
@@ -18434,7 +18434,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1095</i>
      */
-    public static int numaWriteStream(Pointer<LibLept.FILE> fp,
+    public static int numaWriteStream(Pointer<FILE> fp,
             Pointer<Numa> na) {
         return numaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(na));
     }
@@ -18660,7 +18660,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:1111</i>
      */
     public static Pointer<Numaa> numaaReadStream(
-            Pointer<LibLept.FILE> fp) {
+            Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 numaaReadStream(Pointer.getPeer(fp)), Numaa.class);
     }
@@ -18686,7 +18686,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1113</i>
      */
-    public static int numaaWriteStream(Pointer<LibLept.FILE> fp,
+    public static int numaaWriteStream(Pointer<FILE> fp,
             Pointer<Numaa> naa) {
         return numaaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(naa));
     }
@@ -21007,7 +21007,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1248</i>
      */
-    public static int pixWriteStreamPdf(Pointer<LibLept.FILE> fp,
+    public static int pixWriteStreamPdf(Pointer<FILE> fp,
             Pointer<Pix> pix, int res, Pointer<Byte> title) {
         return pixWriteStreamPdf(Pointer.getPeer(fp), Pointer.getPeer(pix),
                 res, Pointer.getPeer(title));
@@ -21953,7 +21953,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1316</i>
      */
-    public static int pixPrintStreamInfo(Pointer<LibLept.FILE> fp,
+    public static int pixPrintStreamInfo(Pointer<FILE> fp,
             Pointer<Pix> pix, Pointer<Byte> text) {
         return pixPrintStreamInfo(Pointer.getPeer(fp), Pointer.getPeer(pix),
                 Pointer.getPeer(text));
@@ -25414,7 +25414,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1530</i>
      */
-    public static Pointer<Pixa> pixaReadStream(Pointer<LibLept.FILE> fp) {
+    public static Pointer<Pixa> pixaReadStream(Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 pixaReadStream(Pointer.getPeer(fp)), Pixa.class);
     }
@@ -25440,7 +25440,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1532</i>
      */
-    public static int pixaWriteStream(Pointer<LibLept.FILE> fp,
+    public static int pixaWriteStream(Pointer<FILE> fp,
             Pointer<Pixa> pixa) {
         return pixaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(pixa));
     }
@@ -25487,7 +25487,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:1535</i>
      */
     public static Pointer<Pixaa> pixaaReadStream(
-            Pointer<LibLept.FILE> fp) {
+            Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 pixaaReadStream(Pointer.getPeer(fp)), Pixaa.class);
     }
@@ -25513,7 +25513,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1537</i>
      */
-    public static int pixaaWriteStream(Pointer<LibLept.FILE> fp,
+    public static int pixaaWriteStream(Pointer<FILE> fp,
             Pointer<Pixaa> paa) {
         return pixaaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(paa));
     }
@@ -27422,7 +27422,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:1653</i>
      */
     public static Pointer<PixaComp> pixacompReadStream(
-            Pointer<LibLept.FILE> fp) {
+            Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 pixacompReadStream(Pointer.getPeer(fp)), PixaComp.class);
     }
@@ -27452,7 +27452,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1655</i>
      */
-    public static int pixacompWriteStream(Pointer<LibLept.FILE> fp,
+    public static int pixacompWriteStream(Pointer<FILE> fp,
             Pointer<PixaComp> pixac) {
         return pixacompWriteStream(Pointer.getPeer(fp), Pointer.getPeer(pixac));
     }
@@ -27508,7 +27508,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:1658</i>
      */
     public static int pixacompWriteStreamInfo(
-            Pointer<LibLept.FILE> fp, Pointer<PixaComp> pixac,
+            Pointer<FILE> fp, Pointer<PixaComp> pixac,
             Pointer<Byte> text) {
         return pixacompWriteStreamInfo(Pointer.getPeer(fp),
                 Pointer.getPeer(pixac), Pointer.getPeer(text));
@@ -27524,7 +27524,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1659</i>
      */
-    public static int pixcompWriteStreamInfo(Pointer<LibLept.FILE> fp,
+    public static int pixcompWriteStreamInfo(Pointer<FILE> fp,
             Pointer<PixComp> pixc, Pointer<Byte> text) {
         return pixcompWriteStreamInfo(Pointer.getPeer(fp),
                 Pointer.getPeer(pixc), Pointer.getPeer(text));
@@ -28463,7 +28463,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:1717</i>
      */
     public static Pointer<Pix> pixReadStreamPng(
-            Pointer<LibLept.FILE> fp) {
+            Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 pixReadStreamPng(Pointer.getPeer(fp)), Pix.class);
     }
@@ -28498,7 +28498,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1719</i>
      */
-    public static int freadHeaderPng(Pointer<LibLept.FILE> fp,
+    public static int freadHeaderPng(Pointer<FILE> fp,
             Pointer<Integer> pw, Pointer<Integer> ph, Pointer<Integer> pbps,
             Pointer<Integer> pspp, Pointer<Integer> piscmap) {
         return freadHeaderPng(Pointer.getPeer(fp), Pointer.getPeer(pw),
@@ -28535,7 +28535,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1721</i>
      */
-    public static int fgetPngResolution(Pointer<LibLept.FILE> fp,
+    public static int fgetPngResolution(Pointer<FILE> fp,
             Pointer<Integer> pxres, Pointer<Integer> pyres) {
         return fgetPngResolution(Pointer.getPeer(fp), Pointer.getPeer(pxres),
                 Pointer.getPeer(pyres));
@@ -28567,7 +28567,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1723</i>
      */
-    public static int pixWriteStreamPng(Pointer<LibLept.FILE> fp,
+    public static int pixWriteStreamPng(Pointer<FILE> fp,
             Pointer<Pix> pix, float gamma) {
         return pixWriteStreamPng(Pointer.getPeer(fp), Pointer.getPeer(pix),
                 gamma);
@@ -28635,7 +28635,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:1728</i>
      */
     public static Pointer<Pix> pixReadStreamPnm(
-            Pointer<LibLept.FILE> fp) {
+            Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 pixReadStreamPnm(Pointer.getPeer(fp)), Pix.class);
     }
@@ -28672,7 +28672,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1730</i>
      */
-    public static int freadHeaderPnm(Pointer<LibLept.FILE> fp,
+    public static int freadHeaderPnm(Pointer<FILE> fp,
             Pointer<Integer> pw, Pointer<Integer> ph, Pointer<Integer> pd,
             Pointer<Integer> ptype, Pointer<Integer> pbps, Pointer<Integer> pspp) {
         return freadHeaderPnm(Pointer.getPeer(fp), Pointer.getPeer(pw),
@@ -28691,7 +28691,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1731</i>
      */
-    public static int pixWriteStreamPnm(Pointer<LibLept.FILE> fp,
+    public static int pixWriteStreamPnm(Pointer<FILE> fp,
             Pointer<Pix> pix) {
         return pixWriteStreamPnm(Pointer.getPeer(fp), Pointer.getPeer(pix));
     }
@@ -28705,7 +28705,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1732</i>
      */
-    public static int pixWriteStreamAsciiPnm(Pointer<LibLept.FILE> fp,
+    public static int pixWriteStreamAsciiPnm(Pointer<FILE> fp,
             Pointer<Pix> pix) {
         return pixWriteStreamAsciiPnm(Pointer.getPeer(fp), Pointer.getPeer(pix));
     }
@@ -29189,7 +29189,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1759</i>
      */
-    public static int pixWriteStreamPS(Pointer<LibLept.FILE> fp,
+    public static int pixWriteStreamPS(Pointer<FILE> fp,
             Pointer<Pix> pix, Pointer<Box> box, int res, float scale) {
         return pixWriteStreamPS(Pointer.getPeer(fp), Pointer.getPeer(pix),
                 Pointer.getPeer(box), res, scale);
@@ -30014,7 +30014,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1810</i>
      */
-    public static Pointer<Pta> ptaReadStream(Pointer<LibLept.FILE> fp) {
+    public static Pointer<Pta> ptaReadStream(Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 ptaReadStream(Pointer.getPeer(fp)), Pta.class);
     }
@@ -30044,7 +30044,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1812</i>
      */
-    public static int ptaWriteStream(Pointer<LibLept.FILE> fp,
+    public static int ptaWriteStream(Pointer<FILE> fp,
             Pointer<Pta> pta, int type) {
         return ptaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(pta), type);
     }
@@ -30213,7 +30213,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1824</i>
      */
-    public static Pointer<Ptaa> ptaaReadStream(Pointer<LibLept.FILE> fp) {
+    public static Pointer<Ptaa> ptaaReadStream(Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 ptaaReadStream(Pointer.getPeer(fp)), Ptaa.class);
     }
@@ -30243,7 +30243,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1826</i>
      */
-    public static int ptaaWriteStream(Pointer<LibLept.FILE> fp,
+    public static int ptaaWriteStream(Pointer<FILE> fp,
             Pointer<Ptaa> ptaa, int type) {
         return ptaaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(ptaa), type);
     }
@@ -31428,7 +31428,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1901</i>
      */
-    public static int lqueuePrint(Pointer<LibLept.FILE> fp,
+    public static int lqueuePrint(Pointer<FILE> fp,
             Pointer<L_Queue> lq) {
         return lqueuePrint(Pointer.getPeer(fp), Pointer.getPeer(lq));
     }
@@ -31823,8 +31823,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1923</i>
      */
-    public static Pointer<Pix> pixReadStream(Pointer<LibLept.FILE> fp,
-            int hint) {
+    public static Pointer<Pix> pixReadStream(Pointer<FILE> fp, int hint) {
         return (Pointer) Pointer.pointerToAddress(
                 pixReadStream(Pointer.getPeer(fp), hint), Pix.class);
     }
@@ -31877,7 +31876,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1926</i>
      */
-    public static int findFileFormatStream(Pointer<LibLept.FILE> fp,
+    public static int findFileFormatStream(Pointer<FILE> fp,
             Pointer<Integer> pformat) {
         return findFileFormatStream(Pointer.getPeer(fp),
                 Pointer.getPeer(pformat));
@@ -31908,7 +31907,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1928</i>
      */
-    public static int fileFormatIsTiff(Pointer<LibLept.FILE> fp) {
+    public static int fileFormatIsTiff(Pointer<FILE> fp) {
         return fileFormatIsTiff(Pointer.getPeer(fp));
     }
 
@@ -32310,7 +32309,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:1954</i>
      */
     public static Pointer<L_Recoga> recogaReadStream(
-            Pointer<LibLept.FILE> fp) {
+            Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 recogaReadStream(Pointer.getPeer(fp)), L_Recoga.class);
     }
@@ -32339,7 +32338,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1956</i>
      */
-    public static int recogaWriteStream(Pointer<LibLept.FILE> fp,
+    public static int recogaWriteStream(Pointer<FILE> fp,
             Pointer<L_Recoga> recoga, Pointer<Byte> filename) {
         return recogaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(recoga),
                 Pointer.getPeer(filename));
@@ -32385,7 +32384,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:1959</i>
      */
     public static Pointer<L_Recog> recogReadStream(
-            Pointer<LibLept.FILE> fp) {
+            Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 recogReadStream(Pointer.getPeer(fp)), L_Recog.class);
     }
@@ -32413,7 +32412,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1961</i>
      */
-    public static int recogWriteStream(Pointer<LibLept.FILE> fp,
+    public static int recogWriteStream(Pointer<FILE> fp,
             Pointer<L_Recog> recog, Pointer<Byte> filename) {
         return recogWriteStream(Pointer.getPeer(fp), Pointer.getPeer(recog),
                 Pointer.getPeer(filename));
@@ -33164,7 +33163,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2005</i>
      */
-    public static int recogaShowContent(Pointer<LibLept.FILE> fp,
+    public static int recogaShowContent(Pointer<FILE> fp,
             Pointer<L_Recoga> recoga, int display) {
         return recogaShowContent(Pointer.getPeer(fp), Pointer.getPeer(recoga),
                 display);
@@ -33180,7 +33179,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2006</i>
      */
-    public static int recogShowContent(Pointer<LibLept.FILE> fp,
+    public static int recogShowContent(Pointer<FILE> fp,
             Pointer<L_Recog> recog, int display) {
         return recogShowContent(Pointer.getPeer(fp), Pointer.getPeer(recog),
                 display);
@@ -34779,7 +34778,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:2102</i>
      */
     public static Pointer<Sarray> sarrayReadStream(
-            Pointer<LibLept.FILE> fp) {
+            Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 sarrayReadStream(Pointer.getPeer(fp)), Sarray.class);
     }
@@ -34807,7 +34806,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2104</i>
      */
-    public static int sarrayWriteStream(Pointer<LibLept.FILE> fp,
+    public static int sarrayWriteStream(Pointer<FILE> fp,
             Pointer<Sarray> sa) {
         return sarrayWriteStream(Pointer.getPeer(fp), Pointer.getPeer(sa));
     }
@@ -36989,7 +36988,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2235</i>
      */
-    public static Pointer<Sela> selaReadStream(Pointer<LibLept.FILE> fp) {
+    public static Pointer<Sela> selaReadStream(Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 selaReadStream(Pointer.getPeer(fp)), Sela.class);
     }
@@ -37018,7 +37017,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:2237</i>
      */
     public static Pointer<LibLept.SEL> selReadStream(
-            Pointer<LibLept.FILE> fp) {
+            Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 selReadStream(Pointer.getPeer(fp)), LibLept.SEL.class);
     }
@@ -37044,7 +37043,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2239</i>
      */
-    public static int selaWriteStream(Pointer<LibLept.FILE> fp,
+    public static int selaWriteStream(Pointer<FILE> fp,
             Pointer<Sela> sela) {
         return selaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(sela));
     }
@@ -37070,7 +37069,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2241</i>
      */
-    public static int selWriteStream(Pointer<LibLept.FILE> fp,
+    public static int selWriteStream(Pointer<FILE> fp,
             Pointer<LibLept.SEL> sel) {
         return selWriteStream(Pointer.getPeer(fp), Pointer.getPeer(sel));
     }
@@ -37885,7 +37884,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:2286</i>
      */
     public static Pointer<Pix> pixReadStreamSpix(
-            Pointer<LibLept.FILE> fp) {
+            Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 pixReadStreamSpix(Pointer.getPeer(fp)), Pix.class);
     }
@@ -37923,7 +37922,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2288</i>
      */
-    public static int freadHeaderSpix(Pointer<LibLept.FILE> fp,
+    public static int freadHeaderSpix(Pointer<FILE> fp,
             Pointer<Integer> pwidth, Pointer<Integer> pheight,
             Pointer<Integer> pbps, Pointer<Integer> pspp,
             Pointer<Integer> piscmap) {
@@ -37962,7 +37961,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2290</i>
      */
-    public static int pixWriteStreamSpix(Pointer<LibLept.FILE> fp,
+    public static int pixWriteStreamSpix(Pointer<FILE> fp,
             Pointer<Pix> pix) {
         return pixWriteStreamSpix(Pointer.getPeer(fp), Pointer.getPeer(pix));
     }
@@ -38105,7 +38104,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2300</i>
      */
-    public static int lstackPrint(Pointer<LibLept.FILE> fp,
+    public static int lstackPrint(Pointer<FILE> fp,
             Pointer<L_Stack> lstack) {
         return lstackPrint(Pointer.getPeer(fp), Pointer.getPeer(lstack));
     }
@@ -38441,7 +38440,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:2320</i>
      */
     public static Pointer<Pix> pixReadStreamTiff(
-            Pointer<LibLept.FILE> fp, int n) {
+            Pointer<FILE> fp, int n) {
         return (Pointer) Pointer.pointerToAddress(
                 pixReadStreamTiff(Pointer.getPeer(fp), n), Pix.class);
     }
@@ -38496,7 +38495,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2323</i>
      */
-    public static int pixWriteStreamTiff(Pointer<LibLept.FILE> fp,
+    public static int pixWriteStreamTiff(Pointer<FILE> fp,
             Pointer<Pix> pix, int comptype) {
         return pixWriteStreamTiff(Pointer.getPeer(fp), Pointer.getPeer(pix),
                 comptype);
@@ -38560,7 +38559,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2327</i>
      */
-    public static int fprintTiffInfo(Pointer<LibLept.FILE> fpout,
+    public static int fprintTiffInfo(Pointer<FILE> fpout,
             Pointer<Byte> tiffile) {
         return fprintTiffInfo(Pointer.getPeer(fpout), Pointer.getPeer(tiffile));
     }
@@ -38574,7 +38573,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2328</i>
      */
-    public static int tiffGetCount(Pointer<LibLept.FILE> fp,
+    public static int tiffGetCount(Pointer<FILE> fp,
             Pointer<Integer> pn) {
         return tiffGetCount(Pointer.getPeer(fp), Pointer.getPeer(pn));
     }
@@ -38588,7 +38587,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2329</i>
      */
-    public static int getTiffResolution(Pointer<LibLept.FILE> fp,
+    public static int getTiffResolution(Pointer<FILE> fp,
             Pointer<Integer> pxres, Pointer<Integer> pyres) {
         return getTiffResolution(Pointer.getPeer(fp), Pointer.getPeer(pxres),
                 Pointer.getPeer(pyres));
@@ -38629,7 +38628,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2331</i>
      */
-    public static int freadHeaderTiff(Pointer<LibLept.FILE> fp, int n,
+    public static int freadHeaderTiff(Pointer<FILE> fp, int n,
             Pointer<Integer> pwidth, Pointer<Integer> pheight,
             Pointer<Integer> pbps, Pointer<Integer> pspp,
             Pointer<Integer> pres, Pointer<Integer> pcmap,
@@ -38676,7 +38675,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2333</i>
      */
-    public static int findTiffCompression(Pointer<LibLept.FILE> fp,
+    public static int findTiffCompression(Pointer<FILE> fp,
             Pointer<Integer> pcomptype) {
         return findTiffCompression(Pointer.getPeer(fp),
                 Pointer.getPeer(pcomptype));
@@ -39113,7 +39112,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:2359</i>
      */
     public static Pointer<Byte> l_binaryReadStream(
-            Pointer<LibLept.FILE> fp, Pointer<SizeT> pnbytes) {
+            Pointer<FILE> fp, Pointer<SizeT> pnbytes) {
         return (Pointer) Pointer.pointerToAddress(
                 l_binaryReadStream(Pointer.getPeer(fp),
                         Pointer.getPeer(pnbytes)), Byte.class);
@@ -39161,7 +39160,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:2362</i>
      */
     @Ptr
-    public static long fnbytesInFile(Pointer<LibLept.FILE> fp) {
+    public static long fnbytesInFile(Pointer<FILE> fp) {
         return fnbytesInFile(Pointer.getPeer(fp));
     }
 
@@ -39280,11 +39279,11 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2372</i>
      */
-    public static Pointer<LibLept.FILE> fopenReadStream(
+    public static Pointer<FILE> fopenReadStream(
             Pointer<Byte> filename) {
         return (Pointer) Pointer.pointerToAddress(
                 fopenReadStream(Pointer.getPeer(filename)),
-                LibLept.FILE.class);
+                FILE.class);
     }
 
     @Ptr
@@ -39297,12 +39296,12 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2373</i>
      */
-    public static Pointer<LibLept.FILE> fopenWriteStream(
+    public static Pointer<FILE> fopenWriteStream(
             Pointer<Byte> filename, Pointer<Byte> modestring) {
         return (Pointer) Pointer.pointerToAddress(
                 fopenWriteStream(Pointer.getPeer(filename),
                         Pointer.getPeer(modestring)),
-                LibLept.FILE.class);
+                FILE.class);
     }
 
     @Ptr
@@ -39316,11 +39315,11 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2374</i>
      */
-    public static Pointer<LibLept.FILE> lept_fopen(
+    public static Pointer<FILE> lept_fopen(
             Pointer<Byte> filename, Pointer<Byte> mode) {
         return (Pointer) Pointer.pointerToAddress(
                 lept_fopen(Pointer.getPeer(filename), Pointer.getPeer(mode)),
-                LibLept.FILE.class);
+                FILE.class);
     }
 
     @Ptr
@@ -39332,7 +39331,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2375</i>
      */
-    public static int lept_fclose(Pointer<LibLept.FILE> fp) {
+    public static int lept_fclose(Pointer<FILE> fp) {
         return lept_fclose(Pointer.getPeer(fp));
     }
 
@@ -39991,7 +39990,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:2419</i>
      */
     public static Pointer<Pix> pixReadStreamWebP(
-            Pointer<LibLept.FILE> fp) {
+            Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
                 pixReadStreamWebP(Pointer.getPeer(fp)), Pix.class);
     }
@@ -40056,7 +40055,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2423</i>
      */
-    public static int pixWriteStreamWebP(Pointer<LibLept.FILE> fp,
+    public static int pixWriteStreamWebP(Pointer<FILE> fp,
             Pointer<Pix> pixs, int quality, int lossless) {
         return pixWriteStreamWebP(Pointer.getPeer(fp), Pointer.getPeer(pixs),
                 quality, lossless);
@@ -40122,7 +40121,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2427</i>
      */
-    public static int pixWriteStream(Pointer<LibLept.FILE> fp,
+    public static int pixWriteStream(Pointer<FILE> fp,
             Pointer<Pix> pix, int format) {
         return pixWriteStream(Pointer.getPeer(fp), Pointer.getPeer(pix), format);
     }
