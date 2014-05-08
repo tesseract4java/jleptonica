@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-  compile 'net.java.dev.jna:jna:4.1.0'
+  compile 'com.nativelibs4java:bridj:0.6.2'
 }
 
 task javadocJar(type: Jar, dependsOn: javadoc) {
