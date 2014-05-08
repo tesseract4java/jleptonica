@@ -16966,7 +16966,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:1006</i>
      */
     public static Pointer<Pix> pixDilate(Pointer<Pix> pixd, Pointer<Pix> pixs,
-            Pointer<LibLept.SEL> sel) {
+            Pointer<SEL> sel) {
         return (Pointer) Pointer.pointerToAddress(
                 pixDilate(Pointer.getPeer(pixd), Pointer.getPeer(pixs),
                         Pointer.getPeer(sel)), Pix.class);
@@ -16983,7 +16983,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:1007</i>
      */
     public static Pointer<Pix> pixErode(Pointer<Pix> pixd, Pointer<Pix> pixs,
-            Pointer<LibLept.SEL> sel) {
+            Pointer<SEL> sel) {
         return (Pointer) Pointer.pointerToAddress(
                 pixErode(Pointer.getPeer(pixd), Pointer.getPeer(pixs),
                         Pointer.getPeer(sel)), Pix.class);
@@ -17000,7 +17000,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:1008</i>
      */
     public static Pointer<Pix> pixHMT(Pointer<Pix> pixd, Pointer<Pix> pixs,
-            Pointer<LibLept.SEL> sel) {
+            Pointer<SEL> sel) {
         return (Pointer) Pointer.pointerToAddress(
                 pixHMT(Pointer.getPeer(pixd), Pointer.getPeer(pixs),
                         Pointer.getPeer(sel)), Pix.class);
@@ -17017,7 +17017,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:1009</i>
      */
     public static Pointer<Pix> pixOpen(Pointer<Pix> pixd, Pointer<Pix> pixs,
-            Pointer<LibLept.SEL> sel) {
+            Pointer<SEL> sel) {
         return (Pointer) Pointer.pointerToAddress(
                 pixOpen(Pointer.getPeer(pixd), Pointer.getPeer(pixs),
                         Pointer.getPeer(sel)), Pix.class);
@@ -17034,7 +17034,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:1010</i>
      */
     public static Pointer<Pix> pixClose(Pointer<Pix> pixd, Pointer<Pix> pixs,
-            Pointer<LibLept.SEL> sel) {
+            Pointer<SEL> sel) {
         return (Pointer) Pointer.pointerToAddress(
                 pixClose(Pointer.getPeer(pixd), Pointer.getPeer(pixs),
                         Pointer.getPeer(sel)), Pix.class);
@@ -17051,7 +17051,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:1011</i>
      */
     public static Pointer<Pix> pixCloseSafe(Pointer<Pix> pixd,
-            Pointer<Pix> pixs, Pointer<LibLept.SEL> sel) {
+            Pointer<Pix> pixs, Pointer<SEL> sel) {
         return (Pointer) Pointer.pointerToAddress(
                 pixCloseSafe(Pointer.getPeer(pixd), Pointer.getPeer(pixs),
                         Pointer.getPeer(sel)), Pix.class);
@@ -17069,7 +17069,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:1012</i>
      */
     public static Pointer<Pix> pixOpenGeneralized(Pointer<Pix> pixd,
-            Pointer<Pix> pixs, Pointer<LibLept.SEL> sel) {
+            Pointer<Pix> pixs, Pointer<SEL> sel) {
         return (Pointer) Pointer.pointerToAddress(
                 pixOpenGeneralized(Pointer.getPeer(pixd),
                         Pointer.getPeer(pixs), Pointer.getPeer(sel)), Pix.class);
@@ -17087,7 +17087,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:1013</i>
      */
     public static Pointer<Pix> pixCloseGeneralized(Pointer<Pix> pixd,
-            Pointer<Pix> pixs, Pointer<LibLept.SEL> sel) {
+            Pointer<Pix> pixs, Pointer<SEL> sel) {
         return (Pointer) Pointer.pointerToAddress(
                 pixCloseGeneralized(Pointer.getPeer(pixd),
                         Pointer.getPeer(pixs), Pointer.getPeer(sel)), Pix.class);
@@ -17195,8 +17195,8 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:1019</i>
      */
     public static int selectComposableSels(int size, int direction,
-            Pointer<Pointer<LibLept.SEL>> psel1,
-            Pointer<Pointer<LibLept.SEL>> psel2) {
+            Pointer<Pointer<SEL>> psel1,
+            Pointer<Pointer<SEL>> psel2) {
         return selectComposableSels(size, direction, Pointer.getPeer(psel1),
                 Pointer.getPeer(psel2));
     }
@@ -36600,11 +36600,11 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2211</i>
      */
-    public static Pointer<LibLept.SEL> selCreate(int height,
+    public static Pointer<SEL> selCreate(int height,
             int width, Pointer<Byte> name) {
         return (Pointer) Pointer.pointerToAddress(
                 selCreate(height, width, Pointer.getPeer(name)),
-                LibLept.SEL.class);
+                SEL.class);
     }
 
     @Ptr
@@ -36616,7 +36616,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2212</i>
      */
-    public static void selDestroy(Pointer<Pointer<LibLept.SEL>> psel) {
+    public static void selDestroy(Pointer<Pointer<SEL>> psel) {
         selDestroy(Pointer.getPeer(psel));
     }
 
@@ -36628,10 +36628,10 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2213</i>
      */
-    public static Pointer<LibLept.SEL> selCopy(
-            Pointer<LibLept.SEL> sel) {
+    public static Pointer<SEL> selCopy(
+            Pointer<SEL> sel) {
         return (Pointer) Pointer.pointerToAddress(
-                selCopy(Pointer.getPeer(sel)), LibLept.SEL.class);
+                selCopy(Pointer.getPeer(sel)), SEL.class);
     }
 
     @Ptr
@@ -36645,11 +36645,11 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2214</i>
      */
-    public static Pointer<LibLept.SEL> selCreateBrick(int h, int w,
+    public static Pointer<SEL> selCreateBrick(int h, int w,
             int cy, int cx, int type) {
         return (Pointer) Pointer.pointerToAddress(
                 selCreateBrick$2(h, w, cy, cx, type),
-                LibLept.SEL.class);
+                SEL.class);
     }
 
     @Ptr
@@ -36664,11 +36664,11 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2215</i>
      */
-    public static Pointer<LibLept.SEL> selCreateComb(int factor1,
+    public static Pointer<SEL> selCreateComb(int factor1,
             int factor2, int direction) {
         return (Pointer) Pointer.pointerToAddress(
                 selCreateComb$2(factor1, factor2, direction),
-                LibLept.SEL.class);
+                SEL.class);
     }
 
     @Ptr
@@ -36701,7 +36701,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:2217</i>
      */
     public static int selaAddSel(Pointer<Sela> sela,
-            Pointer<LibLept.SEL> sel, Pointer<Byte> selname,
+            Pointer<SEL> sel, Pointer<Byte> selname,
             int copyflag) {
         return selaAddSel(Pointer.getPeer(sela), Pointer.getPeer(sel),
                 Pointer.getPeer(selname), copyflag);
@@ -36728,11 +36728,11 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2219</i>
      */
-    public static Pointer<LibLept.SEL> selaGetSel(Pointer<Sela> sela,
+    public static Pointer<SEL> selaGetSel(Pointer<Sela> sela,
             int i) {
         return (Pointer) Pointer.pointerToAddress(
                 selaGetSel(Pointer.getPeer(sela), i),
-                LibLept.SEL.class);
+                SEL.class);
     }
 
     @Ptr
@@ -36744,7 +36744,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2220</i>
      */
-    public static Pointer<Byte> selGetName(Pointer<LibLept.SEL> sel) {
+    public static Pointer<Byte> selGetName(Pointer<SEL> sel) {
         return (Pointer) Pointer.pointerToAddress(
                 selGetName(Pointer.getPeer(sel)), Byte.class);
     }
@@ -36758,7 +36758,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2221</i>
      */
-    public static int selSetName(Pointer<LibLept.SEL> sel,
+    public static int selSetName(Pointer<SEL> sel,
             Pointer<Byte> name) {
         return selSetName(Pointer.getPeer(sel), Pointer.getPeer(name));
     }
@@ -36774,7 +36774,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:2222</i>
      */
     public static int selaFindSelByName(Pointer<Sela> sela, Pointer<Byte> name,
-            Pointer<Integer> pindex, Pointer<Pointer<LibLept.SEL>> psel) {
+            Pointer<Integer> pindex, Pointer<Pointer<SEL>> psel) {
         return selaFindSelByName(Pointer.getPeer(sela), Pointer.getPeer(name),
                 Pointer.getPeer(pindex), Pointer.getPeer(psel));
     }
@@ -36789,7 +36789,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2223</i>
      */
-    public static int selGetElement(Pointer<LibLept.SEL> sel, int row,
+    public static int selGetElement(Pointer<SEL> sel, int row,
             int col, Pointer<Integer> ptype) {
         return selGetElement(Pointer.getPeer(sel), row, col,
                 Pointer.getPeer(ptype));
@@ -36805,7 +36805,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2224</i>
      */
-    public static int selSetElement(Pointer<LibLept.SEL> sel, int row,
+    public static int selSetElement(Pointer<SEL> sel, int row,
             int col, int type) {
         return selSetElement(Pointer.getPeer(sel), row, col, type);
     }
@@ -36821,7 +36821,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2225</i>
      */
-    public static int selGetParameters(Pointer<LibLept.SEL> sel,
+    public static int selGetParameters(Pointer<SEL> sel,
             Pointer<Integer> psy, Pointer<Integer> psx, Pointer<Integer> pcy,
             Pointer<Integer> pcx) {
         return selGetParameters(Pointer.getPeer(sel), Pointer.getPeer(psy),
@@ -36839,7 +36839,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2226</i>
      */
-    public static int selSetOrigin(Pointer<LibLept.SEL> sel, int cy,
+    public static int selSetOrigin(Pointer<SEL> sel, int cy,
             int cx) {
         return selSetOrigin(Pointer.getPeer(sel), cy, cx);
     }
@@ -36853,7 +36853,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2227</i>
      */
-    public static int selGetTypeAtOrigin(Pointer<LibLept.SEL> sel,
+    public static int selGetTypeAtOrigin(Pointer<SEL> sel,
             Pointer<Integer> ptype) {
         return selGetTypeAtOrigin(Pointer.getPeer(sel), Pointer.getPeer(ptype));
     }
@@ -36941,7 +36941,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2232</i>
      */
-    public static int selFindMaxTranslations(Pointer<LibLept.SEL> sel,
+    public static int selFindMaxTranslations(Pointer<SEL> sel,
             Pointer<Integer> pxp, Pointer<Integer> pyp, Pointer<Integer> pxn,
             Pointer<Integer> pyn) {
         return selFindMaxTranslations(Pointer.getPeer(sel),
@@ -36958,11 +36958,11 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2233</i>
      */
-    public static Pointer<LibLept.SEL> selRotateOrth(
-            Pointer<LibLept.SEL> sel, int quads) {
+    public static Pointer<SEL> selRotateOrth(
+            Pointer<SEL> sel, int quads) {
         return (Pointer) Pointer.pointerToAddress(
                 selRotateOrth(Pointer.getPeer(sel), quads),
-                LibLept.SEL.class);
+                SEL.class);
     }
 
     @Ptr
@@ -37002,9 +37002,9 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2236</i>
      */
-    public static Pointer<LibLept.SEL> selRead(Pointer<Byte> fname) {
+    public static Pointer<SEL> selRead(Pointer<Byte> fname) {
         return (Pointer) Pointer.pointerToAddress(
-                selRead(Pointer.getPeer(fname)), LibLept.SEL.class);
+                selRead(Pointer.getPeer(fname)), SEL.class);
     }
 
     @Ptr
@@ -37016,10 +37016,10 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2237</i>
      */
-    public static Pointer<LibLept.SEL> selReadStream(
+    public static Pointer<SEL> selReadStream(
             Pointer<FILE> fp) {
         return (Pointer) Pointer.pointerToAddress(
-                selReadStream(Pointer.getPeer(fp)), LibLept.SEL.class);
+                selReadStream(Pointer.getPeer(fp)), SEL.class);
     }
 
     @Ptr
@@ -37057,7 +37057,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:2240</i>
      */
     public static int selWrite(Pointer<Byte> fname,
-            Pointer<LibLept.SEL> sel) {
+            Pointer<SEL> sel) {
         return selWrite(Pointer.getPeer(fname), Pointer.getPeer(sel));
     }
 
@@ -37070,7 +37070,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:2241</i>
      */
     public static int selWriteStream(Pointer<FILE> fp,
-            Pointer<LibLept.SEL> sel) {
+            Pointer<SEL> sel) {
         return selWriteStream(Pointer.getPeer(fp), Pointer.getPeer(sel));
     }
 
@@ -37084,11 +37084,11 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2242</i>
      */
-    public static Pointer<LibLept.SEL> selCreateFromString(
+    public static Pointer<SEL> selCreateFromString(
             Pointer<Byte> text, int h, int w, Pointer<Byte> name) {
         return (Pointer) Pointer.pointerToAddress(
                 selCreateFromString(Pointer.getPeer(text), h, w,
-                        Pointer.getPeer(name)), LibLept.SEL.class);
+                        Pointer.getPeer(name)), SEL.class);
     }
 
     @Ptr
@@ -37102,7 +37102,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:2243</i>
      */
     public static Pointer<Byte> selPrintToString(
-            Pointer<LibLept.SEL> sel) {
+            Pointer<SEL> sel) {
         return (Pointer) Pointer.pointerToAddress(
                 selPrintToString(Pointer.getPeer(sel)), Byte.class);
     }
@@ -37131,11 +37131,11 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2245</i>
      */
-    public static Pointer<LibLept.SEL> selCreateFromPta(
+    public static Pointer<SEL> selCreateFromPta(
             Pointer<Pta> pta, int cy, int cx, Pointer<Byte> name) {
         return (Pointer) Pointer.pointerToAddress(
                 selCreateFromPta(Pointer.getPeer(pta), cy, cx,
-                        Pointer.getPeer(name)), LibLept.SEL.class);
+                        Pointer.getPeer(name)), SEL.class);
     }
 
     @Ptr
@@ -37149,11 +37149,11 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2246</i>
      */
-    public static Pointer<LibLept.SEL> selCreateFromPix(
+    public static Pointer<SEL> selCreateFromPix(
             Pointer<Pix> pix, int cy, int cx, Pointer<Byte> name) {
         return (Pointer) Pointer.pointerToAddress(
                 selCreateFromPix(Pointer.getPeer(pix), cy, cx,
-                        Pointer.getPeer(name)), LibLept.SEL.class);
+                        Pointer.getPeer(name)), SEL.class);
     }
 
     @Ptr
@@ -37166,11 +37166,11 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2247</i>
      */
-    public static Pointer<LibLept.SEL> selReadFromColorImage(
+    public static Pointer<SEL> selReadFromColorImage(
             Pointer<Byte> pathname) {
         return (Pointer) Pointer.pointerToAddress(
                 selReadFromColorImage(Pointer.getPeer(pathname)),
-                LibLept.SEL.class);
+                SEL.class);
     }
 
     @Ptr
@@ -37182,11 +37182,11 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2248</i>
      */
-    public static Pointer<LibLept.SEL> selCreateFromColorPix(
+    public static Pointer<SEL> selCreateFromColorPix(
             Pointer<Pix> pixs, Pointer<Byte> selname) {
         return (Pointer) Pointer.pointerToAddress(
                 selCreateFromColorPix(Pointer.getPeer(pixs),
-                        Pointer.getPeer(selname)), LibLept.SEL.class);
+                        Pointer.getPeer(selname)), SEL.class);
     }
 
     @Ptr
@@ -37201,7 +37201,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:2249</i>
      */
     public static Pointer<Pix> selDisplayInPix(
-            Pointer<LibLept.SEL> sel, int size, int gthick) {
+            Pointer<SEL> sel, int size, int gthick) {
         return (Pointer) Pointer.pointerToAddress(
                 selDisplayInPix(Pointer.getPeer(sel), size, gthick), Pix.class);
     }
@@ -37331,14 +37331,14 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2257</i>
      */
-    public static Pointer<LibLept.SEL> pixGenerateSelWithRuns(
+    public static Pointer<SEL> pixGenerateSelWithRuns(
             Pointer<Pix> pixs, int nhlines, int nvlines, int distance,
             int minlength, int toppix, int botpix, int leftpix, int rightpix,
             Pointer<Pointer<Pix>> ppixe) {
         return (Pointer) Pointer.pointerToAddress(
                 pixGenerateSelWithRuns(Pointer.getPeer(pixs), nhlines, nvlines,
                         distance, minlength, toppix, botpix, leftpix, rightpix,
-                        Pointer.getPeer(ppixe)), LibLept.SEL.class);
+                        Pointer.getPeer(ppixe)), SEL.class);
     }
 
     @Ptr
@@ -37354,14 +37354,14 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2258</i>
      */
-    public static Pointer<LibLept.SEL> pixGenerateSelRandom(
+    public static Pointer<SEL> pixGenerateSelRandom(
             Pointer<Pix> pixs, float hitfract, float missfract, int distance,
             int toppix, int botpix, int leftpix, int rightpix,
             Pointer<Pointer<Pix>> ppixe) {
         return (Pointer) Pointer.pointerToAddress(
                 pixGenerateSelRandom(Pointer.getPeer(pixs), hitfract,
                         missfract, distance, toppix, botpix, leftpix, rightpix,
-                        Pointer.getPeer(ppixe)), LibLept.SEL.class);
+                        Pointer.getPeer(ppixe)), SEL.class);
     }
 
     @Ptr
@@ -37377,7 +37377,7 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2259</i>
      */
-    public static Pointer<LibLept.SEL> pixGenerateSelBoundary(
+    public static Pointer<SEL> pixGenerateSelBoundary(
             Pointer<Pix> pixs, int hitdist, int missdist, int hitskip,
             int missskip, int topflag, int botflag, int leftflag,
             int rightflag, Pointer<Pointer<Pix>> ppixe) {
@@ -37385,7 +37385,7 @@ public class LibLept {
                 pixGenerateSelBoundary(Pointer.getPeer(pixs), hitdist,
                         missdist, hitskip, missskip, topflag, botflag,
                         leftflag, rightflag, Pointer.getPeer(ppixe)),
-                LibLept.SEL.class);
+                SEL.class);
     }
 
     @Ptr
@@ -37475,7 +37475,7 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:2264</i>
      */
     public static Pointer<Pix> pixDisplayHitMissSel(Pointer<Pix> pixs,
-            Pointer<LibLept.SEL> sel, int scalefactor, int hitcolor,
+            Pointer<SEL> sel, int scalefactor, int hitcolor,
             int misscolor) {
         return (Pointer) Pointer.pointerToAddress(
                 pixDisplayHitMissSel(Pointer.getPeer(pixs),
