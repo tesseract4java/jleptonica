@@ -33,6 +33,8 @@ You can convert a `BufferedImage` to a instance of `Pix` and vice versa:
 BufferedImage img = ImageIO.read(Paths.get("input.png").toFile());
 Pointer<Pix> ppix = PixConversions.img2pix(img);
 BufferedImage img2 = PixConversions.pix2img(ppix);
+
+LibLept.pixDestroy(Pointer.pointerToPointer(ppix));
 ~~~
 
 
