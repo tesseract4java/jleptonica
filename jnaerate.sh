@@ -1,7 +1,5 @@
 #!/bin/sh
 
-rm -rf src/main/java/de
-
 # call jnaerator
 java -jar jnaerator-0.12-SNAPSHOT.jar \
     -library leptonica \
