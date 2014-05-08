@@ -1,0 +1,6 @@
+# Use LF line endings by default
+* text eol=lf
+
+# JARs and DLLs are binary and shall not be modified
+*.jar binary
+*.dll binary
