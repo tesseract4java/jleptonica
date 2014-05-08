@@ -949,39 +949,6 @@ public class LibLept {
     public static final int FPIX_VERSION_NUMBER = (int) 2;
 
     /**
-     * <i>native declaration :
-     * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
-     * \tesseract-vs2013\liblept\include\allheaders.h</i>
-     */
-    public static abstract class setPixMemoryManager_allocator_callback extends
-            Callback<setPixMemoryManager_allocator_callback> {
-        public Pointer<?> apply(@Ptr long size_t1) {
-            return Pointer.pointerToAddress(apply$2(size_t1));
-        }
-
-        @Ptr
-        public long apply$2(@Ptr long size_t1) {
-            return Pointer.getPeer(apply(size_t1));
-        }
-    };
-
-    /**
-     * <i>native declaration :
-     * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
-     * \tesseract-vs2013\liblept\include\allheaders.h</i>
-     */
-    public static abstract class setPixMemoryManager_deallocator_callback
-            extends Callback<setPixMemoryManager_deallocator_callback> {
-        public void apply(Pointer<?> voidPtr1) {
-            apply(Pointer.getPeer(voidPtr1));
-        }
-
-        public void apply(@Ptr long voidPtr1) {
-            apply(Pointer.pointerToAddress(voidPtr1));
-        }
-    };
-
-    /**
      * Original signature :
      * <code>PIX* pixBackgroundNormSimple(PIX*, PIX*, PIX*)</code><br>
      * <i>native declaration :
@@ -21290,21 +21257,6 @@ public class LibLept {
      * \tesseract-vs2013\liblept\include\allheaders.h:1262</i>
      */
     public static native void l_pdfSetDateAndVersion(int flag);
-
-    /**
-     * Original signature :
-     * <code>void setPixMemoryManager(setPixMemoryManager_allocator_callback*, setPixMemoryManager_deallocator_callback*)</code>
-     * <br>
-     * <i>native declaration :
-     * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
-     * \tesseract-vs2013\liblept\include\allheaders.h:1263</i>
-     */
-    public static void setPixMemoryManager(
-            Pointer<LibLept.setPixMemoryManager_allocator_callback> allocator,
-            Pointer<LibLept.setPixMemoryManager_deallocator_callback> deallocator) {
-        setPixMemoryManager(Pointer.getPeer(allocator),
-                Pointer.getPeer(deallocator));
-    }
 
     protected native static void setPixMemoryManager(@Ptr long allocator,
             @Ptr long deallocator);
