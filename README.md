@@ -3,6 +3,39 @@
 This library is a wrapper arround Leptonica.
 
 
+## Usage
+
+Before you can use this library, it has do be registered with BridJ:
+
+~~~ java
+BridJ.setNativeLibraryFile("leptonica",
+    Paths.get("path/to/liblept.so").toFile()); // alternatively "liblept.dll"
+~~~
+
+**Note:** This is platform specific. Ensure you set the right path for the right
+platform or let your users do it for you.
+
+When the library has been set up, you can use it:
+
+~~~ java
+// create a 640x480 with 8 bits per pixel (grayscale)
+Pointer<Pix> ppix = LibLept.pixCreate(640, 480, 8);
+
+// do something with it
+
+// destroy the pix when you don't need it any more
+LibLept.pixDestroy(Pointer.pointerToPointer(ppix));
+~~~
+
+You can convert a `BufferedImage` to a instance of `Pix` and vice versa:
+
+~~~ java
+BufferedImage img = ImageIO.read(Paths.get("input.png").toFile());
+Pointer<Pix> ppix = PixConversions.img2pix(img);
+BufferedImage img2 = PixConversions.pix2img(ppix);
+~~~
+
+
 ## License
 
 It is released under the same license as Leptonica, the 2-clause BSD license:
