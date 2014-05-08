@@ -68,39 +68,29 @@ public class PixConversions {
 
         final Pointer<Pix> ppix = LibLept.pixCreate(width, height,
                 depth);
-        final Pix pix = ppix.get();
 
         // set samples per pixel
-        pix.spp(spp);
+        LibLept.pixSetSpp(ppix, spp);
 
         // calculate words (ints) per line
         final int wpl = (width * depth + 31) / 32; // words (ints) per line
-        pix.wpl(wpl);
+        LibLept.pixSetWpl(ppix, wpl);
 
         // get the raw bytes of the image
         final DataBufferByte dataBuf =
                 (DataBufferByte) img.getData().getDataBuffer();
         final ByteBuffer bytes = ByteBuffer.wrap(dataBuf.getData());
 
+        final Pointer<Integer> pixData = LibLept.pixGetData(ppix);
         // convert the raw bytes to pix data
-        final Pointer<Integer> data = convertBytesToPix(bytes, width, height,
-                depth, wpl);
-
-        ppix.get().data(data);
+        setBytesToPix(pixData, bytes, width, height, depth, wpl);
 
         return ppix;
     }
 
-    private static Pointer<Integer> convertBytesToPix(final ByteBuffer bytes,
-            final int width, final int height, final int depth, final int wpl) {
-        final long dataLength = height * wpl;
-
-        // pointer to the resulting int array
-        final Pointer<Integer> result = Pointer.allocateInts(dataLength);
-
-        // get a second, changeable ref to that pointer
-        Pointer<Integer> pixData = result;
-
+    private static void setBytesToPix(Pointer<Integer> pixData,
+            final ByteBuffer bytes, final int width, final int height,
+            final int depth, final int wpl) {
         // placeholders for bulk byte transfer
         final byte[] bulk;
         final int bulkSize;
@@ -166,16 +156,13 @@ public class PixConversions {
         default:
             bulk = new byte[0];
         }
-
-        return result;
     }
 
     public static BufferedImage pix2img(Pointer<Pix> ppix) {
         final Pix pix = ppix.get();
 
         final byte[] buf = convertPixToBytes(pix.data(), pix.w(), pix.h(),
-                pix.d(),
-                pix.wpl());
+                pix.d(), pix.wpl());
 
         final DataBufferByte dataBuf = new DataBufferByte(buf, buf.length);
 
