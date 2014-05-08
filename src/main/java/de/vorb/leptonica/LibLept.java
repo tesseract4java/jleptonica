@@ -2,9 +2,9 @@ package de.vorb.leptonica;
 
 import java.util.Collections;
 import java.util.Iterator;
+
 import org.bridj.BridJ;
 import org.bridj.CRuntime;
-import org.bridj.Callback;
 import org.bridj.FlagSet;
 import org.bridj.IntValuedEnum;
 import org.bridj.Pointer;
@@ -1200,7 +1200,7 @@ public class LibLept {
      */
     public static Pointer<Pix> pixExtendByReplication(Pointer<Pix> pixs,
             int addw, int addh) {
-        return (Pointer) Pointer.pointerToAddress(
+        return Pointer.pointerToAddress(
                 pixExtendByReplication(Pointer.getPeer(pixs), addw, addh),
                 Pix.class);
     }
@@ -1234,7 +1234,7 @@ public class LibLept {
      */
     public static Pointer<Pix> pixGetInvBackgroundMap(Pointer<Pix> pixs,
             int bgval, int smoothx, int smoothy) {
-        return (Pointer) Pointer.pointerToAddress(
+        return Pointer.pointerToAddress(
                 pixGetInvBackgroundMap(Pointer.getPeer(pixs), bgval, smoothx,
                         smoothy), Pix.class);
     }
@@ -1253,7 +1253,7 @@ public class LibLept {
      */
     public static Pointer<Pix> pixApplyInvBackgroundGrayMap(Pointer<Pix> pixs,
             Pointer<Pix> pixm, int sx, int sy) {
-        return (Pointer) Pointer.pointerToAddress(
+        return Pointer.pointerToAddress(
                 pixApplyInvBackgroundGrayMap(Pointer.getPeer(pixs),
                         Pointer.getPeer(pixm), sx, sy), Pix.class);
     }
@@ -1273,7 +1273,7 @@ public class LibLept {
     public static Pointer<Pix> pixApplyInvBackgroundRGBMap(Pointer<Pix> pixs,
             Pointer<Pix> pixmr, Pointer<Pix> pixmg, Pointer<Pix> pixmb, int sx,
             int sy) {
-        return (Pointer) Pointer.pointerToAddress(
+        return Pointer.pointerToAddress(
                 pixApplyInvBackgroundRGBMap(Pointer.getPeer(pixs),
                         Pointer.getPeer(pixmr), Pointer.getPeer(pixmg),
                         Pointer.getPeer(pixmb), sx, sy), Pix.class);
@@ -1292,7 +1292,7 @@ public class LibLept {
      */
     public static Pointer<Pix> pixApplyVariableGrayMap(Pointer<Pix> pixs,
             Pointer<Pix> pixg, int target) {
-        return (Pointer) Pointer.pointerToAddress(
+        return Pointer.pointerToAddress(
                 pixApplyVariableGrayMap(Pointer.getPeer(pixs),
                         Pointer.getPeer(pixg), target), Pix.class);
     }
@@ -1311,7 +1311,7 @@ public class LibLept {
      */
     public static Pointer<Pix> pixGlobalNormRGB(Pointer<Pix> pixd,
             Pointer<Pix> pixs, int rval, int gval, int bval, int mapval) {
-        return (Pointer) Pointer.pointerToAddress(
+        return Pointer.pointerToAddress(
                 pixGlobalNormRGB(Pointer.getPeer(pixd), Pointer.getPeer(pixs),
                         rval, gval, bval, mapval), Pix.class);
     }
@@ -1331,7 +1331,7 @@ public class LibLept {
     public static Pointer<Pix> pixGlobalNormNoSatRGB(Pointer<Pix> pixd,
             Pointer<Pix> pixs, int rval, int gval, int bval, int factor,
             float rank) {
-        return (Pointer) Pointer.pointerToAddress(
+        return Pointer.pointerToAddress(
                 pixGlobalNormNoSatRGB(Pointer.getPeer(pixd),
                         Pointer.getPeer(pixs), rval, gval, bval, factor, rank),
                 Pix.class);
@@ -1374,7 +1374,7 @@ public class LibLept {
      */
     public static Pointer<Pix> pixBackgroundNormFlex(Pointer<Pix> pixs, int sx,
             int sy, int smoothx, int smoothy, int delta) {
-        return (Pointer) Pointer.pointerToAddress(
+        return Pointer.pointerToAddress(
                 pixBackgroundNormFlex(Pointer.getPeer(pixs), sx, sy, smoothx,
                         smoothy, delta), Pix.class);
     }
@@ -1394,7 +1394,7 @@ public class LibLept {
     public static Pointer<Pix> pixContrastNorm(Pointer<Pix> pixd,
             Pointer<Pix> pixs, int sx, int sy, int mindiff, int smoothx,
             int smoothy) {
-        return (Pointer) Pointer.pointerToAddress(
+        return Pointer.pointerToAddress(
                 pixContrastNorm(Pointer.getPeer(pixd), Pointer.getPeer(pixs),
                         sx, sy, mindiff, smoothx, smoothy), Pix.class);
     }
