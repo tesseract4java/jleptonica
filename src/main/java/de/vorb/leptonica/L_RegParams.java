@@ -1,7 +1,7 @@
 package de.vorb.leptonica;
 import com.sun.jna.Pointer;
 import com.sun.jna.Structure;
-import de.vorb.leptonica.LeptonicaLibrary.FILE;
+import de.vorb.leptonica.Leptonica.FILE;
 import java.util.Arrays;
 import java.util.List;
 /**
