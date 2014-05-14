@@ -32,7 +32,7 @@ task sourcesJar(type: Jar) {
 
 jar {
   manifest {
-    attributes 'Implementation-Title': 'JTesseract',
+    attributes 'Implementation-Title': 'JLeptonica',
       'Implementation-Version': version
   }
 }
