@@ -1,6 +1,6 @@
 # BridJ bindings for Leptonica 1.70
 
-This library is a wrapper arround Leptonica.
+This library is a wrapper around Leptonica.
 
 
 ## Usage
