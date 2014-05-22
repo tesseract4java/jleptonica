@@ -193,7 +193,8 @@ public class PixConversions {
         }
 
         // create and return the buffered image
-        return new BufferedImage(cm, raster, false, new Hashtable<>());
+        return new BufferedImage(cm, raster, false,
+                new Hashtable<Object, Object>());
     }
 
     private static byte[] convertPixToBytes(Pointer<Integer> pixData,
