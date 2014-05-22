@@ -1,5 +1,6 @@
 package de.vorb.leptonica;
 
+import java.lang.reflect.Type;
 import java.util.Collections;
 import java.util.Iterator;
 
@@ -1656,7 +1657,8 @@ public class LibLept {
         return affineInvertXform(Pointer.getPeer(vc), Pointer.getPeer(pvci));
     }
 
-    protected native static int affineInvertXform(@Ptr long vc, @Ptr long pvci) throws LastError;
+    protected native static int affineInvertXform(@Ptr long vc, @Ptr long pvci)
+            throws LastError;
 
     /**
      * Original signature :
@@ -1742,7 +1744,8 @@ public class LibLept {
         return gaussjordan(Pointer.getPeer(a), Pointer.getPeer(b), n);
     }
 
-    protected native static int gaussjordan(@Ptr long a, @Ptr long b, int n) throws LastError;
+    protected native static int gaussjordan(@Ptr long a, @Ptr long b, int n)
+            throws LastError;
 
     /**
      * Original signature :
@@ -2036,7 +2039,8 @@ public class LibLept {
         return l_getDataBit(Pointer.getPeer(line), n);
     }
 
-    protected native static int l_getDataBit(@Ptr long line, int n) throws LastError;
+    protected native static int l_getDataBit(@Ptr long line, int n)
+            throws LastError;
 
     /**
      * Original signature : <code>void l_setDataBit(void*, l_int32)</code><br>
@@ -2048,7 +2052,8 @@ public class LibLept {
         l_setDataBit(Pointer.getPeer(line), n);
     }
 
-    protected native static void l_setDataBit(@Ptr long line, int n) throws LastError;
+    protected native static void l_setDataBit(@Ptr long line, int n)
+            throws LastError;
 
     /**
      * Original signature : <code>void l_clearDataBit(void*, l_int32)</code><br>
@@ -2060,7 +2065,8 @@ public class LibLept {
         l_clearDataBit(Pointer.getPeer(line), n);
     }
 
-    protected native static void l_clearDataBit(@Ptr long line, int n) throws LastError;
+    protected native static void l_clearDataBit(@Ptr long line, int n)
+            throws LastError;
 
     /**
      * Original signature :
@@ -2073,7 +2079,8 @@ public class LibLept {
         l_setDataBitVal(Pointer.getPeer(line), n, val);
     }
 
-    protected native static void l_setDataBitVal(@Ptr long line, int n, int val) throws LastError;
+    protected native static void l_setDataBitVal(@Ptr long line, int n, int val)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 l_getDataDibit(void*, l_int32)</code><br>
@@ -2085,7 +2092,8 @@ public class LibLept {
         return l_getDataDibit(Pointer.getPeer(line), n);
     }
 
-    protected native static int l_getDataDibit(@Ptr long line, int n) throws LastError;
+    protected native static int l_getDataDibit(@Ptr long line, int n)
+            throws LastError;
 
     /**
      * Original signature :
@@ -2098,7 +2106,8 @@ public class LibLept {
         l_setDataDibit(Pointer.getPeer(line), n, val);
     }
 
-    protected native static void l_setDataDibit(@Ptr long line, int n, int val) throws LastError;
+    protected native static void l_setDataDibit(@Ptr long line, int n, int val)
+            throws LastError;
 
     /**
      * Original signature : <code>void l_clearDataDibit(void*, l_int32)</code><br>
@@ -2110,7 +2119,8 @@ public class LibLept {
         l_clearDataDibit(Pointer.getPeer(line), n);
     }
 
-    protected native static void l_clearDataDibit(@Ptr long line, int n) throws LastError;
+    protected native static void l_clearDataDibit(@Ptr long line, int n)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 l_getDataQbit(void*, l_int32)</code><br>
@@ -2122,7 +2132,8 @@ public class LibLept {
         return l_getDataQbit(Pointer.getPeer(line), n);
     }
 
-    protected native static int l_getDataQbit(@Ptr long line, int n) throws LastError;
+    protected native static int l_getDataQbit(@Ptr long line, int n)
+            throws LastError;
 
     /**
      * Original signature :
@@ -2135,7 +2146,8 @@ public class LibLept {
         l_setDataQbit(Pointer.getPeer(line), n, val);
     }
 
-    protected native static void l_setDataQbit(@Ptr long line, int n, int val) throws LastError;
+    protected native static void l_setDataQbit(@Ptr long line, int n, int val)
+            throws LastError;
 
     /**
      * Original signature : <code>void l_clearDataQbit(void*, l_int32)</code><br>
@@ -2147,7 +2159,8 @@ public class LibLept {
         l_clearDataQbit(Pointer.getPeer(line), n);
     }
 
-    protected native static void l_clearDataQbit(@Ptr long line, int n) throws LastError;
+    protected native static void l_clearDataQbit(@Ptr long line, int n)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 l_getDataByte(void*, l_int32)</code><br>
@@ -2159,7 +2172,8 @@ public class LibLept {
         return l_getDataByte(Pointer.getPeer(line), n);
     }
 
-    protected native static int l_getDataByte(@Ptr long line, int n) throws LastError;
+    protected native static int l_getDataByte(@Ptr long line, int n)
+            throws LastError;
 
     /**
      * Original signature :
@@ -2172,7 +2186,8 @@ public class LibLept {
         l_setDataByte(Pointer.getPeer(line), n, val);
     }
 
-    protected native static void l_setDataByte(@Ptr long line, int n, int val) throws LastError;
+    protected native static void l_setDataByte(@Ptr long line, int n, int val)
+            throws LastError;
 
     /**
      * Original signature :
@@ -2185,7 +2200,8 @@ public class LibLept {
         return l_getDataTwoBytes(Pointer.getPeer(line), n);
     }
 
-    protected native static int l_getDataTwoBytes(@Ptr long line, int n) throws LastError;
+    protected native static int l_getDataTwoBytes(@Ptr long line, int n)
+            throws LastError;
 
     /**
      * Original signature :
@@ -2212,7 +2228,8 @@ public class LibLept {
         return l_getDataFourBytes(Pointer.getPeer(line), n);
     }
 
-    protected native static int l_getDataFourBytes(@Ptr long line, int n) throws LastError;
+    protected native static int l_getDataFourBytes(@Ptr long line, int n)
+            throws LastError;
 
     /**
      * Original signature :
@@ -2253,7 +2270,8 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:116</i>
      */
-    public static native int barcodeFormatIsSupported(int format) throws LastError;
+    public static native int barcodeFormatIsSupported(int format)
+            throws LastError;
 
     /**
      * Original signature :
@@ -2354,7 +2372,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long bbufferCreate(@Ptr long indata, int nalloc) throws LastError;
+    protected native static long bbufferCreate(@Ptr long indata, int nalloc)
+            throws LastError;
 
     /**
      * Original signature : <code>void bbufferDestroy(BBUFFER**)</code><br>
@@ -2589,7 +2608,8 @@ public class LibLept {
 
     @Ptr
     @Name("makeRangeKernel")
-    protected native static long makeRangeKernel$2(float range_stdev) throws LastError;
+    protected native static long makeRangeKernel$2(float range_stdev)
+            throws LastError;
 
     /**
      * Original signature :
@@ -3336,7 +3356,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixAlphaBlendUniform(@Ptr long pixs, int color) throws LastError;
+    protected native static long pixAlphaBlendUniform(@Ptr long pixs, int color)
+            throws LastError;
 
     /**
      * Original signature :
@@ -3368,7 +3389,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixSetAlphaOverWhite(@Ptr long pixs) throws LastError;
+    protected native static long pixSetAlphaOverWhite(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>L_BMF* bmfCreate(const char*, l_int32)</code><br>
@@ -3382,7 +3404,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long bmfCreate(@Ptr long dir, int size) throws LastError;
+    protected native static long bmfCreate(@Ptr long dir, int size)
+            throws LastError;
 
     /**
      * Original signature : <code>void bmfDestroy(L_BMF**)</code><br>
@@ -3408,7 +3431,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long bmfGetPix(@Ptr long bmf, byte chr) throws LastError;
+    protected native static long bmfGetPix(@Ptr long bmf, byte chr)
+            throws LastError;
 
     /**
      * Original signature :
@@ -3510,7 +3534,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixReadStreamBmp(@Ptr long fp) throws LastError;
+    protected native static long pixReadStreamBmp(@Ptr long fp)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixWriteStreamBmp(FILE*, PIX*)</code><br>
@@ -3523,7 +3548,8 @@ public class LibLept {
         return pixWriteStreamBmp(Pointer.getPeer(fp), Pointer.getPeer(pix));
     }
 
-    protected native static int pixWriteStreamBmp(@Ptr long fp, @Ptr long pix) throws LastError;
+    protected native static int pixWriteStreamBmp(@Ptr long fp, @Ptr long pix)
+            throws LastError;
 
     /**
      * Original signature :
@@ -3538,7 +3564,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixReadMemBmp(@Ptr long cdata, @Ptr long size) throws LastError;
+    protected native static long pixReadMemBmp(@Ptr long cdata, @Ptr long size)
+            throws LastError;
 
     /**
      * Original signature :
@@ -3570,7 +3597,8 @@ public class LibLept {
 
     @Ptr
     @Name("boxCreate")
-    protected native static long boxCreate$2(int x, int y, int w, int h) throws LastError;
+    protected native static long boxCreate$2(int x, int y, int w, int h)
+            throws LastError;
 
     /**
      * Original signature :
@@ -3586,7 +3614,8 @@ public class LibLept {
 
     @Ptr
     @Name("boxCreateValid")
-    protected native static long boxCreateValid$2(int x, int y, int w, int h) throws LastError;
+    protected native static long boxCreateValid$2(int x, int y, int w, int h)
+            throws LastError;
 
     /**
      * Original signature : <code>BOX* boxCopy(BOX*)</code><br>
@@ -3700,7 +3729,8 @@ public class LibLept {
         return boxChangeRefcount(Pointer.getPeer(box), delta);
     }
 
-    protected native static int boxChangeRefcount(@Ptr long box, int delta) throws LastError;
+    protected native static int boxChangeRefcount(@Ptr long box, int delta)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 boxIsValid(BOX*, l_int32*)</code><br>
@@ -3712,7 +3742,8 @@ public class LibLept {
         return boxIsValid(Pointer.getPeer(box), Pointer.getPeer(pvalid));
     }
 
-    protected native static int boxIsValid(@Ptr long box, @Ptr long pvalid) throws LastError;
+    protected native static int boxIsValid(@Ptr long box, @Ptr long pvalid)
+            throws LastError;
 
     /**
      * Original signature : <code>BOXA* boxaCreate(l_int32)</code><br>
@@ -3740,7 +3771,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long boxaCopy(@Ptr long boxa, int copyflag) throws LastError;
+    protected native static long boxaCopy(@Ptr long boxa, int copyflag)
+            throws LastError;
 
     /**
      * Original signature : <code>void boxaDestroy(BOXA**)</code><br>
@@ -3779,7 +3811,8 @@ public class LibLept {
         return boxaExtendArray(Pointer.getPeer(boxa));
     }
 
-    protected native static int boxaExtendArray(@Ptr long boxa) throws LastError;
+    protected native static int boxaExtendArray(@Ptr long boxa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -3792,7 +3825,8 @@ public class LibLept {
         return boxaExtendArrayToSize(Pointer.getPeer(boxa), size);
     }
 
-    protected native static int boxaExtendArrayToSize(@Ptr long boxa, int size) throws LastError;
+    protected native static int boxaExtendArrayToSize(@Ptr long boxa, int size)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 boxaGetCount(BOXA*)</code><br>
@@ -3816,7 +3850,8 @@ public class LibLept {
         return boxaGetValidCount(Pointer.getPeer(boxa));
     }
 
-    protected native static int boxaGetValidCount(@Ptr long boxa) throws LastError;
+    protected native static int boxaGetValidCount(@Ptr long boxa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -3882,7 +3917,8 @@ public class LibLept {
         return boxaIsFull(Pointer.getPeer(boxa), Pointer.getPeer(pfull));
     }
 
-    protected native static int boxaIsFull(@Ptr long boxa, @Ptr long pfull) throws LastError;
+    protected native static int boxaIsFull(@Ptr long boxa, @Ptr long pfull)
+            throws LastError;
 
     /**
      * Original signature :
@@ -3925,7 +3961,8 @@ public class LibLept {
         return boxaRemoveBox(Pointer.getPeer(boxa), index);
     }
 
-    protected native static int boxaRemoveBox(@Ptr long boxa, int index) throws LastError;
+    protected native static int boxaRemoveBox(@Ptr long boxa, int index)
+            throws LastError;
 
     /**
      * Original signature :
@@ -3953,7 +3990,8 @@ public class LibLept {
         return boxaInitFull(Pointer.getPeer(boxa), Pointer.getPeer(box));
     }
 
-    protected native static int boxaInitFull(@Ptr long boxa, @Ptr long box) throws LastError;
+    protected native static int boxaInitFull(@Ptr long boxa, @Ptr long box)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 boxaClear(BOXA*)</code><br>
@@ -3993,7 +4031,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long boxaaCopy(@Ptr long baas, int copyflag) throws LastError;
+    protected native static long boxaaCopy(@Ptr long baas, int copyflag)
+            throws LastError;
 
     /**
      * Original signature : <code>void boxaaDestroy(BOXAA**)</code><br>
@@ -4032,7 +4071,8 @@ public class LibLept {
         return boxaaExtendArray(Pointer.getPeer(baa));
     }
 
-    protected native static int boxaaExtendArray(@Ptr long baa) throws LastError;
+    protected native static int boxaaExtendArray(@Ptr long baa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -4045,7 +4085,8 @@ public class LibLept {
         return boxaaExtendArrayToSize(Pointer.getPeer(baa), size);
     }
 
-    protected native static int boxaaExtendArrayToSize(@Ptr long baa, int size) throws LastError;
+    protected native static int boxaaExtendArrayToSize(@Ptr long baa, int size)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 boxaaGetCount(BOXAA*)</code><br>
@@ -4069,7 +4110,8 @@ public class LibLept {
         return boxaaGetBoxCount(Pointer.getPeer(baa));
     }
 
-    protected native static int boxaaGetBoxCount(@Ptr long baa) throws LastError;
+    protected native static int boxaaGetBoxCount(@Ptr long baa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -4117,7 +4159,8 @@ public class LibLept {
         return boxaaInitFull(Pointer.getPeer(baa), Pointer.getPeer(boxa));
     }
 
-    protected native static int boxaaInitFull(@Ptr long baa, @Ptr long boxa) throws LastError;
+    protected native static int boxaaInitFull(@Ptr long baa, @Ptr long boxa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -4178,7 +4221,8 @@ public class LibLept {
         return boxaaRemoveBoxa(Pointer.getPeer(baa), index);
     }
 
-    protected native static int boxaaRemoveBoxa(@Ptr long baa, int index) throws LastError;
+    protected native static int boxaaRemoveBoxa(@Ptr long baa, int index)
+            throws LastError;
 
     /**
      * Original signature :
@@ -4254,7 +4298,8 @@ public class LibLept {
         return boxaaWrite(Pointer.getPeer(filename), Pointer.getPeer(baa));
     }
 
-    protected native static int boxaaWrite(@Ptr long filename, @Ptr long baa) throws LastError;
+    protected native static int boxaaWrite(@Ptr long filename, @Ptr long baa)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 boxaaWriteStream(FILE*, BOXAA*)</code><br>
@@ -4267,7 +4312,8 @@ public class LibLept {
         return boxaaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(baa));
     }
 
-    protected native static int boxaaWriteStream(@Ptr long fp, @Ptr long baa) throws LastError;
+    protected native static int boxaaWriteStream(@Ptr long fp, @Ptr long baa)
+            throws LastError;
 
     /**
      * Original signature : <code>BOXA* boxaRead(const char*)</code><br>
@@ -4310,7 +4356,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long boxaReadMem(@Ptr long data, @Ptr long size) throws LastError;
+    protected native static long boxaReadMem(@Ptr long data, @Ptr long size)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 boxaWrite(const char*, BOXA*)</code><br>
@@ -4322,7 +4369,8 @@ public class LibLept {
         return boxaWrite(Pointer.getPeer(filename), Pointer.getPeer(boxa));
     }
 
-    protected native static int boxaWrite(@Ptr long filename, @Ptr long boxa) throws LastError;
+    protected native static int boxaWrite(@Ptr long filename, @Ptr long boxa)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 boxaWriteStream(FILE*, BOXA*)</code><br>
@@ -4335,7 +4383,8 @@ public class LibLept {
         return boxaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(boxa));
     }
 
-    protected native static int boxaWriteStream(@Ptr long fp, @Ptr long boxa) throws LastError;
+    protected native static int boxaWriteStream(@Ptr long fp, @Ptr long boxa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -4364,7 +4413,8 @@ public class LibLept {
         return boxPrintStreamInfo(Pointer.getPeer(fp), Pointer.getPeer(box));
     }
 
-    protected native static int boxPrintStreamInfo(@Ptr long fp, @Ptr long box) throws LastError;
+    protected native static int boxPrintStreamInfo(@Ptr long fp, @Ptr long box)
+            throws LastError;
 
     /**
      * Original signature :
@@ -4446,7 +4496,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long boxaClipToBox(@Ptr long boxas, @Ptr long box) throws LastError;
+    protected native static long boxaClipToBox(@Ptr long boxas, @Ptr long box)
+            throws LastError;
 
     /**
      * Original signature : <code>BOXA* boxaCombineOverlaps(BOXA*)</code><br>
@@ -4460,7 +4511,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long boxaCombineOverlaps(@Ptr long boxas) throws LastError;
+    protected native static long boxaCombineOverlaps(@Ptr long boxas)
+            throws LastError;
 
     /**
      * Original signature : <code>BOX* boxOverlapRegion(BOX*, BOX*)</code><br>
@@ -4476,7 +4528,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long boxOverlapRegion(@Ptr long box1, @Ptr long box2) throws LastError;
+    protected native static long boxOverlapRegion(@Ptr long box1, @Ptr long box2)
+            throws LastError;
 
     /**
      * Original signature : <code>BOX* boxBoundingRegion(BOX*, BOX*)</code><br>
@@ -4596,7 +4649,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long boxaGetNearestToPt(@Ptr long boxa, int x, int y) throws LastError;
+    protected native static long boxaGetNearestToPt(@Ptr long boxa, int x, int y)
+            throws LastError;
 
     /**
      * Original signature :
@@ -5162,7 +5216,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long boxaGetRankSize(@Ptr long boxa, float fract) throws LastError;
+    protected native static long boxaGetRankSize(@Ptr long boxa, float fract)
+            throws LastError;
 
     /**
      * Original signature : <code>BOX* boxaGetMedian(BOXA*)</code><br>
@@ -5634,7 +5689,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long boxaPermutePseudorandom(@Ptr long boxas) throws LastError;
+    protected native static long boxaPermutePseudorandom(@Ptr long boxas)
+            throws LastError;
 
     /**
      * Original signature : <code>BOXA* boxaPermuteRandom(BOXA*, BOXA*)</code><br>
@@ -5664,7 +5720,8 @@ public class LibLept {
         return boxaSwapBoxes(Pointer.getPeer(boxa), i, j);
     }
 
-    protected native static int boxaSwapBoxes(@Ptr long boxa, int i, int j) throws LastError;
+    protected native static int boxaSwapBoxes(@Ptr long boxa, int i, int j)
+            throws LastError;
 
     /**
      * Original signature : <code>PTA* boxaConvertToPta(BOXA*, l_int32)</code><br>
@@ -5678,7 +5735,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long boxaConvertToPta(@Ptr long boxa, int ncorners) throws LastError;
+    protected native static long boxaConvertToPta(@Ptr long boxa, int ncorners)
+            throws LastError;
 
     /**
      * Original signature : <code>BOXA* ptaConvertToBoxa(PTA*, l_int32)</code><br>
@@ -5692,7 +5750,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long ptaConvertToBoxa(@Ptr long pta, int ncorners) throws LastError;
+    protected native static long ptaConvertToBoxa(@Ptr long pta, int ncorners)
+            throws LastError;
 
     /**
      * Original signature :
@@ -5889,7 +5948,8 @@ public class LibLept {
         return boxaGetArea(Pointer.getPeer(boxa), Pointer.getPeer(parea));
     }
 
-    protected native static int boxaGetArea(@Ptr long boxa, @Ptr long parea) throws LastError;
+    protected native static int boxaGetArea(@Ptr long boxa, @Ptr long parea)
+            throws LastError;
 
     /**
      * Original signature :
@@ -5926,7 +5986,8 @@ public class LibLept {
 
     @Ptr
     @Name("l_byteaCreate")
-    protected native static long l_byteaCreate$2(@Ptr long nbytes) throws LastError;
+    protected native static long l_byteaCreate$2(@Ptr long nbytes)
+            throws LastError;
 
     /**
      * Original signature :
@@ -5958,7 +6019,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long l_byteaInitFromFile(@Ptr long fname) throws LastError;
+    protected native static long l_byteaInitFromFile(@Ptr long fname)
+            throws LastError;
 
     /**
      * Original signature : <code>L_BYTEA* l_byteaInitFromStream(FILE*)</code><br>
@@ -5973,7 +6035,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long l_byteaInitFromStream(@Ptr long fp) throws LastError;
+    protected native static long l_byteaInitFromStream(@Ptr long fp)
+            throws LastError;
 
     /**
      * Original signature : <code>L_BYTEA* l_byteaCopy(L_BYTEA*, l_int32)</code><br>
@@ -5988,7 +6051,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long l_byteaCopy(@Ptr long bas, int copyflag) throws LastError;
+    protected native static long l_byteaCopy(@Ptr long bas, int copyflag)
+            throws LastError;
 
     /**
      * Original signature : <code>void l_byteaDestroy(L_BYTEA**)</code><br>
@@ -6031,7 +6095,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long l_byteaGetData(@Ptr long ba, @Ptr long psize) throws LastError;
+    protected native static long l_byteaGetData(@Ptr long ba, @Ptr long psize)
+            throws LastError;
 
     /**
      * Original signature :
@@ -6048,7 +6113,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long l_byteaCopyData(@Ptr long ba, @Ptr long psize) throws LastError;
+    protected native static long l_byteaCopyData(@Ptr long ba, @Ptr long psize)
+            throws LastError;
 
     /**
      * Original signature :
@@ -6077,7 +6143,8 @@ public class LibLept {
         return l_byteaAppendString(Pointer.getPeer(ba), Pointer.getPeer(str));
     }
 
-    protected native static int l_byteaAppendString(@Ptr long ba, @Ptr long str) throws LastError;
+    protected native static int l_byteaAppendString(@Ptr long ba, @Ptr long str)
+            throws LastError;
 
     /**
      * Original signature :
@@ -6091,7 +6158,8 @@ public class LibLept {
         return l_byteaJoin(Pointer.getPeer(ba1), Pointer.getPeer(pba2));
     }
 
-    protected native static int l_byteaJoin(@Ptr long ba1, @Ptr long pba2) throws LastError;
+    protected native static int l_byteaJoin(@Ptr long ba1, @Ptr long pba2)
+            throws LastError;
 
     /**
      * Original signature :
@@ -6170,7 +6238,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long ccbaCreate(@Ptr long pixs, int n) throws LastError;
+    protected native static long ccbaCreate(@Ptr long pixs, int n)
+            throws LastError;
 
     /**
      * Original signature : <code>void ccbaDestroy(CCBORDA**)</code><br>
@@ -6220,7 +6289,8 @@ public class LibLept {
         return ccbaAddCcb(Pointer.getPeer(ccba), Pointer.getPeer(ccb));
     }
 
-    protected native static int ccbaAddCcb(@Ptr long ccba, @Ptr long ccb) throws LastError;
+    protected native static int ccbaAddCcb(@Ptr long ccba, @Ptr long ccb)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 ccbaGetCount(CCBORDA*)</code><br>
@@ -6246,7 +6316,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long ccbaGetCcb(@Ptr long ccba, int index) throws LastError;
+    protected native static long ccbaGetCcb(@Ptr long ccba, int index)
+            throws LastError;
 
     /**
      * Original signature : <code>CCBORDA* pixGetAllCCBorders(PIX*)</code><br>
@@ -6260,7 +6331,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixGetAllCCBorders(@Ptr long pixs) throws LastError;
+    protected native static long pixGetAllCCBorders(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>CCBORD* pixGetCCBorders(PIX*, BOX*)</code><br>
@@ -6276,7 +6348,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixGetCCBorders(@Ptr long pixs, @Ptr long box) throws LastError;
+    protected native static long pixGetCCBorders(@Ptr long pixs, @Ptr long box)
+            throws LastError;
 
     /**
      * Original signature : <code>PTAA* pixGetOuterBordersPtaa(PIX*)</code><br>
@@ -6290,7 +6363,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixGetOuterBordersPtaa(@Ptr long pixs) throws LastError;
+    protected native static long pixGetOuterBordersPtaa(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>PTA* pixGetOuterBorderPta(PIX*, BOX*)</code><br>
@@ -6390,7 +6464,8 @@ public class LibLept {
         return ccbaGenerateGlobalLocs(Pointer.getPeer(ccba));
     }
 
-    protected native static int ccbaGenerateGlobalLocs(@Ptr long ccba) throws LastError;
+    protected native static int ccbaGenerateGlobalLocs(@Ptr long ccba)
+            throws LastError;
 
     /**
      * Original signature :
@@ -6403,7 +6478,8 @@ public class LibLept {
         return ccbaGenerateStepChains(Pointer.getPeer(ccba));
     }
 
-    protected native static int ccbaGenerateStepChains(@Ptr long ccba) throws LastError;
+    protected native static int ccbaGenerateStepChains(@Ptr long ccba)
+            throws LastError;
 
     /**
      * Original signature :
@@ -6446,7 +6522,8 @@ public class LibLept {
         return ccbaGenerateSinglePath(Pointer.getPeer(ccba));
     }
 
-    protected native static int ccbaGenerateSinglePath(@Ptr long ccba) throws LastError;
+    protected native static int ccbaGenerateSinglePath(@Ptr long ccba)
+            throws LastError;
 
     /**
      * Original signature :
@@ -6480,7 +6557,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long ccbaDisplayBorder(@Ptr long ccba) throws LastError;
+    protected native static long ccbaDisplayBorder(@Ptr long ccba)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* ccbaDisplaySPBorder(CCBORDA*)</code><br>
@@ -6494,7 +6572,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long ccbaDisplaySPBorder(@Ptr long ccba) throws LastError;
+    protected native static long ccbaDisplaySPBorder(@Ptr long ccba)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* ccbaDisplayImage1(CCBORDA*)</code><br>
@@ -6508,7 +6587,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long ccbaDisplayImage1(@Ptr long ccba) throws LastError;
+    protected native static long ccbaDisplayImage1(@Ptr long ccba)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* ccbaDisplayImage2(CCBORDA*)</code><br>
@@ -6522,7 +6602,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long ccbaDisplayImage2(@Ptr long ccba) throws LastError;
+    protected native static long ccbaDisplayImage2(@Ptr long ccba)
+            throws LastError;
 
     /**
      * Original signature :
@@ -6535,7 +6616,8 @@ public class LibLept {
         return ccbaWrite(Pointer.getPeer(filename), Pointer.getPeer(ccba));
     }
 
-    protected native static int ccbaWrite(@Ptr long filename, @Ptr long ccba) throws LastError;
+    protected native static int ccbaWrite(@Ptr long filename, @Ptr long ccba)
+            throws LastError;
 
     /**
      * Original signature :
@@ -6549,7 +6631,8 @@ public class LibLept {
         return ccbaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(ccba));
     }
 
-    protected native static int ccbaWriteStream(@Ptr long fp, @Ptr long ccba) throws LastError;
+    protected native static int ccbaWriteStream(@Ptr long fp, @Ptr long ccba)
+            throws LastError;
 
     /**
      * Original signature : <code>CCBORDA* ccbaRead(const char*)</code><br>
@@ -6591,7 +6674,8 @@ public class LibLept {
         return ccbaWriteSVG(Pointer.getPeer(filename), Pointer.getPeer(ccba));
     }
 
-    protected native static int ccbaWriteSVG(@Ptr long filename, @Ptr long ccba) throws LastError;
+    protected native static int ccbaWriteSVG(@Ptr long filename, @Ptr long ccba)
+            throws LastError;
 
     /**
      * Original signature :
@@ -7242,7 +7326,8 @@ public class LibLept {
 
     @Ptr
     @Name("pixcmapCreateLinear")
-    protected native static long pixcmapCreateLinear$2(int d, int nlevels) throws LastError;
+    protected native static long pixcmapCreateLinear$2(int d, int nlevels)
+            throws LastError;
 
     /**
      * Original signature : <code>PIXCMAP* pixcmapCopy(PIXCMAP*)</code><br>
@@ -7268,7 +7353,8 @@ public class LibLept {
         pixcmapDestroy(Pointer.getPeer(pcmap));
     }
 
-    protected native static void pixcmapDestroy(@Ptr long pcmap) throws LastError;
+    protected native static void pixcmapDestroy(@Ptr long pcmap)
+            throws LastError;
 
     /**
      * Original signature :
@@ -7394,7 +7480,8 @@ public class LibLept {
         return pixcmapGetCount(Pointer.getPeer(cmap));
     }
 
-    protected native static int pixcmapGetCount(@Ptr long cmap) throws LastError;
+    protected native static int pixcmapGetCount(@Ptr long cmap)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixcmapGetFreeCount(PIXCMAP*)</code><br>
@@ -7406,7 +7493,8 @@ public class LibLept {
         return pixcmapGetFreeCount(Pointer.getPeer(cmap));
     }
 
-    protected native static int pixcmapGetFreeCount(@Ptr long cmap) throws LastError;
+    protected native static int pixcmapGetFreeCount(@Ptr long cmap)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixcmapGetDepth(PIXCMAP*)</code><br>
@@ -7418,7 +7506,8 @@ public class LibLept {
         return pixcmapGetDepth(Pointer.getPeer(cmap));
     }
 
-    protected native static int pixcmapGetDepth(@Ptr long cmap) throws LastError;
+    protected native static int pixcmapGetDepth(@Ptr long cmap)
+            throws LastError;
 
     /**
      * Original signature :
@@ -7563,7 +7652,8 @@ public class LibLept {
         return pixcmapHasColor(Pointer.getPeer(cmap), Pointer.getPeer(pcolor));
     }
 
-    protected native static int pixcmapHasColor(@Ptr long cmap, @Ptr long pcolor) throws LastError;
+    protected native static int pixcmapHasColor(@Ptr long cmap, @Ptr long pcolor)
+            throws LastError;
 
     /**
      * Original signature :
@@ -7696,7 +7786,8 @@ public class LibLept {
 
     @Ptr
     @Name("pixcmapGrayToColor")
-    protected native static long pixcmapGrayToColor$2(int color) throws LastError;
+    protected native static long pixcmapGrayToColor$2(int color)
+            throws LastError;
 
     /**
      * Original signature :
@@ -7730,7 +7821,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixcmapReadStream(@Ptr long fp) throws LastError;
+    protected native static long pixcmapReadStream(@Ptr long fp)
+            throws LastError;
 
     /**
      * Original signature :
@@ -7744,7 +7836,8 @@ public class LibLept {
         return pixcmapWriteStream(Pointer.getPeer(fp), Pointer.getPeer(cmap));
     }
 
-    protected native static int pixcmapWriteStream(@Ptr long fp, @Ptr long cmap) throws LastError;
+    protected native static int pixcmapWriteStream(@Ptr long fp, @Ptr long cmap)
+            throws LastError;
 
     /**
      * Original signature :
@@ -7831,7 +7924,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixcmapConvertToHex(@Ptr long data, int ncolors) throws LastError;
+    protected native static long pixcmapConvertToHex(@Ptr long data, int ncolors)
+            throws LastError;
 
     /**
      * Original signature :
@@ -7860,7 +7954,8 @@ public class LibLept {
         return pixcmapContrastTRC(Pointer.getPeer(cmap), factor);
     }
 
-    protected native static int pixcmapContrastTRC(@Ptr long cmap, float factor) throws LastError;
+    protected native static int pixcmapContrastTRC(@Ptr long cmap, float factor)
+            throws LastError;
 
     /**
      * Original signature :
@@ -8246,7 +8341,8 @@ public class LibLept {
         return pixRemoveUnusedColors(Pointer.getPeer(pixs));
     }
 
-    protected native static int pixRemoveUnusedColors(@Ptr long pixs) throws LastError;
+    protected native static int pixRemoveUnusedColors(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature :
@@ -8533,7 +8629,8 @@ public class LibLept {
         return pixcmapConvertRGBToHSV(Pointer.getPeer(cmap));
     }
 
-    protected native static int pixcmapConvertRGBToHSV(@Ptr long cmap) throws LastError;
+    protected native static int pixcmapConvertRGBToHSV(@Ptr long cmap)
+            throws LastError;
 
     /**
      * Original signature :
@@ -8546,7 +8643,8 @@ public class LibLept {
         return pixcmapConvertHSVToRGB(Pointer.getPeer(cmap));
     }
 
-    protected native static int pixcmapConvertHSVToRGB(@Ptr long cmap) throws LastError;
+    protected native static int pixcmapConvertHSVToRGB(@Ptr long cmap)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixConvertRGBToHue(PIX*)</code><br>
@@ -8560,7 +8658,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixConvertRGBToHue(@Ptr long pixs) throws LastError;
+    protected native static long pixConvertRGBToHue(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixConvertRGBToSaturation(PIX*)</code><br>
@@ -8574,7 +8673,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixConvertRGBToSaturation(@Ptr long pixs) throws LastError;
+    protected native static long pixConvertRGBToSaturation(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixConvertRGBToValue(PIX*)</code><br>
@@ -8588,7 +8688,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixConvertRGBToValue(@Ptr long pixs) throws LastError;
+    protected native static long pixConvertRGBToValue(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature :
@@ -8826,7 +8927,8 @@ public class LibLept {
         return pixcmapConvertRGBToYUV(Pointer.getPeer(cmap));
     }
 
-    protected native static int pixcmapConvertRGBToYUV(@Ptr long cmap) throws LastError;
+    protected native static int pixcmapConvertRGBToYUV(@Ptr long cmap)
+            throws LastError;
 
     /**
      * Original signature :
@@ -8839,7 +8941,8 @@ public class LibLept {
         return pixcmapConvertYUVToRGB(Pointer.getPeer(cmap));
     }
 
-    protected native static int pixcmapConvertYUVToRGB(@Ptr long cmap) throws LastError;
+    protected native static int pixcmapConvertYUVToRGB(@Ptr long cmap)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixEqual(PIX*, PIX*, l_int32*)</code><br>
@@ -9243,7 +9346,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixConnCompBB(@Ptr long pixs, int connectivity) throws LastError;
+    protected native static long pixConnCompBB(@Ptr long pixs, int connectivity)
+            throws LastError;
 
     /**
      * Original signature :
@@ -9431,7 +9535,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixBlockconv(@Ptr long pix, int wc, int hc) throws LastError;
+    protected native static long pixBlockconv(@Ptr long pix, int wc, int hc)
+            throws LastError;
 
     /**
      * Original signature :
@@ -9463,7 +9568,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixBlockconvAccum(@Ptr long pixs) throws LastError;
+    protected native static long pixBlockconvAccum(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature :
@@ -9608,7 +9714,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixMeanSquareAccum(@Ptr long pixs) throws LastError;
+    protected native static long pixMeanSquareAccum(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature :
@@ -9716,7 +9823,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixConvolveRGB(@Ptr long pixs, @Ptr long kel) throws LastError;
+    protected native static long pixConvolveRGB(@Ptr long pixs, @Ptr long kel)
+            throws LastError;
 
     /**
      * Original signature :
@@ -9800,7 +9908,8 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:561</i>
      */
-    public static native void l_setConvolveSampling(int xfact, int yfact) throws LastError;
+    public static native void l_setConvolveSampling(int xfact, int yfact)
+            throws LastError;
 
     /**
      * Original signature :
@@ -9816,7 +9925,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixAddGaussianNoise(@Ptr long pixs, float stdev) throws LastError;
+    protected native static long pixAddGaussianNoise(@Ptr long pixs, float stdev)
+            throws LastError;
 
     /**
      * Original signature : <code>l_float32 gaussDistribSampling()</code><br>
@@ -9973,7 +10083,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long dewarpCreate(@Ptr long pixs, int pageno) throws LastError;
+    protected native static long dewarpCreate(@Ptr long pixs, int pageno)
+            throws LastError;
 
     /**
      * Original signature :
@@ -9989,7 +10100,8 @@ public class LibLept {
 
     @Ptr
     @Name("dewarpCreateRef")
-    protected native static long dewarpCreateRef$2(int pageno, int refpage) throws LastError;
+    protected native static long dewarpCreateRef$2(int pageno, int refpage)
+            throws LastError;
 
     /**
      * Original signature : <code>void dewarpDestroy(L_DEWARP**)</code><br>
@@ -10053,7 +10165,8 @@ public class LibLept {
         dewarpaDestroy(Pointer.getPeer(pdewa));
     }
 
-    protected native static void dewarpaDestroy(@Ptr long pdewa) throws LastError;
+    protected native static void dewarpaDestroy(@Ptr long pdewa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -10066,7 +10179,8 @@ public class LibLept {
         return dewarpaDestroyDewarp(Pointer.getPeer(dewa), pageno);
     }
 
-    protected native static int dewarpaDestroyDewarp(@Ptr long dewa, int pageno) throws LastError;
+    protected native static int dewarpaDestroyDewarp(@Ptr long dewa, int pageno)
+            throws LastError;
 
     /**
      * Original signature :
@@ -10097,7 +10211,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long dewarpaGetDewarp(@Ptr long dewa, int index) throws LastError;
+    protected native static long dewarpaGetDewarp(@Ptr long dewa, int index)
+            throws LastError;
 
     /**
      * Original signature :
@@ -10130,7 +10245,8 @@ public class LibLept {
         return dewarpaUseBothArrays(Pointer.getPeer(dewa), useboth);
     }
 
-    protected native static int dewarpaUseBothArrays(@Ptr long dewa, int useboth) throws LastError;
+    protected native static int dewarpaUseBothArrays(@Ptr long dewa, int useboth)
+            throws LastError;
 
     /**
      * Original signature :
@@ -10158,7 +10274,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long dewarpRead(@Ptr long filename) throws LastError;
+    protected native static long dewarpRead(@Ptr long filename)
+            throws LastError;
 
     /**
      * Original signature : <code>L_DEWARP* dewarpReadStream(FILE*)</code><br>
@@ -10173,7 +10290,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long dewarpReadStream(@Ptr long fp) throws LastError;
+    protected native static long dewarpReadStream(@Ptr long fp)
+            throws LastError;
 
     /**
      * Original signature :
@@ -10186,7 +10304,8 @@ public class LibLept {
         return dewarpWrite(Pointer.getPeer(filename), Pointer.getPeer(dew));
     }
 
-    protected native static int dewarpWrite(@Ptr long filename, @Ptr long dew) throws LastError;
+    protected native static int dewarpWrite(@Ptr long filename, @Ptr long dew)
+            throws LastError;
 
     /**
      * Original signature :
@@ -10200,7 +10319,8 @@ public class LibLept {
         return dewarpWriteStream(Pointer.getPeer(fp), Pointer.getPeer(dew));
     }
 
-    protected native static int dewarpWriteStream(@Ptr long fp, @Ptr long dew) throws LastError;
+    protected native static int dewarpWriteStream(@Ptr long fp, @Ptr long dew)
+            throws LastError;
 
     /**
      * Original signature : <code>L_DEWARPA* dewarpaRead(const char*)</code><br>
@@ -10214,7 +10334,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long dewarpaRead(@Ptr long filename) throws LastError;
+    protected native static long dewarpaRead(@Ptr long filename)
+            throws LastError;
 
     /**
      * Original signature : <code>L_DEWARPA* dewarpaReadStream(FILE*)</code><br>
@@ -10229,7 +10350,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long dewarpaReadStream(@Ptr long fp) throws LastError;
+    protected native static long dewarpaReadStream(@Ptr long fp)
+            throws LastError;
 
     /**
      * Original signature :
@@ -10243,7 +10365,8 @@ public class LibLept {
         return dewarpaWrite(Pointer.getPeer(filename), Pointer.getPeer(dewa));
     }
 
-    protected native static int dewarpaWrite(@Ptr long filename, @Ptr long dewa) throws LastError;
+    protected native static int dewarpaWrite(@Ptr long filename, @Ptr long dewa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -10257,7 +10380,8 @@ public class LibLept {
         return dewarpaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(dewa));
     }
 
-    protected native static int dewarpaWriteStream(@Ptr long fp, @Ptr long dewa) throws LastError;
+    protected native static int dewarpaWriteStream(@Ptr long fp, @Ptr long dewa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -10455,7 +10579,8 @@ public class LibLept {
         return dewarpaListPages(Pointer.getPeer(dewa));
     }
 
-    protected native static int dewarpaListPages(@Ptr long dewa) throws LastError;
+    protected native static int dewarpaListPages(@Ptr long dewa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -10498,7 +10623,8 @@ public class LibLept {
         return dewarpaStripRefModels(Pointer.getPeer(dewa));
     }
 
-    protected native static int dewarpaStripRefModels(@Ptr long dewa) throws LastError;
+    protected native static int dewarpaStripRefModels(@Ptr long dewa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -10511,7 +10637,8 @@ public class LibLept {
         return dewarpaRestoreModels(Pointer.getPeer(dewa));
     }
 
-    protected native static int dewarpaRestoreModels(@Ptr long dewa) throws LastError;
+    protected native static int dewarpaRestoreModels(@Ptr long dewa)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 dewarpaInfo(FILE*, L_DEWARPA*)</code><br>
@@ -10524,7 +10651,8 @@ public class LibLept {
         return dewarpaInfo(Pointer.getPeer(fp), Pointer.getPeer(dewa));
     }
 
-    protected native static int dewarpaInfo(@Ptr long fp, @Ptr long dewa) throws LastError;
+    protected native static int dewarpaInfo(@Ptr long fp, @Ptr long dewa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -10729,7 +10857,8 @@ public class LibLept {
         return l_dnaAddNumber(Pointer.getPeer(da), val);
     }
 
-    protected native static int l_dnaAddNumber(@Ptr long da, double val) throws LastError;
+    protected native static int l_dnaAddNumber(@Ptr long da, double val)
+            throws LastError;
 
     /**
      * Original signature :
@@ -10756,7 +10885,8 @@ public class LibLept {
         return l_dnaRemoveNumber(Pointer.getPeer(da), index);
     }
 
-    protected native static int l_dnaRemoveNumber(@Ptr long da, int index) throws LastError;
+    protected native static int l_dnaRemoveNumber(@Ptr long da, int index)
+            throws LastError;
 
     /**
      * Original signature :
@@ -10795,7 +10925,8 @@ public class LibLept {
         return l_dnaSetCount(Pointer.getPeer(da), newcount);
     }
 
-    protected native static int l_dnaSetCount(@Ptr long da, int newcount) throws LastError;
+    protected native static int l_dnaSetCount(@Ptr long da, int newcount)
+            throws LastError;
 
     /**
      * Original signature :
@@ -10883,7 +11014,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long l_dnaGetDArray(@Ptr long da, int copyflag) throws LastError;
+    protected native static long l_dnaGetDArray(@Ptr long da, int copyflag)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 l_dnaGetRefcount(L_DNA*)</code><br>
@@ -10908,7 +11040,8 @@ public class LibLept {
         return l_dnaChangeRefcount(Pointer.getPeer(da), delta);
     }
 
-    protected native static int l_dnaChangeRefcount(@Ptr long da, int delta) throws LastError;
+    protected native static int l_dnaChangeRefcount(@Ptr long da, int delta)
+            throws LastError;
 
     /**
      * Original signature :
@@ -10952,7 +11085,8 @@ public class LibLept {
         return l_dnaCopyParameters(Pointer.getPeer(dad), Pointer.getPeer(das));
     }
 
-    protected native static int l_dnaCopyParameters(@Ptr long dad, @Ptr long das) throws LastError;
+    protected native static int l_dnaCopyParameters(@Ptr long dad, @Ptr long das)
+            throws LastError;
 
     /**
      * Original signature : <code>L_DNA* l_dnaRead(const char*)</code><br>
@@ -10993,7 +11127,8 @@ public class LibLept {
         return l_dnaWrite(Pointer.getPeer(filename), Pointer.getPeer(da));
     }
 
-    protected native static int l_dnaWrite(@Ptr long filename, @Ptr long da) throws LastError;
+    protected native static int l_dnaWrite(@Ptr long filename, @Ptr long da)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 l_dnaWriteStream(FILE*, L_DNA*)</code><br>
@@ -11006,7 +11141,8 @@ public class LibLept {
         return l_dnaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(da));
     }
 
-    protected native static int l_dnaWriteStream(@Ptr long fp, @Ptr long da) throws LastError;
+    protected native static int l_dnaWriteStream(@Ptr long fp, @Ptr long da)
+            throws LastError;
 
     /**
      * Original signature : <code>L_DNAA* l_dnaaCreate(l_int32)</code><br>
@@ -11073,7 +11209,8 @@ public class LibLept {
         return l_dnaaGetDnaCount(Pointer.getPeer(daa), index);
     }
 
-    protected native static int l_dnaaGetDnaCount(@Ptr long daa, int index) throws LastError;
+    protected native static int l_dnaaGetDnaCount(@Ptr long daa, int index)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 l_dnaaGetNumberCount(L_DNAA*)</code><br>
@@ -11085,7 +11222,8 @@ public class LibLept {
         return l_dnaaGetNumberCount(Pointer.getPeer(daa));
     }
 
-    protected native static int l_dnaaGetNumberCount(@Ptr long daa) throws LastError;
+    protected native static int l_dnaaGetNumberCount(@Ptr long daa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -11163,7 +11301,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long l_dnaaRead(@Ptr long filename) throws LastError;
+    protected native static long l_dnaaRead(@Ptr long filename)
+            throws LastError;
 
     /**
      * Original signature : <code>L_DNAA* l_dnaaReadStream(FILE*)</code><br>
@@ -11178,7 +11317,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long l_dnaaReadStream(@Ptr long fp) throws LastError;
+    protected native static long l_dnaaReadStream(@Ptr long fp)
+            throws LastError;
 
     /**
      * Original signature :
@@ -11191,7 +11331,8 @@ public class LibLept {
         return l_dnaaWrite(Pointer.getPeer(filename), Pointer.getPeer(daa));
     }
 
-    protected native static int l_dnaaWrite(@Ptr long filename, @Ptr long daa) throws LastError;
+    protected native static int l_dnaaWrite(@Ptr long filename, @Ptr long daa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -11205,7 +11346,8 @@ public class LibLept {
         return l_dnaaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(daa));
     }
 
-    protected native static int l_dnaaWriteStream(@Ptr long fp, @Ptr long daa) throws LastError;
+    protected native static int l_dnaaWriteStream(@Ptr long fp, @Ptr long daa)
+            throws LastError;
 
     /**
      * Original signature : <code>L_DNA* l_dnaMakeDelta(L_DNA*)</code><br>
@@ -11233,7 +11375,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long l_dnaConvertToNuma(@Ptr long da) throws LastError;
+    protected native static long l_dnaConvertToNuma(@Ptr long da)
+            throws LastError;
 
     /**
      * Original signature : <code>L_DNA* numaConvertToDna(NUMA*)</code><br>
@@ -11247,7 +11390,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long numaConvertToDna(@Ptr long na) throws LastError;
+    protected native static long numaConvertToDna(@Ptr long na)
+            throws LastError;
 
     /**
      * Original signature :
@@ -11551,7 +11695,8 @@ public class LibLept {
 
     @Ptr
     @Name("numaContrastTRC")
-    protected native static long numaContrastTRC$2(float factor) throws LastError;
+    protected native static long numaContrastTRC$2(float factor)
+            throws LastError;
 
     /**
      * Original signature :
@@ -12260,7 +12405,8 @@ public class LibLept {
 
     @Ptr
     @Name("fpixCreate")
-    protected native static long fpixCreate$2(int width, int height) throws LastError;
+    protected native static long fpixCreate$2(int width, int height)
+            throws LastError;
 
     /**
      * Original signature : <code>FPIX* fpixCreateTemplate(FPIX*)</code><br>
@@ -12274,7 +12420,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long fpixCreateTemplate(@Ptr long fpixs) throws LastError;
+    protected native static long fpixCreateTemplate(@Ptr long fpixs)
+            throws LastError;
 
     /**
      * Original signature : <code>FPIX* fpixClone(FPIX*)</code><br>
@@ -12304,7 +12451,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long fpixCopy(@Ptr long fpixd, @Ptr long fpixs) throws LastError;
+    protected native static long fpixCopy(@Ptr long fpixd, @Ptr long fpixs)
+            throws LastError;
 
     /**
      * Original signature :
@@ -12361,7 +12509,8 @@ public class LibLept {
         return fpixSetDimensions(Pointer.getPeer(fpix), w, h);
     }
 
-    protected native static int fpixSetDimensions(@Ptr long fpix, int w, int h) throws LastError;
+    protected native static int fpixSetDimensions(@Ptr long fpix, int w, int h)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 fpixGetWpl(FPIX*)</code><br>
@@ -12385,7 +12534,8 @@ public class LibLept {
         return fpixSetWpl(Pointer.getPeer(fpix), wpl);
     }
 
-    protected native static int fpixSetWpl(@Ptr long fpix, int wpl) throws LastError;
+    protected native static int fpixSetWpl(@Ptr long fpix, int wpl)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 fpixGetRefcount(FPIX*)</code><br>
@@ -12397,7 +12547,8 @@ public class LibLept {
         return fpixGetRefcount(Pointer.getPeer(fpix));
     }
 
-    protected native static int fpixGetRefcount(@Ptr long fpix) throws LastError;
+    protected native static int fpixGetRefcount(@Ptr long fpix)
+            throws LastError;
 
     /**
      * Original signature :
@@ -12410,7 +12561,8 @@ public class LibLept {
         return fpixChangeRefcount(Pointer.getPeer(fpix), delta);
     }
 
-    protected native static int fpixChangeRefcount(@Ptr long fpix, int delta) throws LastError;
+    protected native static int fpixChangeRefcount(@Ptr long fpix, int delta)
+            throws LastError;
 
     /**
      * Original signature :
@@ -12482,7 +12634,8 @@ public class LibLept {
         return fpixSetData(Pointer.getPeer(fpix), Pointer.getPeer(data));
     }
 
-    protected native static int fpixSetData(@Ptr long fpix, @Ptr long data) throws LastError;
+    protected native static int fpixSetData(@Ptr long fpix, @Ptr long data)
+            throws LastError;
 
     /**
      * Original signature :
@@ -12539,7 +12692,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long fpixaCopy(@Ptr long fpixa, int copyflag) throws LastError;
+    protected native static long fpixaCopy(@Ptr long fpixa, int copyflag)
+            throws LastError;
 
     /**
      * Original signature : <code>void fpixaDestroy(FPIXA**)</code><br>
@@ -12551,7 +12705,8 @@ public class LibLept {
         fpixaDestroy(Pointer.getPeer(pfpixa));
     }
 
-    protected native static void fpixaDestroy(@Ptr long pfpixa) throws LastError;
+    protected native static void fpixaDestroy(@Ptr long pfpixa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -12592,7 +12747,8 @@ public class LibLept {
         return fpixaChangeRefcount(Pointer.getPeer(fpixa), delta);
     }
 
-    protected native static int fpixaChangeRefcount(@Ptr long fpixa, int delta) throws LastError;
+    protected native static int fpixaChangeRefcount(@Ptr long fpixa, int delta)
+            throws LastError;
 
     /**
      * Original signature :
@@ -12675,7 +12831,8 @@ public class LibLept {
 
     @Ptr
     @Name("dpixCreate")
-    protected native static long dpixCreate$2(int width, int height) throws LastError;
+    protected native static long dpixCreate$2(int width, int height)
+            throws LastError;
 
     /**
      * Original signature : <code>DPIX* dpixCreateTemplate(DPIX*)</code><br>
@@ -12689,7 +12846,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long dpixCreateTemplate(@Ptr long dpixs) throws LastError;
+    protected native static long dpixCreateTemplate(@Ptr long dpixs)
+            throws LastError;
 
     /**
      * Original signature : <code>DPIX* dpixClone(DPIX*)</code><br>
@@ -12719,7 +12877,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long dpixCopy(@Ptr long dpixd, @Ptr long dpixs) throws LastError;
+    protected native static long dpixCopy(@Ptr long dpixd, @Ptr long dpixs)
+            throws LastError;
 
     /**
      * Original signature :
@@ -12776,7 +12935,8 @@ public class LibLept {
         return dpixSetDimensions(Pointer.getPeer(dpix), w, h);
     }
 
-    protected native static int dpixSetDimensions(@Ptr long dpix, int w, int h) throws LastError;
+    protected native static int dpixSetDimensions(@Ptr long dpix, int w, int h)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 dpixGetWpl(DPIX*)</code><br>
@@ -12800,7 +12960,8 @@ public class LibLept {
         return dpixSetWpl(Pointer.getPeer(dpix), wpl);
     }
 
-    protected native static int dpixSetWpl(@Ptr long dpix, int wpl) throws LastError;
+    protected native static int dpixSetWpl(@Ptr long dpix, int wpl)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 dpixGetRefcount(DPIX*)</code><br>
@@ -12812,7 +12973,8 @@ public class LibLept {
         return dpixGetRefcount(Pointer.getPeer(dpix));
     }
 
-    protected native static int dpixGetRefcount(@Ptr long dpix) throws LastError;
+    protected native static int dpixGetRefcount(@Ptr long dpix)
+            throws LastError;
 
     /**
      * Original signature :
@@ -12825,7 +12987,8 @@ public class LibLept {
         return dpixChangeRefcount(Pointer.getPeer(dpix), delta);
     }
 
-    protected native static int dpixChangeRefcount(@Ptr long dpix, int delta) throws LastError;
+    protected native static int dpixChangeRefcount(@Ptr long dpix, int delta)
+            throws LastError;
 
     /**
      * Original signature :
@@ -12897,7 +13060,8 @@ public class LibLept {
         return dpixSetData(Pointer.getPeer(dpix), Pointer.getPeer(data));
     }
 
-    protected native static int dpixSetData(@Ptr long dpix, @Ptr long data) throws LastError;
+    protected native static int dpixSetData(@Ptr long dpix, @Ptr long data)
+            throws LastError;
 
     /**
      * Original signature :
@@ -12966,7 +13130,8 @@ public class LibLept {
         return fpixWrite(Pointer.getPeer(filename), Pointer.getPeer(fpix));
     }
 
-    protected native static int fpixWrite(@Ptr long filename, @Ptr long fpix) throws LastError;
+    protected native static int fpixWrite(@Ptr long filename, @Ptr long fpix)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 fpixWriteStream(FILE*, FPIX*)</code><br>
@@ -12979,7 +13144,8 @@ public class LibLept {
         return fpixWriteStream(Pointer.getPeer(fp), Pointer.getPeer(fpix));
     }
 
-    protected native static int fpixWriteStream(@Ptr long fp, @Ptr long fpix) throws LastError;
+    protected native static int fpixWriteStream(@Ptr long fp, @Ptr long fpix)
+            throws LastError;
 
     /**
      * Original signature : <code>FPIX* fpixEndianByteSwap(FPIX*, FPIX*)</code><br>
@@ -13036,7 +13202,8 @@ public class LibLept {
         return dpixWrite(Pointer.getPeer(filename), Pointer.getPeer(dpix));
     }
 
-    protected native static int dpixWrite(@Ptr long filename, @Ptr long dpix) throws LastError;
+    protected native static int dpixWrite(@Ptr long filename, @Ptr long dpix)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 dpixWriteStream(FILE*, DPIX*)</code><br>
@@ -13049,7 +13216,8 @@ public class LibLept {
         return dpixWriteStream(Pointer.getPeer(fp), Pointer.getPeer(dpix));
     }
 
-    protected native static int dpixWriteStream(@Ptr long fp, @Ptr long dpix) throws LastError;
+    protected native static int dpixWriteStream(@Ptr long fp, @Ptr long dpix)
+            throws LastError;
 
     /**
      * Original signature : <code>DPIX* dpixEndianByteSwap(DPIX*, DPIX*)</code><br>
@@ -13096,7 +13264,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixConvertToFPix(@Ptr long pixs, int ncomps) throws LastError;
+    protected native static long pixConvertToFPix(@Ptr long pixs, int ncomps)
+            throws LastError;
 
     /**
      * Original signature : <code>DPIX* pixConvertToDPix(PIX*, l_int32)</code><br>
@@ -13110,7 +13279,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixConvertToDPix(@Ptr long pixs, int ncomps) throws LastError;
+    protected native static long pixConvertToDPix(@Ptr long pixs, int ncomps)
+            throws LastError;
 
     /**
      * Original signature :
@@ -13142,7 +13312,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long fpixDisplayMaxDynamicRange(@Ptr long fpixs) throws LastError;
+    protected native static long fpixDisplayMaxDynamicRange(@Ptr long fpixs)
+            throws LastError;
 
     /**
      * Original signature : <code>DPIX* fpixConvertToDPix(FPIX*)</code><br>
@@ -13156,7 +13327,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long fpixConvertToDPix(@Ptr long fpix) throws LastError;
+    protected native static long fpixConvertToDPix(@Ptr long fpix)
+            throws LastError;
 
     /**
      * Original signature :
@@ -13188,7 +13360,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long dpixConvertToFPix(@Ptr long dpix) throws LastError;
+    protected native static long dpixConvertToFPix(@Ptr long dpix)
+            throws LastError;
 
     /**
      * Original signature :
@@ -13268,7 +13441,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long fpixScaleByInteger(@Ptr long fpixs, int factor) throws LastError;
+    protected native static long fpixScaleByInteger(@Ptr long fpixs, int factor)
+            throws LastError;
 
     /**
      * Original signature :
@@ -13284,7 +13458,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long dpixScaleByInteger(@Ptr long dpixs, int factor) throws LastError;
+    protected native static long dpixScaleByInteger(@Ptr long dpixs, int factor)
+            throws LastError;
 
     /**
      * Original signature :
@@ -13367,7 +13542,8 @@ public class LibLept {
         return fpixSetAllArbitrary(Pointer.getPeer(fpix), inval);
     }
 
-    protected native static int fpixSetAllArbitrary(@Ptr long fpix, float inval) throws LastError;
+    protected native static int fpixSetAllArbitrary(@Ptr long fpix, float inval)
+            throws LastError;
 
     /**
      * Original signature :
@@ -13380,7 +13556,8 @@ public class LibLept {
         return dpixSetAllArbitrary(Pointer.getPeer(dpix), inval);
     }
 
-    protected native static int dpixSetAllArbitrary(@Ptr long dpix, double inval) throws LastError;
+    protected native static int dpixSetAllArbitrary(@Ptr long dpix, double inval)
+            throws LastError;
 
     /**
      * Original signature :
@@ -13506,7 +13683,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long fpixRotateOrth(@Ptr long fpixs, int quads) throws LastError;
+    protected native static long fpixRotateOrth(@Ptr long fpixs, int quads)
+            throws LastError;
 
     /**
      * Original signature : <code>FPIX* fpixRotate180(FPIX*, FPIX*)</code><br>
@@ -13522,7 +13700,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long fpixRotate180(@Ptr long fpixd, @Ptr long fpixs) throws LastError;
+    protected native static long fpixRotate180(@Ptr long fpixd, @Ptr long fpixs)
+            throws LastError;
 
     /**
      * Original signature : <code>FPIX* fpixRotate90(FPIX*, l_int32)</code><br>
@@ -13536,7 +13715,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long fpixRotate90(@Ptr long fpixs, int direction) throws LastError;
+    protected native static long fpixRotate90(@Ptr long fpixs, int direction)
+            throws LastError;
 
     /**
      * Original signature : <code>FPIX* fpixFlipLR(FPIX*, FPIX*)</code><br>
@@ -13552,7 +13732,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long fpixFlipLR(@Ptr long fpixd, @Ptr long fpixs) throws LastError;
+    protected native static long fpixFlipLR(@Ptr long fpixd, @Ptr long fpixs)
+            throws LastError;
 
     /**
      * Original signature : <code>FPIX* fpixFlipTB(FPIX*, FPIX*)</code><br>
@@ -13568,7 +13749,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long fpixFlipTB(@Ptr long fpixd, @Ptr long fpixs) throws LastError;
+    protected native static long fpixFlipTB(@Ptr long fpixd, @Ptr long fpixs)
+            throws LastError;
 
     /**
      * Original signature :
@@ -13675,7 +13857,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long fpixThresholdToPix(@Ptr long fpix, float thresh) throws LastError;
+    protected native static long fpixThresholdToPix(@Ptr long fpix, float thresh)
+            throws LastError;
 
     /**
      * Original signature :
@@ -13711,7 +13894,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixReadStreamGif(@Ptr long fp) throws LastError;
+    protected native static long pixReadStreamGif(@Ptr long fp)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixWriteStreamGif(FILE*, PIX*)</code><br>
@@ -13724,7 +13908,8 @@ public class LibLept {
         return pixWriteStreamGif(Pointer.getPeer(fp), Pointer.getPeer(pix));
     }
 
-    protected native static int pixWriteStreamGif(@Ptr long fp, @Ptr long pix) throws LastError;
+    protected native static int pixWriteStreamGif(@Ptr long fp, @Ptr long pix)
+            throws LastError;
 
     /**
      * Original signature :
@@ -13739,7 +13924,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixReadMemGif(@Ptr long cdata, @Ptr long size) throws LastError;
+    protected native static long pixReadMemGif(@Ptr long cdata, @Ptr long size)
+            throws LastError;
 
     /**
      * Original signature :
@@ -13788,7 +13974,8 @@ public class LibLept {
         gplotDestroy(Pointer.getPeer(pgplot));
     }
 
-    protected native static void gplotDestroy(@Ptr long pgplot) throws LastError;
+    protected native static void gplotDestroy(@Ptr long pgplot)
+            throws LastError;
 
     /**
      * Original signature :
@@ -13818,7 +14005,8 @@ public class LibLept {
         return gplotSetScaling(Pointer.getPeer(gplot), scaling);
     }
 
-    protected native static int gplotSetScaling(@Ptr long gplot, int scaling) throws LastError;
+    protected native static int gplotSetScaling(@Ptr long gplot, int scaling)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 gplotMakeOutput(GPLOT*)</code><br>
@@ -13830,7 +14018,8 @@ public class LibLept {
         return gplotMakeOutput(Pointer.getPeer(gplot));
     }
 
-    protected native static int gplotMakeOutput(@Ptr long gplot) throws LastError;
+    protected native static int gplotMakeOutput(@Ptr long gplot)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 gplotGenCommandFile(GPLOT*)</code><br>
@@ -13842,7 +14031,8 @@ public class LibLept {
         return gplotGenCommandFile(Pointer.getPeer(gplot));
     }
 
-    protected native static int gplotGenCommandFile(@Ptr long gplot) throws LastError;
+    protected native static int gplotGenCommandFile(@Ptr long gplot)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 gplotGenDataFiles(GPLOT*)</code><br>
@@ -13854,7 +14044,8 @@ public class LibLept {
         return gplotGenDataFiles(Pointer.getPeer(gplot));
     }
 
-    protected native static int gplotGenDataFiles(@Ptr long gplot) throws LastError;
+    protected native static int gplotGenDataFiles(@Ptr long gplot)
+            throws LastError;
 
     /**
      * Original signature :
@@ -13931,7 +14122,8 @@ public class LibLept {
         return gplotWrite(Pointer.getPeer(filename), Pointer.getPeer(gplot));
     }
 
-    protected native static int gplotWrite(@Ptr long filename, @Ptr long gplot) throws LastError;
+    protected native static int gplotWrite(@Ptr long filename, @Ptr long gplot)
+            throws LastError;
 
     /**
      * Original signature :
@@ -13981,7 +14173,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long generatePtaBox(@Ptr long box, int width) throws LastError;
+    protected native static long generatePtaBox(@Ptr long box, int width)
+            throws LastError;
 
     /**
      * Original signature :
@@ -14051,7 +14244,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long generatePtaaBoxa(@Ptr long boxa) throws LastError;
+    protected native static long generatePtaaBoxa(@Ptr long boxa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -14102,7 +14296,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long convertPtaLineTo4cc(@Ptr long ptas) throws LastError;
+    protected native static long convertPtaLineTo4cc(@Ptr long ptas)
+            throws LastError;
 
     /**
      * Original signature : <code>PTA* generatePtaFilledCircle(l_int32)</code><br>
@@ -14117,7 +14312,8 @@ public class LibLept {
 
     @Ptr
     @Name("generatePtaFilledCircle")
-    protected native static long generatePtaFilledCircle$2(int radius) throws LastError;
+    protected native static long generatePtaFilledCircle$2(int radius)
+            throws LastError;
 
     /**
      * Original signature : <code>PTA* generatePtaFilledSquare(l_int32)</code><br>
@@ -14132,7 +14328,8 @@ public class LibLept {
 
     @Ptr
     @Name("generatePtaFilledSquare")
-    protected native static long generatePtaFilledSquare$2(int side) throws LastError;
+    protected native static long generatePtaFilledSquare$2(int side)
+            throws LastError;
 
     /**
      * Original signature :
@@ -14859,7 +15056,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixDitherToBinary(@Ptr long pixs) throws LastError;
+    protected native static long pixDitherToBinary(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature :
@@ -14893,7 +15091,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixThresholdToBinary(@Ptr long pixs, int thresh) throws LastError;
+    protected native static long pixThresholdToBinary(@Ptr long pixs, int thresh)
+            throws LastError;
 
     /**
      * Original signature :
@@ -14980,7 +15179,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixDitherTo2bpp(@Ptr long pixs, int cmapflag) throws LastError;
+    protected native static long pixDitherTo2bpp(@Ptr long pixs, int cmapflag)
+            throws LastError;
 
     /**
      * Original signature :
@@ -15090,7 +15290,8 @@ public class LibLept {
 
     @Ptr
     @Name("makeGrayQuantIndexTable")
-    protected native static long makeGrayQuantIndexTable$2(int nlevels) throws LastError;
+    protected native static long makeGrayQuantIndexTable$2(int nlevels)
+            throws LastError;
 
     /**
      * Original signature :
@@ -15468,7 +15669,8 @@ public class LibLept {
 
     @Ptr
     @Name("lheapCreate")
-    protected native static long lheapCreate$2(int nalloc, int direction) throws LastError;
+    protected native static long lheapCreate$2(int nalloc, int direction)
+            throws LastError;
 
     /**
      * Original signature : <code>void lheapDestroy(L_HEAP**, l_int32)</code><br>
@@ -15480,7 +15682,8 @@ public class LibLept {
         lheapDestroy(Pointer.getPeer(plh), freeflag);
     }
 
-    protected native static void lheapDestroy(@Ptr long plh, int freeflag) throws LastError;
+    protected native static void lheapDestroy(@Ptr long plh, int freeflag)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 lheapAdd(L_HEAP*, void*)</code><br>
@@ -15492,7 +15695,8 @@ public class LibLept {
         return lheapAdd(Pointer.getPeer(lh), Pointer.getPeer(item));
     }
 
-    protected native static int lheapAdd(@Ptr long lh, @Ptr long item) throws LastError;
+    protected native static int lheapAdd(@Ptr long lh, @Ptr long item)
+            throws LastError;
 
     /**
      * Original signature : <code>void* lheapRemove(L_HEAP*)</code><br>
@@ -15529,7 +15733,8 @@ public class LibLept {
         return lheapSwapUp(Pointer.getPeer(lh), index);
     }
 
-    protected native static int lheapSwapUp(@Ptr long lh, int index) throws LastError;
+    protected native static int lheapSwapUp(@Ptr long lh, int index)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 lheapSwapDown(L_HEAP*)</code><br>
@@ -15565,7 +15770,8 @@ public class LibLept {
         return lheapSortStrictOrder(Pointer.getPeer(lh));
     }
 
-    protected native static int lheapSortStrictOrder(@Ptr long lh) throws LastError;
+    protected native static int lheapSortStrictOrder(@Ptr long lh)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 lheapPrint(FILE*, L_HEAP*)</code><br>
@@ -15578,7 +15784,8 @@ public class LibLept {
         return lheapPrint(Pointer.getPeer(fp), Pointer.getPeer(lh));
     }
 
-    protected native static int lheapPrint(@Ptr long fp, @Ptr long lh) throws LastError;
+    protected native static int lheapPrint(@Ptr long fp, @Ptr long lh)
+            throws LastError;
 
     /**
      * Original signature :
@@ -15653,7 +15860,8 @@ public class LibLept {
         return jbAddPages(Pointer.getPeer(classer), Pointer.getPeer(safiles));
     }
 
-    protected native static int jbAddPages(@Ptr long classer, @Ptr long safiles) throws LastError;
+    protected native static int jbAddPages(@Ptr long classer, @Ptr long safiles)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 jbAddPage(JBCLASSER*, PIX*)</code><br>
@@ -15665,7 +15873,8 @@ public class LibLept {
         return jbAddPage(Pointer.getPeer(classer), Pointer.getPeer(pixs));
     }
 
-    protected native static int jbAddPage(@Ptr long classer, @Ptr long pixs) throws LastError;
+    protected native static int jbAddPage(@Ptr long classer, @Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature :
@@ -15864,7 +16073,8 @@ public class LibLept {
 
     @Ptr
     @Name("jbClasserCreate")
-    protected native static long jbClasserCreate$2(int method, int components) throws LastError;
+    protected native static long jbClasserCreate$2(int method, int components)
+            throws LastError;
 
     /**
      * Original signature : <code>void jbClasserDestroy(JBCLASSER**)</code><br>
@@ -15876,7 +16086,8 @@ public class LibLept {
         jbClasserDestroy(Pointer.getPeer(pclasser));
     }
 
-    protected native static void jbClasserDestroy(@Ptr long pclasser) throws LastError;
+    protected native static void jbClasserDestroy(@Ptr long pclasser)
+            throws LastError;
 
     /**
      * Original signature : <code>JBDATA* jbDataSave(JBCLASSER*)</code><br>
@@ -15902,7 +16113,8 @@ public class LibLept {
         jbDataDestroy(Pointer.getPeer(pdata));
     }
 
-    protected native static void jbDataDestroy(@Ptr long pdata) throws LastError;
+    protected native static void jbDataDestroy(@Ptr long pdata)
+            throws LastError;
 
     /**
      * Original signature :
@@ -15915,7 +16127,8 @@ public class LibLept {
         return jbDataWrite(Pointer.getPeer(rootout), Pointer.getPeer(jbdata));
     }
 
-    protected native static int jbDataWrite(@Ptr long rootout, @Ptr long jbdata) throws LastError;
+    protected native static int jbDataWrite(@Ptr long rootout, @Ptr long jbdata)
+            throws LastError;
 
     /**
      * Original signature : <code>JBDATA* jbDataRead(const char*)</code><br>
@@ -15929,7 +16142,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long jbDataRead(@Ptr long rootname) throws LastError;
+    protected native static long jbDataRead(@Ptr long rootname)
+            throws LastError;
 
     /**
      * Original signature : <code>PIXA* jbDataRender(JBDATA*, l_int32)</code><br>
@@ -15943,7 +16157,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long jbDataRender(@Ptr long data, int debugflag) throws LastError;
+    protected native static long jbDataRender(@Ptr long data, int debugflag)
+            throws LastError;
 
     /**
      * Original signature :
@@ -15971,7 +16186,8 @@ public class LibLept {
         return jbGetLLCorners(Pointer.getPeer(classer));
     }
 
-    protected native static int jbGetLLCorners(@Ptr long classer) throws LastError;
+    protected native static int jbGetLLCorners(@Ptr long classer)
+            throws LastError;
 
     /**
      * Original signature :
@@ -16128,7 +16344,8 @@ public class LibLept {
         return fgetJpegComment(Pointer.getPeer(fp), Pointer.getPeer(pcomment));
     }
 
-    protected native static int fgetJpegComment(@Ptr long fp, @Ptr long pcomment) throws LastError;
+    protected native static int fgetJpegComment(@Ptr long fp, @Ptr long pcomment)
+            throws LastError;
 
     /**
      * Original signature :
@@ -16232,7 +16449,8 @@ public class LibLept {
         return pixSetChromaSampling(Pointer.getPeer(pix), sampling);
     }
 
-    protected native static int pixSetChromaSampling(@Ptr long pix, int sampling) throws LastError;
+    protected native static int pixSetChromaSampling(@Ptr long pix, int sampling)
+            throws LastError;
 
     /**
      * Original signature :
@@ -16290,7 +16508,8 @@ public class LibLept {
 
     @Ptr
     @Name("kernelCreate")
-    protected native static long kernelCreate$2(int height, int width) throws LastError;
+    protected native static long kernelCreate$2(int height, int width)
+            throws LastError;
 
     /**
      * Original signature : <code>void kernelDestroy(L_KERNEL**)</code><br>
@@ -16381,7 +16600,8 @@ public class LibLept {
         return kernelSetOrigin(Pointer.getPeer(kel), cy, cx);
     }
 
-    protected native static int kernelSetOrigin(@Ptr long kel, int cy, int cx) throws LastError;
+    protected native static int kernelSetOrigin(@Ptr long kel, int cy, int cx)
+            throws LastError;
 
     /**
      * Original signature :
@@ -16394,7 +16614,8 @@ public class LibLept {
         return kernelGetSum(Pointer.getPeer(kel), Pointer.getPeer(psum));
     }
 
-    protected native static int kernelGetSum(@Ptr long kel, @Ptr long psum) throws LastError;
+    protected native static int kernelGetSum(@Ptr long kel, @Ptr long psum)
+            throws LastError;
 
     /**
      * Original signature :
@@ -16426,7 +16647,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long kernelNormalize(@Ptr long kels, float normsum) throws LastError;
+    protected native static long kernelNormalize(@Ptr long kels, float normsum)
+            throws LastError;
 
     /**
      * Original signature : <code>L_KERNEL* kernelInvert(L_KERNEL*)</code><br>
@@ -16456,7 +16678,8 @@ public class LibLept {
 
     @Ptr
     @Name("create2dFloatArray")
-    protected native static long create2dFloatArray$2(int sy, int sx) throws LastError;
+    protected native static long create2dFloatArray$2(int sy, int sx)
+            throws LastError;
 
     /**
      * Original signature : <code>L_KERNEL* kernelRead(const char*)</code><br>
@@ -16485,7 +16708,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long kernelReadStream(@Ptr long fp) throws LastError;
+    protected native static long kernelReadStream(@Ptr long fp)
+            throws LastError;
 
     /**
      * Original signature :
@@ -16498,7 +16722,8 @@ public class LibLept {
         return kernelWrite(Pointer.getPeer(fname), Pointer.getPeer(kel));
     }
 
-    protected native static int kernelWrite(@Ptr long fname, @Ptr long kel) throws LastError;
+    protected native static int kernelWrite(@Ptr long fname, @Ptr long kel)
+            throws LastError;
 
     /**
      * Original signature :
@@ -16512,7 +16737,8 @@ public class LibLept {
         return kernelWriteStream(Pointer.getPeer(fp), Pointer.getPeer(kel));
     }
 
-    protected native static int kernelWriteStream(@Ptr long fp, @Ptr long kel) throws LastError;
+    protected native static int kernelWriteStream(@Ptr long fp, @Ptr long kel)
+            throws LastError;
 
     /**
      * Original signature :
@@ -16546,7 +16772,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long kernelCreateFromFile(@Ptr long filename) throws LastError;
+    protected native static long kernelCreateFromFile(@Ptr long filename)
+            throws LastError;
 
     /**
      * Original signature :
@@ -16717,7 +16944,8 @@ public class LibLept {
         return listAddToHead(Pointer.getPeer(phead), Pointer.getPeer(data));
     }
 
-    protected native static int listAddToHead(@Ptr long phead, @Ptr long data) throws LastError;
+    protected native static int listAddToHead(@Ptr long phead, @Ptr long data)
+            throws LastError;
 
     /**
      * Original signature :
@@ -16798,7 +17026,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long listRemoveFromHead(@Ptr long phead) throws LastError;
+    protected native static long listRemoveFromHead(@Ptr long phead)
+            throws LastError;
 
     /**
      * Original signature :
@@ -16832,7 +17061,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long listFindElement(@Ptr long head, @Ptr long data) throws LastError;
+    protected native static long listFindElement(@Ptr long head, @Ptr long data)
+            throws LastError;
 
     /**
      * Original signature : <code>DLLIST* listFindTail(DLLIST*)</code><br>
@@ -16884,7 +17114,8 @@ public class LibLept {
         return listJoin(Pointer.getPeer(phead1), Pointer.getPeer(phead2));
     }
 
-    protected native static int listJoin(@Ptr long phead1, @Ptr long phead2) throws LastError;
+    protected native static int listJoin(@Ptr long phead1, @Ptr long phead2)
+            throws LastError;
 
     /**
      * Original signature :
@@ -17318,7 +17549,8 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1026</i>
      */
-    public static native void resetMorphBoundaryCondition(int bc) throws LastError;
+    public static native void resetMorphBoundaryCondition(int bc)
+            throws LastError;
 
     /**
      * Original signature :
@@ -17327,7 +17559,8 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1027</i>
      */
-    public static native int getMorphBorderPixelColor(int type, int depth) throws LastError;
+    public static native int getMorphBorderPixelColor(int type, int depth)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixExtractBoundary(PIX*, l_int32)</code><br>
@@ -17341,7 +17574,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixExtractBoundary(@Ptr long pixs, int type) throws LastError;
+    protected native static long pixExtractBoundary(@Ptr long pixs, int type)
+            throws LastError;
 
     /**
      * Original signature :
@@ -17998,7 +18232,8 @@ public class LibLept {
         return morphSequenceVerify(Pointer.getPeer(sa));
     }
 
-    protected native static int morphSequenceVerify(@Ptr long sa) throws LastError;
+    protected native static int morphSequenceVerify(@Ptr long sa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -18066,7 +18301,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long numaCreateFromIArray(@Ptr long iarray, int size) throws LastError;
+    protected native static long numaCreateFromIArray(@Ptr long iarray, int size)
+            throws LastError;
 
     /**
      * Original signature :
@@ -18148,7 +18384,8 @@ public class LibLept {
         return numaAddNumber(Pointer.getPeer(na), val);
     }
 
-    protected native static int numaAddNumber(@Ptr long na, float val) throws LastError;
+    protected native static int numaAddNumber(@Ptr long na, float val)
+            throws LastError;
 
     /**
      * Original signature :
@@ -18175,7 +18412,8 @@ public class LibLept {
         return numaRemoveNumber(Pointer.getPeer(na), index);
     }
 
-    protected native static int numaRemoveNumber(@Ptr long na, int index) throws LastError;
+    protected native static int numaRemoveNumber(@Ptr long na, int index)
+            throws LastError;
 
     /**
      * Original signature :
@@ -18213,7 +18451,8 @@ public class LibLept {
         return numaSetCount(Pointer.getPeer(na), newcount);
     }
 
-    protected native static int numaSetCount(@Ptr long na, int newcount) throws LastError;
+    protected native static int numaSetCount(@Ptr long na, int newcount)
+            throws LastError;
 
     /**
      * Original signature :
@@ -18256,7 +18495,8 @@ public class LibLept {
         return numaSetValue(Pointer.getPeer(na), index, val);
     }
 
-    protected native static int numaSetValue(@Ptr long na, int index, float val) throws LastError;
+    protected native static int numaSetValue(@Ptr long na, int index, float val)
+            throws LastError;
 
     /**
      * Original signature :
@@ -18299,7 +18539,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long numaGetFArray(@Ptr long na, int copyflag) throws LastError;
+    protected native static long numaGetFArray(@Ptr long na, int copyflag)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 numaGetRefcount(NUMA*)</code><br>
@@ -18324,7 +18565,8 @@ public class LibLept {
         return numaChangeRefcount(Pointer.getPeer(na), delta);
     }
 
-    protected native static int numaChangeRefcount(@Ptr long na, int delta) throws LastError;
+    protected native static int numaChangeRefcount(@Ptr long na, int delta)
+            throws LastError;
 
     /**
      * Original signature :
@@ -18368,7 +18610,8 @@ public class LibLept {
         return numaCopyParameters(Pointer.getPeer(nad), Pointer.getPeer(nas));
     }
 
-    protected native static int numaCopyParameters(@Ptr long nad, @Ptr long nas) throws LastError;
+    protected native static int numaCopyParameters(@Ptr long nad, @Ptr long nas)
+            throws LastError;
 
     /**
      * Original signature :
@@ -18427,7 +18670,8 @@ public class LibLept {
         return numaWrite(Pointer.getPeer(filename), Pointer.getPeer(na));
     }
 
-    protected native static int numaWrite(@Ptr long filename, @Ptr long na) throws LastError;
+    protected native static int numaWrite(@Ptr long filename, @Ptr long na)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 numaWriteStream(FILE*, NUMA*)</code><br>
@@ -18440,7 +18684,8 @@ public class LibLept {
         return numaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(na));
     }
 
-    protected native static int numaWriteStream(@Ptr long fp, @Ptr long na) throws LastError;
+    protected native static int numaWriteStream(@Ptr long fp, @Ptr long na)
+            throws LastError;
 
     /**
      * Original signature : <code>NUMAA* numaaCreate(l_int32)</code><br>
@@ -18470,7 +18715,8 @@ public class LibLept {
 
     @Ptr
     @Name("numaaCreateFull")
-    protected native static long numaaCreateFull$2(int ntop, int n) throws LastError;
+    protected native static long numaaCreateFull$2(int ntop, int n)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 numaaTruncate(NUMAA*)</code><br>
@@ -18521,7 +18767,8 @@ public class LibLept {
         return numaaExtendArray(Pointer.getPeer(naa));
     }
 
-    protected native static int numaaExtendArray(@Ptr long naa) throws LastError;
+    protected native static int numaaExtendArray(@Ptr long naa)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 numaaGetCount(NUMAA*)</code><br>
@@ -18546,7 +18793,8 @@ public class LibLept {
         return numaaGetNumaCount(Pointer.getPeer(naa), index);
     }
 
-    protected native static int numaaGetNumaCount(@Ptr long naa, int index) throws LastError;
+    protected native static int numaaGetNumaCount(@Ptr long naa, int index)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 numaaGetNumberCount(NUMAA*)</code><br>
@@ -18558,7 +18806,8 @@ public class LibLept {
         return numaaGetNumberCount(Pointer.getPeer(naa));
     }
 
-    protected native static int numaaGetNumberCount(@Ptr long naa) throws LastError;
+    protected native static int numaaGetNumberCount(@Ptr long naa)
+            throws LastError;
 
     /**
      * Original signature : <code>NUMA** numaaGetPtrArray(NUMAA*)</code><br>
@@ -18573,7 +18822,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long numaaGetPtrArray(@Ptr long naa) throws LastError;
+    protected native static long numaaGetPtrArray(@Ptr long naa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -18679,7 +18929,8 @@ public class LibLept {
         return numaaWrite(Pointer.getPeer(filename), Pointer.getPeer(naa));
     }
 
-    protected native static int numaaWrite(@Ptr long filename, @Ptr long naa) throws LastError;
+    protected native static int numaaWrite(@Ptr long filename, @Ptr long naa)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 numaaWriteStream(FILE*, NUMAA*)</code><br>
@@ -18692,7 +18943,8 @@ public class LibLept {
         return numaaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(naa));
     }
 
-    protected native static int numaaWriteStream(@Ptr long fp, @Ptr long naa) throws LastError;
+    protected native static int numaaWriteStream(@Ptr long fp, @Ptr long naa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -18722,7 +18974,8 @@ public class LibLept {
         numa2dDestroy(Pointer.getPeer(pna2d));
     }
 
-    protected native static void numa2dDestroy(@Ptr long pna2d) throws LastError;
+    protected native static void numa2dDestroy(@Ptr long pna2d)
+            throws LastError;
 
     /**
      * Original signature :
@@ -18751,7 +19004,8 @@ public class LibLept {
         return numa2dGetCount(Pointer.getPeer(na2d), row, col);
     }
 
-    protected native static int numa2dGetCount(@Ptr long na2d, int row, int col) throws LastError;
+    protected native static int numa2dGetCount(@Ptr long na2d, int row, int col)
+            throws LastError;
 
     /**
      * Original signature :
@@ -18767,7 +19021,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long numa2dGetNuma(@Ptr long na2d, int row, int col) throws LastError;
+    protected native static long numa2dGetNuma(@Ptr long na2d, int row, int col)
+            throws LastError;
 
     /**
      * Original signature :
@@ -18817,7 +19072,8 @@ public class LibLept {
 
     @Ptr
     @Name("numaHashCreate")
-    protected native static long numaHashCreate$2(int nbuckets, int initsize) throws LastError;
+    protected native static long numaHashCreate$2(int nbuckets, int initsize)
+            throws LastError;
 
     /**
      * Original signature : <code>void numaHashDestroy(NUMAHASH**)</code><br>
@@ -18829,7 +19085,8 @@ public class LibLept {
         numaHashDestroy(Pointer.getPeer(pnahash));
     }
 
-    protected native static void numaHashDestroy(@Ptr long pnahash) throws LastError;
+    protected native static void numaHashDestroy(@Ptr long pnahash)
+            throws LastError;
 
     /**
      * Original signature :
@@ -18845,7 +19102,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long numaHashGetNuma(@Ptr long nahash, int key) throws LastError;
+    protected native static long numaHashGetNuma(@Ptr long nahash, int key)
+            throws LastError;
 
     /**
      * Original signature :
@@ -18910,7 +19168,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long numaInvert(@Ptr long nad, @Ptr long nas) throws LastError;
+    protected native static long numaInvert(@Ptr long nad, @Ptr long nas)
+            throws LastError;
 
     /**
      * Original signature :
@@ -18984,7 +19243,8 @@ public class LibLept {
         return numaGetSum(Pointer.getPeer(na), Pointer.getPeer(psum));
     }
 
-    protected native static int numaGetSum(@Ptr long na, @Ptr long psum) throws LastError;
+    protected native static int numaGetSum(@Ptr long na, @Ptr long psum)
+            throws LastError;
 
     /**
      * Original signature : <code>NUMA* numaGetPartialSums(NUMA*)</code><br>
@@ -18998,7 +19258,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long numaGetPartialSums(@Ptr long na) throws LastError;
+    protected native static long numaGetPartialSums(@Ptr long na)
+            throws LastError;
 
     /**
      * Original signature :
@@ -19045,7 +19306,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long numaSubsample(@Ptr long nas, int subfactor) throws LastError;
+    protected native static long numaSubsample(@Ptr long nas, int subfactor)
+            throws LastError;
 
     /**
      * Original signature : <code>NUMA* numaMakeDelta(NUMA*)</code><br>
@@ -19093,7 +19355,8 @@ public class LibLept {
 
     @Ptr
     @Name("numaMakeConstant")
-    protected native static long numaMakeConstant$2(float val, int size) throws LastError;
+    protected native static long numaMakeConstant$2(float val, int size)
+            throws LastError;
 
     /**
      * Original signature : <code>NUMA* numaMakeAbsValue(NUMA*, NUMA*)</code><br>
@@ -19109,7 +19372,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long numaMakeAbsValue(@Ptr long nad, @Ptr long nas) throws LastError;
+    protected native static long numaMakeAbsValue(@Ptr long nad, @Ptr long nas)
+            throws LastError;
 
     /**
      * Original signature :
@@ -19247,7 +19511,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long numaUniformSampling(@Ptr long nas, int nsamp) throws LastError;
+    protected native static long numaUniformSampling(@Ptr long nas, int nsamp)
+            throws LastError;
 
     /**
      * Original signature : <code>NUMA* numaReverse(NUMA*, NUMA*)</code><br>
@@ -19262,7 +19527,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long numaReverse(@Ptr long nad, @Ptr long nas) throws LastError;
+    protected native static long numaReverse(@Ptr long nad, @Ptr long nas)
+            throws LastError;
 
     /**
      * Original signature :
@@ -19498,7 +19764,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long numaSortAutoSelect(@Ptr long nas, int sortorder) throws LastError;
+    protected native static long numaSortAutoSelect(@Ptr long nas, int sortorder)
+            throws LastError;
 
     /**
      * Original signature :
@@ -19528,7 +19795,8 @@ public class LibLept {
         return numaChooseSortType(Pointer.getPeer(nas));
     }
 
-    protected native static int numaChooseSortType(@Ptr long nas) throws LastError;
+    protected native static int numaChooseSortType(@Ptr long nas)
+            throws LastError;
 
     /**
      * Original signature : <code>NUMA* numaSort(NUMA*, NUMA*, l_int32)</code><br>
@@ -19559,7 +19827,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long numaBinSort(@Ptr long nas, int sortorder) throws LastError;
+    protected native static long numaBinSort(@Ptr long nas, int sortorder)
+            throws LastError;
 
     /**
      * Original signature : <code>NUMA* numaGetSortIndex(NUMA*, l_int32)</code><br>
@@ -19573,7 +19842,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long numaGetSortIndex(@Ptr long na, int sortorder) throws LastError;
+    protected native static long numaGetSortIndex(@Ptr long na, int sortorder)
+            throws LastError;
 
     /**
      * Original signature :
@@ -19671,7 +19941,8 @@ public class LibLept {
 
     @Ptr
     @Name("numaPseudorandomSequence")
-    protected native static long numaPseudorandomSequence$2(int size, int seed) throws LastError;
+    protected native static long numaPseudorandomSequence$2(int size, int seed)
+            throws LastError;
 
     /**
      * Original signature :
@@ -19687,7 +19958,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long numaRandomPermutation(@Ptr long nas, int seed) throws LastError;
+    protected native static long numaRandomPermutation(@Ptr long nas, int seed)
+            throws LastError;
 
     /**
      * Original signature :
@@ -19717,7 +19989,8 @@ public class LibLept {
         return numaGetMedian(Pointer.getPeer(na), Pointer.getPeer(pval));
     }
 
-    protected native static int numaGetMedian(@Ptr long na, @Ptr long pval) throws LastError;
+    protected native static int numaGetMedian(@Ptr long na, @Ptr long pval)
+            throws LastError;
 
     /**
      * Original signature :
@@ -19731,7 +20004,8 @@ public class LibLept {
         return numaGetBinnedMedian(Pointer.getPeer(na), Pointer.getPeer(pval));
     }
 
-    protected native static int numaGetBinnedMedian(@Ptr long na, @Ptr long pval) throws LastError;
+    protected native static int numaGetBinnedMedian(@Ptr long na, @Ptr long pval)
+            throws LastError;
 
     /**
      * Original signature :
@@ -19810,7 +20084,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long numaaFlattenToNuma(@Ptr long naa) throws LastError;
+    protected native static long numaaFlattenToNuma(@Ptr long naa)
+            throws LastError;
 
     /**
      * Original signature : <code>NUMA* numaErode(NUMA*, l_int32)</code><br>
@@ -19824,7 +20099,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long numaErode(@Ptr long nas, int size) throws LastError;
+    protected native static long numaErode(@Ptr long nas, int size)
+            throws LastError;
 
     /**
      * Original signature : <code>NUMA* numaDilate(NUMA*, l_int32)</code><br>
@@ -19838,7 +20114,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long numaDilate(@Ptr long nas, int size) throws LastError;
+    protected native static long numaDilate(@Ptr long nas, int size)
+            throws LastError;
 
     /**
      * Original signature : <code>NUMA* numaOpen(NUMA*, l_int32)</code><br>
@@ -19852,7 +20129,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long numaOpen(@Ptr long nas, int size) throws LastError;
+    protected native static long numaOpen(@Ptr long nas, int size)
+            throws LastError;
 
     /**
      * Original signature : <code>NUMA* numaClose(NUMA*, l_int32)</code><br>
@@ -19866,7 +20144,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long numaClose(@Ptr long nas, int size) throws LastError;
+    protected native static long numaClose(@Ptr long nas, int size)
+            throws LastError;
 
     /**
      * Original signature :
@@ -19916,7 +20195,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long numaWindowedMean(@Ptr long nas, int wc) throws LastError;
+    protected native static long numaWindowedMean(@Ptr long nas, int wc)
+            throws LastError;
 
     /**
      * Original signature :
@@ -19931,7 +20211,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long numaWindowedMeanSquare(@Ptr long nas, int wc) throws LastError;
+    protected native static long numaWindowedMeanSquare(@Ptr long nas, int wc)
+            throws LastError;
 
     /**
      * Original signature :
@@ -19963,7 +20244,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long numaConvertToInt(@Ptr long nas) throws LastError;
+    protected native static long numaConvertToInt(@Ptr long nas)
+            throws LastError;
 
     /**
      * Original signature :
@@ -19998,7 +20280,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long numaMakeHistogramAuto(@Ptr long na, int maxbins) throws LastError;
+    protected native static long numaMakeHistogramAuto(@Ptr long na, int maxbins)
+            throws LastError;
 
     /**
      * Original signature :
@@ -20032,7 +20315,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long numaRebinHistogram(@Ptr long nas, int newsize) throws LastError;
+    protected native static long numaRebinHistogram(@Ptr long nas, int newsize)
+            throws LastError;
 
     /**
      * Original signature :
@@ -20278,7 +20562,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long numaFindExtrema(@Ptr long nas, float delta) throws LastError;
+    protected native static long numaFindExtrema(@Ptr long nas, float delta)
+            throws LastError;
 
     /**
      * Original signature :
@@ -21172,7 +21457,8 @@ public class LibLept {
         return saConcatenatePdf(Pointer.getPeer(sa), Pointer.getPeer(fileout));
     }
 
-    protected native static int saConcatenatePdf(@Ptr long sa, @Ptr long fileout) throws LastError;
+    protected native static int saConcatenatePdf(@Ptr long sa, @Ptr long fileout)
+            throws LastError;
 
     /**
      * Original signature :
@@ -21276,7 +21562,8 @@ public class LibLept {
 
     @Ptr
     @Name("pixCreate")
-    protected native static long pixCreate$2(int width, int height, int depth) throws LastError;
+    protected native static long pixCreate$2(int width, int height, int depth)
+            throws LastError;
 
     /**
      * Original signature :
@@ -21307,7 +21594,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixCreateTemplate(@Ptr long pixs) throws LastError;
+    protected native static long pixCreateTemplate(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixCreateTemplateNoInit(PIX*)</code><br>
@@ -21321,7 +21609,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixCreateTemplateNoInit(@Ptr long pixs) throws LastError;
+    protected native static long pixCreateTemplateNoInit(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature :
@@ -21379,7 +21668,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixCopy(@Ptr long pixd, @Ptr long pixs) throws LastError;
+    protected native static long pixCopy(@Ptr long pixd, @Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixResizeImageData(PIX*, PIX*)</code><br>
@@ -21404,7 +21694,8 @@ public class LibLept {
         return pixCopyColormap(Pointer.getPeer(pixd), Pointer.getPeer(pixs));
     }
 
-    protected native static int pixCopyColormap(@Ptr long pixd, @Ptr long pixs) throws LastError;
+    protected native static int pixCopyColormap(@Ptr long pixd, @Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixSizesEqual(PIX*, PIX*)</code><br>
@@ -21416,7 +21707,8 @@ public class LibLept {
         return pixSizesEqual(Pointer.getPeer(pix1), Pointer.getPeer(pix2));
     }
 
-    protected native static int pixSizesEqual(@Ptr long pix1, @Ptr long pix2) throws LastError;
+    protected native static int pixSizesEqual(@Ptr long pix1, @Ptr long pix2)
+            throws LastError;
 
     /**
      * Original signature :
@@ -21470,7 +21762,8 @@ public class LibLept {
         return pixSetWidth(Pointer.getPeer(pix), width);
     }
 
-    protected native static int pixSetWidth(@Ptr long pix, int width) throws LastError;
+    protected native static int pixSetWidth(@Ptr long pix, int width)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixGetHeight(PIX*)</code><br>
@@ -21494,7 +21787,8 @@ public class LibLept {
         return pixSetHeight(Pointer.getPeer(pix), height);
     }
 
-    protected native static int pixSetHeight(@Ptr long pix, int height) throws LastError;
+    protected native static int pixSetHeight(@Ptr long pix, int height)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixGetDepth(PIX*)</code><br>
@@ -21518,7 +21812,8 @@ public class LibLept {
         return pixSetDepth(Pointer.getPeer(pix), depth);
     }
 
-    protected native static int pixSetDepth(@Ptr long pix, int depth) throws LastError;
+    protected native static int pixSetDepth(@Ptr long pix, int depth)
+            throws LastError;
 
     /**
      * Original signature :
@@ -21560,7 +21855,8 @@ public class LibLept {
         return pixCopyDimensions(Pointer.getPeer(pixd), Pointer.getPeer(pixs));
     }
 
-    protected native static int pixCopyDimensions(@Ptr long pixd, @Ptr long pixs) throws LastError;
+    protected native static int pixCopyDimensions(@Ptr long pixd, @Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixGetSpp(PIX*)</code><br>
@@ -21584,7 +21880,8 @@ public class LibLept {
         return pixSetSpp(Pointer.getPeer(pix), spp);
     }
 
-    protected native static int pixSetSpp(@Ptr long pix, int spp) throws LastError;
+    protected native static int pixSetSpp(@Ptr long pix, int spp)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixCopySpp(PIX*, PIX*)</code><br>
@@ -21596,7 +21893,8 @@ public class LibLept {
         return pixCopySpp(Pointer.getPeer(pixd), Pointer.getPeer(pixs));
     }
 
-    protected native static int pixCopySpp(@Ptr long pixd, @Ptr long pixs) throws LastError;
+    protected native static int pixCopySpp(@Ptr long pixd, @Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixGetWpl(PIX*)</code><br>
@@ -21620,7 +21918,8 @@ public class LibLept {
         return pixSetWpl(Pointer.getPeer(pix), wpl);
     }
 
-    protected native static int pixSetWpl(@Ptr long pix, int wpl) throws LastError;
+    protected native static int pixSetWpl(@Ptr long pix, int wpl)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixGetRefcount(PIX*)</code><br>
@@ -21645,7 +21944,8 @@ public class LibLept {
         return pixChangeRefcount(Pointer.getPeer(pix), delta);
     }
 
-    protected native static int pixChangeRefcount(@Ptr long pix, int delta) throws LastError;
+    protected native static int pixChangeRefcount(@Ptr long pix, int delta)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixGetXRes(PIX*)</code><br>
@@ -21669,7 +21969,8 @@ public class LibLept {
         return pixSetXRes(Pointer.getPeer(pix), res);
     }
 
-    protected native static int pixSetXRes(@Ptr long pix, int res) throws LastError;
+    protected native static int pixSetXRes(@Ptr long pix, int res)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixGetYRes(PIX*)</code><br>
@@ -21693,7 +21994,8 @@ public class LibLept {
         return pixSetYRes(Pointer.getPeer(pix), res);
     }
 
-    protected native static int pixSetYRes(@Ptr long pix, int res) throws LastError;
+    protected native static int pixSetYRes(@Ptr long pix, int res)
+            throws LastError;
 
     /**
      * Original signature :
@@ -21735,7 +22037,8 @@ public class LibLept {
         return pixCopyResolution(Pointer.getPeer(pixd), Pointer.getPeer(pixs));
     }
 
-    protected native static int pixCopyResolution(@Ptr long pixd, @Ptr long pixs) throws LastError;
+    protected native static int pixCopyResolution(@Ptr long pixd, @Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature :
@@ -21762,7 +22065,8 @@ public class LibLept {
         return pixGetInputFormat(Pointer.getPeer(pix));
     }
 
-    protected native static int pixGetInputFormat(@Ptr long pix) throws LastError;
+    protected native static int pixGetInputFormat(@Ptr long pix)
+            throws LastError;
 
     /**
      * Original signature :
@@ -21775,7 +22079,8 @@ public class LibLept {
         return pixSetInputFormat(Pointer.getPeer(pix), informat);
     }
 
-    protected native static int pixSetInputFormat(@Ptr long pix, int informat) throws LastError;
+    protected native static int pixSetInputFormat(@Ptr long pix, int informat)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixCopyInputFormat(PIX*, PIX*)</code><br>
@@ -21814,7 +22119,8 @@ public class LibLept {
         return pixSetText(Pointer.getPeer(pix), Pointer.getPeer(textstring));
     }
 
-    protected native static int pixSetText(@Ptr long pix, @Ptr long textstring) throws LastError;
+    protected native static int pixSetText(@Ptr long pix, @Ptr long textstring)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixAddText(PIX*, const char*)</code><br>
@@ -21826,7 +22132,8 @@ public class LibLept {
         return pixAddText(Pointer.getPeer(pix), Pointer.getPeer(textstring));
     }
 
-    protected native static int pixAddText(@Ptr long pix, @Ptr long textstring) throws LastError;
+    protected native static int pixAddText(@Ptr long pix, @Ptr long textstring)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixCopyText(PIX*, PIX*)</code><br>
@@ -21838,7 +22145,8 @@ public class LibLept {
         return pixCopyText(Pointer.getPeer(pixd), Pointer.getPeer(pixs));
     }
 
-    protected native static int pixCopyText(@Ptr long pixd, @Ptr long pixs) throws LastError;
+    protected native static int pixCopyText(@Ptr long pixd, @Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>PIXCMAP* pixGetColormap(PIX*)</code><br>
@@ -21865,7 +22173,8 @@ public class LibLept {
         return pixSetColormap(Pointer.getPeer(pix), Pointer.getPeer(colormap));
     }
 
-    protected native static int pixSetColormap(@Ptr long pix, @Ptr long colormap) throws LastError;
+    protected native static int pixSetColormap(@Ptr long pix, @Ptr long colormap)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixDestroyColormap(PIX*)</code><br>
@@ -21877,7 +22186,8 @@ public class LibLept {
         return pixDestroyColormap(Pointer.getPeer(pix));
     }
 
-    protected native static int pixDestroyColormap(@Ptr long pix) throws LastError;
+    protected native static int pixDestroyColormap(@Ptr long pix)
+            throws LastError;
 
     /**
      * Original signature : <code>l_uint32* pixGetData(PIX*)</code><br>
@@ -21903,7 +22213,8 @@ public class LibLept {
         return pixSetData(Pointer.getPeer(pix), Pointer.getPeer(data));
     }
 
-    protected native static int pixSetData(@Ptr long pix, @Ptr long data) throws LastError;
+    protected native static int pixSetData(@Ptr long pix, @Ptr long data)
+            throws LastError;
 
     /**
      * Original signature : <code>l_uint32* pixExtractData(PIX*)</code><br>
@@ -21917,7 +22228,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixExtractData(@Ptr long pixs) throws LastError;
+    protected native static long pixExtractData(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixFreeData(PIX*)</code><br>
@@ -21941,11 +22253,12 @@ public class LibLept {
             Pointer<Integer> psize) {
         return (Pointer) Pointer.pointerToAddress(
                 pixGetLinePtrs(Pointer.getPeer(pix), Pointer.getPeer(psize)),
-                DefaultParameterizedType.paramType(Pointer.class, null));
+                DefaultParameterizedType.paramType(Pointer.class, (Type) null));
     }
 
     @Ptr
-    protected native static long pixGetLinePtrs(@Ptr long pix, @Ptr long psize) throws LastError;
+    protected native static long pixGetLinePtrs(@Ptr long pix, @Ptr long psize)
+            throws LastError;
 
     /**
      * Original signature :
@@ -21989,7 +22302,8 @@ public class LibLept {
         return pixSetPixel(Pointer.getPeer(pix), x, y, val);
     }
 
-    protected native static int pixSetPixel(@Ptr long pix, int x, int y, int val) throws LastError;
+    protected native static int pixSetPixel(@Ptr long pix, int x, int y, int val)
+            throws LastError;
 
     /**
      * Original signature :
@@ -22054,7 +22368,8 @@ public class LibLept {
         return pixClearPixel(Pointer.getPeer(pix), x, y);
     }
 
-    protected native static int pixClearPixel(@Ptr long pix, int x, int y) throws LastError;
+    protected native static int pixClearPixel(@Ptr long pix, int x, int y)
+            throws LastError;
 
     /**
      * Original signature :
@@ -22067,7 +22382,8 @@ public class LibLept {
         return pixFlipPixel(Pointer.getPeer(pix), x, y);
     }
 
-    protected native static int pixFlipPixel(@Ptr long pix, int x, int y) throws LastError;
+    protected native static int pixFlipPixel(@Ptr long pix, int x, int y)
+            throws LastError;
 
     /**
      * Original signature :
@@ -22134,7 +22450,8 @@ public class LibLept {
         return pixSetAllGray(Pointer.getPeer(pix), grayval);
     }
 
-    protected native static int pixSetAllGray(@Ptr long pix, int grayval) throws LastError;
+    protected native static int pixSetAllGray(@Ptr long pix, int grayval)
+            throws LastError;
 
     /**
      * Original signature :
@@ -22147,7 +22464,8 @@ public class LibLept {
         return pixSetAllArbitrary(Pointer.getPeer(pix), val);
     }
 
-    protected native static int pixSetAllArbitrary(@Ptr long pix, int val) throws LastError;
+    protected native static int pixSetAllArbitrary(@Ptr long pix, int val)
+            throws LastError;
 
     /**
      * Original signature :
@@ -22160,7 +22478,8 @@ public class LibLept {
         return pixSetBlackOrWhite(Pointer.getPeer(pixs), op);
     }
 
-    protected native static int pixSetBlackOrWhite(@Ptr long pixs, int op) throws LastError;
+    protected native static int pixSetBlackOrWhite(@Ptr long pixs, int op)
+            throws LastError;
 
     /**
      * Original signature :
@@ -22187,7 +22506,8 @@ public class LibLept {
         return pixClearInRect(Pointer.getPeer(pix), Pointer.getPeer(box));
     }
 
-    protected native static int pixClearInRect(@Ptr long pix, @Ptr long box) throws LastError;
+    protected native static int pixClearInRect(@Ptr long pix, @Ptr long box)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixSetInRect(PIX*, BOX*)</code><br>
@@ -22199,7 +22519,8 @@ public class LibLept {
         return pixSetInRect(Pointer.getPeer(pix), Pointer.getPeer(box));
     }
 
-    protected native static int pixSetInRect(@Ptr long pix, @Ptr long box) throws LastError;
+    protected native static int pixSetInRect(@Ptr long pix, @Ptr long box)
+            throws LastError;
 
     /**
      * Original signature :
@@ -22243,7 +22564,8 @@ public class LibLept {
         return pixSetPadBits(Pointer.getPeer(pix), val);
     }
 
-    protected native static int pixSetPadBits(@Ptr long pix, int val) throws LastError;
+    protected native static int pixSetPadBits(@Ptr long pix, int val)
+            throws LastError;
 
     /**
      * Original signature :
@@ -22357,7 +22679,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixAddBorder(@Ptr long pixs, int npix, int val) throws LastError;
+    protected native static long pixAddBorder(@Ptr long pixs, int npix, int val)
+            throws LastError;
 
     /**
      * Original signature :
@@ -22409,7 +22732,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixRemoveBorder(@Ptr long pixs, int npix) throws LastError;
+    protected native static long pixRemoveBorder(@Ptr long pixs, int npix)
+            throws LastError;
 
     /**
      * Original signature :
@@ -22588,7 +22912,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixGetRGBComponent(@Ptr long pixs, int comp) throws LastError;
+    protected native static long pixGetRGBComponent(@Ptr long pixs, int comp)
+            throws LastError;
 
     /**
      * Original signature :
@@ -22620,7 +22945,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixGetRGBComponentCmap(@Ptr long pixs, int comp) throws LastError;
+    protected native static long pixGetRGBComponentCmap(@Ptr long pixs, int comp)
+            throws LastError;
 
     /**
      * Original signature :
@@ -22713,7 +23039,8 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1364</i>
      */
-    public static native int extractMinMaxComponent(int pixel, int type) throws LastError;
+    public static native int extractMinMaxComponent(int pixel, int type)
+            throws LastError;
 
     /**
      * Original signature :
@@ -22744,7 +23071,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixEndianByteSwapNew(@Ptr long pixs) throws LastError;
+    protected native static long pixEndianByteSwapNew(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixEndianByteSwap(PIX*)</code><br>
@@ -22756,7 +23084,8 @@ public class LibLept {
         return pixEndianByteSwap(Pointer.getPeer(pixs));
     }
 
-    protected native static int pixEndianByteSwap(@Ptr long pixs) throws LastError;
+    protected native static int pixEndianByteSwap(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature :
@@ -22786,7 +23115,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixEndianTwoByteSwapNew(@Ptr long pixs) throws LastError;
+    protected native static long pixEndianTwoByteSwapNew(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixEndianTwoByteSwap(PIX*)</code><br>
@@ -22798,7 +23128,8 @@ public class LibLept {
         return pixEndianTwoByteSwap(Pointer.getPeer(pixs));
     }
 
-    protected native static int pixEndianTwoByteSwap(@Ptr long pixs) throws LastError;
+    protected native static int pixEndianTwoByteSwap(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature :
@@ -22873,7 +23204,8 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1375</i>
      */
-    public static native void l_setAlphaMaskBorder(float val1, float val2) throws LastError;
+    public static native void l_setAlphaMaskBorder(float val1, float val2)
+            throws LastError;
 
     /**
      * Original signature :
@@ -23021,7 +23353,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixInvert(@Ptr long pixd, @Ptr long pixs) throws LastError;
+    protected native static long pixInvert(@Ptr long pixd, @Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixOr(PIX*, PIX*, PIX*)</code><br>
@@ -23101,7 +23434,8 @@ public class LibLept {
         return pixZero(Pointer.getPeer(pix), Pointer.getPeer(pempty));
     }
 
-    protected native static int pixZero(@Ptr long pix, @Ptr long pempty) throws LastError;
+    protected native static int pixZero(@Ptr long pix, @Ptr long pempty)
+            throws LastError;
 
     /**
      * Original signature :
@@ -23131,7 +23465,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixaCountPixels(@Ptr long pixa) throws LastError;
+    protected native static long pixaCountPixels(@Ptr long pixa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -23162,7 +23497,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixCountByRow(@Ptr long pix, @Ptr long box) throws LastError;
+    protected native static long pixCountByRow(@Ptr long pix, @Ptr long box)
+            throws LastError;
 
     /**
      * Original signature : <code>NUMA* pixCountByColumn(PIX*, BOX*)</code><br>
@@ -23178,7 +23514,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixCountByColumn(@Ptr long pix, @Ptr long box) throws LastError;
+    protected native static long pixCountByColumn(@Ptr long pix, @Ptr long box)
+            throws LastError;
 
     /**
      * Original signature :
@@ -23210,7 +23547,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixCountPixelsByColumn(@Ptr long pix) throws LastError;
+    protected native static long pixCountPixelsByColumn(@Ptr long pix)
+            throws LastError;
 
     /**
      * Original signature :
@@ -23242,7 +23580,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixGetMomentByColumn(@Ptr long pix, int order) throws LastError;
+    protected native static long pixGetMomentByColumn(@Ptr long pix, int order)
+            throws LastError;
 
     /**
      * Original signature :
@@ -23357,7 +23696,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixVarianceByRow(@Ptr long pix, @Ptr long box) throws LastError;
+    protected native static long pixVarianceByRow(@Ptr long pix, @Ptr long box)
+            throws LastError;
 
     /**
      * Original signature : <code>NUMA* pixVarianceByColumn(PIX*, BOX*)</code><br>
@@ -23406,7 +23746,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixAbsDiffByRow(@Ptr long pix, @Ptr long box) throws LastError;
+    protected native static long pixAbsDiffByRow(@Ptr long pix, @Ptr long box)
+            throws LastError;
 
     /**
      * Original signature : <code>NUMA* pixAbsDiffByColumn(PIX*, BOX*)</code><br>
@@ -23422,7 +23763,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixAbsDiffByColumn(@Ptr long pix, @Ptr long box) throws LastError;
+    protected native static long pixAbsDiffByColumn(@Ptr long pix, @Ptr long box)
+            throws LastError;
 
     /**
      * Original signature :
@@ -23487,7 +23829,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixMirroredTiling(@Ptr long pixs, int w, int h) throws LastError;
+    protected native static long pixMirroredTiling(@Ptr long pixs, int w, int h)
+            throws LastError;
 
     /**
      * Original signature :
@@ -23503,7 +23846,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixGetGrayHistogram(@Ptr long pixs, int factor) throws LastError;
+    protected native static long pixGetGrayHistogram(@Ptr long pixs, int factor)
+            throws LastError;
 
     /**
      * Original signature :
@@ -23596,7 +23940,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixGetCmapHistogram(@Ptr long pixs, int factor) throws LastError;
+    protected native static long pixGetCmapHistogram(@Ptr long pixs, int factor)
+            throws LastError;
 
     /**
      * Original signature :
@@ -24130,7 +24475,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixaFindPerimToAreaRatio(@Ptr long pixa) throws LastError;
+    protected native static long pixaFindPerimToAreaRatio(@Ptr long pixa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -24160,7 +24506,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixaFindPerimSizeRatio(@Ptr long pixa) throws LastError;
+    protected native static long pixaFindPerimSizeRatio(@Ptr long pixa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -24190,7 +24537,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixaFindAreaFraction(@Ptr long pixa) throws LastError;
+    protected native static long pixaFindAreaFraction(@Ptr long pixa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -24257,7 +24605,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixaFindWidthHeightRatio(@Ptr long pixa) throws LastError;
+    protected native static long pixaFindWidthHeightRatio(@Ptr long pixa)
+            throws LastError;
 
     /**
      * Original signature : <code>NUMA* pixaFindWidthHeightProduct(PIXA*)</code><br>
@@ -24271,7 +24620,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixaFindWidthHeightProduct(@Ptr long pixa) throws LastError;
+    protected native static long pixaFindWidthHeightProduct(@Ptr long pixa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -24410,7 +24760,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixCropToSize(@Ptr long pixs, int w, int h) throws LastError;
+    protected native static long pixCropToSize(@Ptr long pixs, int w, int h)
+            throws LastError;
 
     /**
      * Original signature :
@@ -24661,7 +25012,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixRankRowTransform(@Ptr long pixs) throws LastError;
+    protected native static long pixRankRowTransform(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixRankColumnTransform(PIX*)</code><br>
@@ -24675,7 +25027,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixRankColumnTransform(@Ptr long pixs) throws LastError;
+    protected native static long pixRankColumnTransform(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>PIXA* pixaCreate(l_int32)</code><br>
@@ -24771,7 +25124,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixaCopy(@Ptr long pixa, int copyflag) throws LastError;
+    protected native static long pixaCopy(@Ptr long pixa, int copyflag)
+            throws LastError;
 
     /**
      * Original signature :
@@ -24814,7 +25168,8 @@ public class LibLept {
         return pixaExtendArrayToSize(Pointer.getPeer(pixa), size);
     }
 
-    protected native static int pixaExtendArrayToSize(@Ptr long pixa, int size) throws LastError;
+    protected native static int pixaExtendArrayToSize(@Ptr long pixa, int size)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixaGetCount(PIXA*)</code><br>
@@ -24839,7 +25194,8 @@ public class LibLept {
         return pixaChangeRefcount(Pointer.getPeer(pixa), delta);
     }
 
-    protected native static int pixaChangeRefcount(@Ptr long pixa, int delta) throws LastError;
+    protected native static int pixaChangeRefcount(@Ptr long pixa, int delta)
+            throws LastError;
 
     /**
      * Original signature :
@@ -24887,7 +25243,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixaGetBoxa(@Ptr long pixa, int accesstype) throws LastError;
+    protected native static long pixaGetBoxa(@Ptr long pixa, int accesstype)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixaGetBoxaCount(PIXA*)</code><br>
@@ -24899,7 +25256,8 @@ public class LibLept {
         return pixaGetBoxaCount(Pointer.getPeer(pixa));
     }
 
-    protected native static int pixaGetBoxaCount(@Ptr long pixa) throws LastError;
+    protected native static int pixaGetBoxaCount(@Ptr long pixa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -24966,7 +25324,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixaGetPixArray(@Ptr long pixa) throws LastError;
+    protected native static long pixaGetPixArray(@Ptr long pixa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -25010,7 +25369,8 @@ public class LibLept {
         return pixaCountText(Pointer.getPeer(pixa), Pointer.getPeer(pntext));
     }
 
-    protected native static int pixaCountText(@Ptr long pixa, @Ptr long pntext) throws LastError;
+    protected native static int pixaCountText(@Ptr long pixa, @Ptr long pntext)
+            throws LastError;
 
     /**
      * Original signature :
@@ -25024,11 +25384,13 @@ public class LibLept {
         return (Pointer) Pointer.pointerToAddress(
                 pixaGetLinePtrs(Pointer.getPeer(pixa), Pointer.getPeer(psize)),
                 DefaultParameterizedType.paramType(Pointer.class,
-                        DefaultParameterizedType.paramType(Pointer.class, null)));
+                        DefaultParameterizedType.paramType(Pointer.class,
+                                (Type) null)));
     }
 
     @Ptr
-    protected native static long pixaGetLinePtrs(@Ptr long pixa, @Ptr long psize) throws LastError;
+    protected native static long pixaGetLinePtrs(@Ptr long pixa, @Ptr long psize)
+            throws LastError;
 
     /**
      * Original signature :
@@ -25072,7 +25434,8 @@ public class LibLept {
         return pixaRemovePix(Pointer.getPeer(pixa), index);
     }
 
-    protected native static int pixaRemovePix(@Ptr long pixa, int index) throws LastError;
+    protected native static int pixaRemovePix(@Ptr long pixa, int index)
+            throws LastError;
 
     /**
      * Original signature :
@@ -25219,7 +25582,8 @@ public class LibLept {
         return pixaaExtendArray(Pointer.getPeer(paa));
     }
 
-    protected native static int pixaaExtendArray(@Ptr long paa) throws LastError;
+    protected native static int pixaaExtendArray(@Ptr long paa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -25263,7 +25627,8 @@ public class LibLept {
         return pixaaGetCount(Pointer.getPeer(paa), Pointer.getPeer(pna));
     }
 
-    protected native static int pixaaGetCount(@Ptr long paa, @Ptr long pna) throws LastError;
+    protected native static int pixaaGetCount(@Ptr long paa, @Ptr long pna)
+            throws LastError;
 
     /**
      * Original signature :
@@ -25295,7 +25660,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixaaGetBoxa(@Ptr long paa, int accesstype) throws LastError;
+    protected native static long pixaaGetBoxa(@Ptr long paa, int accesstype)
+            throws LastError;
 
     /**
      * Original signature :
@@ -25341,7 +25707,8 @@ public class LibLept {
         return pixaaIsFull(Pointer.getPeer(paa), Pointer.getPeer(pfull));
     }
 
-    protected native static int pixaaIsFull(@Ptr long paa, @Ptr long pfull) throws LastError;
+    protected native static int pixaaIsFull(@Ptr long paa, @Ptr long pfull)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixaaInitFull(PIXAA*, PIXA*)</code><br>
@@ -25353,7 +25720,8 @@ public class LibLept {
         return pixaaInitFull(Pointer.getPeer(paa), Pointer.getPeer(pixa));
     }
 
-    protected native static int pixaaInitFull(@Ptr long paa, @Ptr long pixa) throws LastError;
+    protected native static int pixaaInitFull(@Ptr long paa, @Ptr long pixa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -25433,7 +25801,8 @@ public class LibLept {
         return pixaWrite(Pointer.getPeer(filename), Pointer.getPeer(pixa));
     }
 
-    protected native static int pixaWrite(@Ptr long filename, @Ptr long pixa) throws LastError;
+    protected native static int pixaWrite(@Ptr long filename, @Ptr long pixa)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixaWriteStream(FILE*, PIXA*)</code><br>
@@ -25446,7 +25815,8 @@ public class LibLept {
         return pixaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(pixa));
     }
 
-    protected native static int pixaWriteStream(@Ptr long fp, @Ptr long pixa) throws LastError;
+    protected native static int pixaWriteStream(@Ptr long fp, @Ptr long pixa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -25506,7 +25876,8 @@ public class LibLept {
         return pixaaWrite(Pointer.getPeer(filename), Pointer.getPeer(paa));
     }
 
-    protected native static int pixaaWrite(@Ptr long filename, @Ptr long paa) throws LastError;
+    protected native static int pixaaWrite(@Ptr long filename, @Ptr long paa)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixaaWriteStream(FILE*, PIXAA*)</code><br>
@@ -25519,7 +25890,8 @@ public class LibLept {
         return pixaaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(paa));
     }
 
-    protected native static int pixaaWriteStream(@Ptr long fp, @Ptr long paa) throws LastError;
+    protected native static int pixaaWriteStream(@Ptr long fp, @Ptr long paa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -25535,7 +25907,8 @@ public class LibLept {
 
     @Ptr
     @Name("pixaccCreate")
-    protected native static long pixaccCreate$2(int w, int h, int negflag) throws LastError;
+    protected native static long pixaccCreate$2(int w, int h, int negflag)
+            throws LastError;
 
     /**
      * Original signature :
@@ -25552,7 +25925,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixaccCreateFromPix(@Ptr long pix, int negflag) throws LastError;
+    protected native static long pixaccCreateFromPix(@Ptr long pix, int negflag)
+            throws LastError;
 
     /**
      * Original signature : <code>void pixaccDestroy(PIXACC**)</code><br>
@@ -25564,7 +25938,8 @@ public class LibLept {
         pixaccDestroy(Pointer.getPeer(ppixacc));
     }
 
-    protected native static void pixaccDestroy(@Ptr long ppixacc) throws LastError;
+    protected native static void pixaccDestroy(@Ptr long ppixacc)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixaccFinal(PIXACC*, l_int32)</code><br>
@@ -25578,7 +25953,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixaccFinal(@Ptr long pixacc, int outdepth) throws LastError;
+    protected native static long pixaccFinal(@Ptr long pixacc, int outdepth)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixaccGetPix(PIXACC*)</code><br>
@@ -25592,7 +25968,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixaccGetPix(@Ptr long pixacc) throws LastError;
+    protected native static long pixaccGetPix(@Ptr long pixacc)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixaccGetOffset(PIXACC*)</code><br>
@@ -25604,7 +25981,8 @@ public class LibLept {
         return pixaccGetOffset(Pointer.getPeer(pixacc));
     }
 
-    protected native static int pixaccGetOffset(@Ptr long pixacc) throws LastError;
+    protected native static int pixaccGetOffset(@Ptr long pixacc)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixaccAdd(PIXACC*, PIX*)</code><br>
@@ -25616,7 +25994,8 @@ public class LibLept {
         return pixaccAdd(Pointer.getPeer(pixacc), Pointer.getPeer(pix));
     }
 
-    protected native static int pixaccAdd(@Ptr long pixacc, @Ptr long pix) throws LastError;
+    protected native static int pixaccAdd(@Ptr long pixacc, @Ptr long pix)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixaccSubtract(PIXACC*, PIX*)</code><br>
@@ -25628,7 +26007,8 @@ public class LibLept {
         return pixaccSubtract(Pointer.getPeer(pixacc), Pointer.getPeer(pix));
     }
 
-    protected native static int pixaccSubtract(@Ptr long pixacc, @Ptr long pix) throws LastError;
+    protected native static int pixaccSubtract(@Ptr long pixacc, @Ptr long pix)
+            throws LastError;
 
     /**
      * Original signature :
@@ -25641,7 +26021,8 @@ public class LibLept {
         return pixaccMultConst(Pointer.getPeer(pixacc), factor);
     }
 
-    protected native static int pixaccMultConst(@Ptr long pixacc, float factor) throws LastError;
+    protected native static int pixaccMultConst(@Ptr long pixacc, float factor)
+            throws LastError;
 
     /**
      * Original signature :
@@ -26069,7 +26450,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixaaScaleToSize(@Ptr long paas, int wd, int hd) throws LastError;
+    protected native static long pixaaScaleToSize(@Ptr long paas, int wd, int hd)
+            throws LastError;
 
     /**
      * Original signature :
@@ -26104,7 +26486,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixaScaleToSize(@Ptr long pixas, int wd, int hd) throws LastError;
+    protected native static long pixaScaleToSize(@Ptr long pixas, int wd, int hd)
+            throws LastError;
 
     /**
      * Original signature :
@@ -26196,7 +26579,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixaClipToPix(@Ptr long pixas, @Ptr long pixs) throws LastError;
+    protected native static long pixaClipToPix(@Ptr long pixas, @Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature :
@@ -26242,7 +26626,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixaConvertToSameDepth(@Ptr long pixas) throws LastError;
+    protected native static long pixaConvertToSameDepth(@Ptr long pixas)
+            throws LastError;
 
     /**
      * Original signature :
@@ -26273,7 +26658,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixaDisplay(@Ptr long pixa, int w, int h) throws LastError;
+    protected native static long pixaDisplay(@Ptr long pixa, int w, int h)
+            throws LastError;
 
     /**
      * Original signature :
@@ -26447,7 +26833,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixaaDisplay(@Ptr long paa, int w, int h) throws LastError;
+    protected native static long pixaaDisplay(@Ptr long paa, int w, int h)
+            throws LastError;
 
     /**
      * Original signature :
@@ -26501,7 +26888,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixaConvertTo1(@Ptr long pixas, int thresh) throws LastError;
+    protected native static long pixaConvertTo1(@Ptr long pixas, int thresh)
+            throws LastError;
 
     /**
      * Original signature : <code>PIXA* pixaConvertTo8(PIXA*, l_int32)</code><br>
@@ -26515,7 +26903,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixaConvertTo8(@Ptr long pixas, int cmapflag) throws LastError;
+    protected native static long pixaConvertTo8(@Ptr long pixas, int cmapflag)
+            throws LastError;
 
     /**
      * Original signature :
@@ -26531,7 +26920,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixaConvertTo8Color(@Ptr long pixas, int dither) throws LastError;
+    protected native static long pixaConvertTo8Color(@Ptr long pixas, int dither)
+            throws LastError;
 
     /**
      * Original signature : <code>PIXA* pixaConvertTo32(PIXA*)</code><br>
@@ -26545,7 +26935,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixaConvertTo32(@Ptr long pixas) throws LastError;
+    protected native static long pixaConvertTo32(@Ptr long pixas)
+            throws LastError;
 
     /**
      * Original signature :
@@ -26623,7 +27014,8 @@ public class LibLept {
 
     @Ptr
     @Name("pmsCustomAlloc")
-    protected native static long pmsCustomAlloc$2(@Ptr long nbytes) throws LastError;
+    protected native static long pmsCustomAlloc$2(@Ptr long nbytes)
+            throws LastError;
 
     /**
      * Original signature : <code>void pmsCustomDealloc(void*)</code><br>
@@ -26635,7 +27027,8 @@ public class LibLept {
         pmsCustomDealloc(Pointer.getPeer(data));
     }
 
-    protected native static void pmsCustomDealloc(@Ptr long data) throws LastError;
+    protected native static void pmsCustomDealloc(@Ptr long data)
+            throws LastError;
 
     /**
      * Original signature : <code>void* pmsGetAlloc(size_t)</code><br>
@@ -26649,7 +27042,8 @@ public class LibLept {
 
     @Ptr
     @Name("pmsGetAlloc")
-    protected native static long pmsGetAlloc$2(@Ptr long nbytes) throws LastError;
+    protected native static long pmsGetAlloc$2(@Ptr long nbytes)
+            throws LastError;
 
     /**
      * Original signature :
@@ -26701,7 +27095,8 @@ public class LibLept {
         return pixAddConstantGray(Pointer.getPeer(pixs), val);
     }
 
-    protected native static int pixAddConstantGray(@Ptr long pixs, int val) throws LastError;
+    protected native static int pixAddConstantGray(@Ptr long pixs, int val)
+            throws LastError;
 
     /**
      * Original signature :
@@ -26714,7 +27109,8 @@ public class LibLept {
         return pixMultConstantGray(Pointer.getPeer(pixs), val);
     }
 
-    protected native static int pixMultConstantGray(@Ptr long pixs, float val) throws LastError;
+    protected native static int pixMultConstantGray(@Ptr long pixs, float val)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixAddGray(PIX*, PIX*, PIX*)</code><br>
@@ -26782,7 +27178,8 @@ public class LibLept {
 
     @Ptr
     @Name("pixInitAccumulate")
-    protected native static long pixInitAccumulate$2(int w, int h, int offset) throws LastError;
+    protected native static long pixInitAccumulate$2(int w, int h, int offset)
+            throws LastError;
 
     /**
      * Original signature :
@@ -26879,7 +27276,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixAddRGB(@Ptr long pixs1, @Ptr long pixs2) throws LastError;
+    protected native static long pixAddRGB(@Ptr long pixs1, @Ptr long pixs2)
+            throws LastError;
 
     /**
      * Original signature :
@@ -26911,7 +27309,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixMaxDynamicRange(@Ptr long pixs, int type) throws LastError;
+    protected native static long pixMaxDynamicRange(@Ptr long pixs, int type)
+            throws LastError;
 
     /**
      * Original signature : <code>l_float32* makeLogBase2Tab()</code><br>
@@ -26939,7 +27338,8 @@ public class LibLept {
         return getLogBase2(val, Pointer.getPeer(logtab));
     }
 
-    protected native static float getLogBase2(int val, @Ptr long logtab) throws LastError;
+    protected native static float getLogBase2(int val, @Ptr long logtab)
+            throws LastError;
 
     /**
      * Original signature :
@@ -27005,7 +27405,8 @@ public class LibLept {
         pixcompDestroy(Pointer.getPeer(ppixc));
     }
 
-    protected native static void pixcompDestroy(@Ptr long ppixc) throws LastError;
+    protected native static void pixcompDestroy(@Ptr long ppixc)
+            throws LastError;
 
     /**
      * Original signature :
@@ -27053,7 +27454,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixCreateFromPixcomp(@Ptr long pixc) throws LastError;
+    protected native static long pixCreateFromPixcomp(@Ptr long pixc)
+            throws LastError;
 
     /**
      * Original signature : <code>PIXAC* pixacompCreate(l_int32)</code><br>
@@ -27141,7 +27543,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixacompCreateFromSA(@Ptr long sa, int comptype) throws LastError;
+    protected native static long pixacompCreateFromSA(@Ptr long sa, int comptype)
+            throws LastError;
 
     /**
      * Original signature : <code>void pixacompDestroy(PIXAC**)</code><br>
@@ -27153,7 +27556,8 @@ public class LibLept {
         pixacompDestroy(Pointer.getPeer(ppixac));
     }
 
-    protected native static void pixacompDestroy(@Ptr long ppixac) throws LastError;
+    protected native static void pixacompDestroy(@Ptr long ppixac)
+            throws LastError;
 
     /**
      * Original signature :
@@ -27244,7 +27648,8 @@ public class LibLept {
         return pixacompGetCount(Pointer.getPeer(pixac));
     }
 
-    protected native static int pixacompGetCount(@Ptr long pixac) throws LastError;
+    protected native static int pixacompGetCount(@Ptr long pixac)
+            throws LastError;
 
     /**
      * Original signature :
@@ -27261,7 +27666,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixacompGetPixcomp(@Ptr long pixac, int index) throws LastError;
+    protected native static long pixacompGetPixcomp(@Ptr long pixac, int index)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixacompGetPix(PIXAC*, l_int32)</code><br>
@@ -27275,7 +27681,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixacompGetPix(@Ptr long pixac, int index) throws LastError;
+    protected native static long pixacompGetPix(@Ptr long pixac, int index)
+            throws LastError;
 
     /**
      * Original signature :
@@ -27308,7 +27715,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixacompGetBoxa(@Ptr long pixac, int accesstype) throws LastError;
+    protected native static long pixacompGetBoxa(@Ptr long pixac, int accesstype)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixacompGetBoxaCount(PIXAC*)</code><br>
@@ -27320,7 +27728,8 @@ public class LibLept {
         return pixacompGetBoxaCount(Pointer.getPeer(pixac));
     }
 
-    protected native static int pixacompGetBoxaCount(@Ptr long pixac) throws LastError;
+    protected native static int pixacompGetBoxaCount(@Ptr long pixac)
+            throws LastError;
 
     /**
      * Original signature :
@@ -27369,7 +27778,8 @@ public class LibLept {
         return pixacompGetOffset(Pointer.getPeer(pixac));
     }
 
-    protected native static int pixacompGetOffset(@Ptr long pixac) throws LastError;
+    protected native static int pixacompGetOffset(@Ptr long pixac)
+            throws LastError;
 
     /**
      * Original signature :
@@ -27382,7 +27792,8 @@ public class LibLept {
         return pixacompSetOffset(Pointer.getPeer(pixac), offset);
     }
 
-    protected native static int pixacompSetOffset(@Ptr long pixac, int offset) throws LastError;
+    protected native static int pixacompSetOffset(@Ptr long pixac, int offset)
+            throws LastError;
 
     /**
      * Original signature :
@@ -27414,7 +27825,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixacompRead(@Ptr long filename) throws LastError;
+    protected native static long pixacompRead(@Ptr long filename)
+            throws LastError;
 
     /**
      * Original signature : <code>PIXAC* pixacompReadStream(FILE*)</code><br>
@@ -27429,7 +27841,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixacompReadStream(@Ptr long fp) throws LastError;
+    protected native static long pixacompReadStream(@Ptr long fp)
+            throws LastError;
 
     /**
      * Original signature :
@@ -27604,7 +28017,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixRemoveColormap(@Ptr long pixs, int type) throws LastError;
+    protected native static long pixRemoveColormap(@Ptr long pixs, int type)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixAddGrayColormap8(PIX*)</code><br>
@@ -27616,7 +28030,8 @@ public class LibLept {
         return pixAddGrayColormap8(Pointer.getPeer(pixs));
     }
 
-    protected native static int pixAddGrayColormap8(@Ptr long pixs) throws LastError;
+    protected native static int pixAddGrayColormap8(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixAddMinimalGrayColormap8(PIX*)</code><br>
@@ -27630,7 +28045,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixAddMinimalGrayColormap8(@Ptr long pixs) throws LastError;
+    protected native static long pixAddMinimalGrayColormap8(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixConvertRGBToLuminance(PIX*)</code><br>
@@ -27644,7 +28060,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixConvertRGBToLuminance(@Ptr long pixs) throws LastError;
+    protected native static long pixConvertRGBToLuminance(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature :
@@ -27677,7 +28094,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixConvertRGBToGrayFast(@Ptr long pixs) throws LastError;
+    protected native static long pixConvertRGBToGrayFast(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature :
@@ -27727,7 +28145,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixConvertGrayToColormap(@Ptr long pixs) throws LastError;
+    protected native static long pixConvertGrayToColormap(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature :
@@ -27812,7 +28231,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixConvert16To8(@Ptr long pixs, int type) throws LastError;
+    protected native static long pixConvert16To8(@Ptr long pixs, int type)
+            throws LastError;
 
     /**
      * Original signature :
@@ -27898,7 +28318,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixConvert1To2Cmap(@Ptr long pixs) throws LastError;
+    protected native static long pixConvert1To2Cmap(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature :
@@ -27930,7 +28351,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixConvert1To4Cmap(@Ptr long pixs) throws LastError;
+    protected native static long pixConvert1To4Cmap(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature :
@@ -27999,7 +28421,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixConvert4To8(@Ptr long pixs, int cmapflag) throws LastError;
+    protected native static long pixConvert4To8(@Ptr long pixs, int cmapflag)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixConvert8To16(PIX*, l_int32)</code><br>
@@ -28013,7 +28436,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixConvert8To16(@Ptr long pixs, int leftshift) throws LastError;
+    protected native static long pixConvert8To16(@Ptr long pixs, int leftshift)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixConvertTo1(PIX*, l_int32)</code><br>
@@ -28027,7 +28451,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixConvertTo1(@Ptr long pixs, int threshold) throws LastError;
+    protected native static long pixConvertTo1(@Ptr long pixs, int threshold)
+            throws LastError;
 
     /**
      * Original signature :
@@ -28059,7 +28484,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixConvertTo8(@Ptr long pixs, int cmapflag) throws LastError;
+    protected native static long pixConvertTo8(@Ptr long pixs, int cmapflag)
+            throws LastError;
 
     /**
      * Original signature :
@@ -28091,7 +28517,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixConvertTo8Color(@Ptr long pixs, int dither) throws LastError;
+    protected native static long pixConvertTo8Color(@Ptr long pixs, int dither)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixConvertTo16(PIX*)</code><br>
@@ -28105,7 +28532,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixConvertTo16(@Ptr long pixs) throws LastError;
+    protected native static long pixConvertTo16(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixConvertTo32(PIX*)</code><br>
@@ -28119,7 +28547,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixConvertTo32(@Ptr long pixs) throws LastError;
+    protected native static long pixConvertTo32(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature :
@@ -28151,7 +28580,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixConvert8To32(@Ptr long pixs) throws LastError;
+    protected native static long pixConvert8To32(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature :
@@ -28183,7 +28613,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixConvert24To32(@Ptr long pixs) throws LastError;
+    protected native static long pixConvert24To32(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixConvert32To24(PIX*)</code><br>
@@ -28197,7 +28628,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixConvert32To24(@Ptr long pixs) throws LastError;
+    protected native static long pixConvert32To24(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixRemoveAlpha(PIX*)</code><br>
@@ -28211,7 +28643,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixRemoveAlpha(@Ptr long pixs) throws LastError;
+    protected native static long pixRemoveAlpha(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixConvertLossless(PIX*, l_int32)</code><br>
@@ -28225,7 +28658,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixConvertLossless(@Ptr long pixs, int d) throws LastError;
+    protected native static long pixConvertLossless(@Ptr long pixs, int d)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixConvertForPSWrap(PIX*)</code><br>
@@ -28239,7 +28673,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixConvertForPSWrap(@Ptr long pixs) throws LastError;
+    protected native static long pixConvertForPSWrap(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature :
@@ -28346,7 +28781,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixLocToColorTransform(@Ptr long pixs) throws LastError;
+    protected native static long pixLocToColorTransform(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature :
@@ -28377,7 +28813,8 @@ public class LibLept {
         pixTilingDestroy(Pointer.getPeer(ppt));
     }
 
-    protected native static void pixTilingDestroy(@Ptr long ppt) throws LastError;
+    protected native static void pixTilingDestroy(@Ptr long ppt)
+            throws LastError;
 
     /**
      * Original signature :
@@ -28425,7 +28862,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixTilingGetTile(@Ptr long pt, int i, int j) throws LastError;
+    protected native static long pixTilingGetTile(@Ptr long pt, int i, int j)
+            throws LastError;
 
     /**
      * Original signature :
@@ -28438,7 +28876,8 @@ public class LibLept {
         return pixTilingNoStripOnPaint(Pointer.getPeer(pt));
     }
 
-    protected native static int pixTilingNoStripOnPaint(@Ptr long pt) throws LastError;
+    protected native static int pixTilingNoStripOnPaint(@Ptr long pt)
+            throws LastError;
 
     /**
      * Original signature :
@@ -28470,7 +28909,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixReadStreamPng(@Ptr long fp) throws LastError;
+    protected native static long pixReadStreamPng(@Ptr long fp)
+            throws LastError;
 
     /**
      * Original signature :
@@ -28588,7 +29028,8 @@ public class LibLept {
         return pixSetZlibCompression(Pointer.getPeer(pix), compval);
     }
 
-    protected native static int pixSetZlibCompression(@Ptr long pix, int compval) throws LastError;
+    protected native static int pixSetZlibCompression(@Ptr long pix, int compval)
+            throws LastError;
 
     /**
      * Original signature : <code>void l_pngSetReadStrip16To8(l_int32)</code><br>
@@ -28611,7 +29052,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixReadMemPng(@Ptr long cdata, @Ptr long size) throws LastError;
+    protected native static long pixReadMemPng(@Ptr long cdata, @Ptr long size)
+            throws LastError;
 
     /**
      * Original signature :
@@ -28642,7 +29084,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixReadStreamPnm(@Ptr long fp) throws LastError;
+    protected native static long pixReadStreamPnm(@Ptr long fp)
+            throws LastError;
 
     /**
      * Original signature :
@@ -28697,7 +29140,8 @@ public class LibLept {
         return pixWriteStreamPnm(Pointer.getPeer(fp), Pointer.getPeer(pix));
     }
 
-    protected native static int pixWriteStreamPnm(@Ptr long fp, @Ptr long pix) throws LastError;
+    protected native static int pixWriteStreamPnm(@Ptr long fp, @Ptr long pix)
+            throws LastError;
 
     /**
      * Original signature :
@@ -28727,7 +29171,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixReadMemPnm(@Ptr long cdata, @Ptr long size) throws LastError;
+    protected native static long pixReadMemPnm(@Ptr long cdata, @Ptr long size)
+            throws LastError;
 
     /**
      * Original signature :
@@ -29398,7 +29843,8 @@ public class LibLept {
         l_compdataDestroy(Pointer.getPeer(pcid));
     }
 
-    protected native static void l_compdataDestroy(@Ptr long pcid) throws LastError;
+    protected native static void l_compdataDestroy(@Ptr long pcid)
+            throws LastError;
 
     /**
      * Original signature :
@@ -29703,7 +30149,8 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1787</i>
      */
-    public static native int getResLetterPage(int w, int h, float fillfract) throws LastError;
+    public static native int getResLetterPage(int w, int h, float fillfract)
+            throws LastError;
 
     /**
      * Original signature :
@@ -29712,7 +30159,8 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:1788</i>
      */
-    public static native int getResA4Page(int w, int h, float fillfract) throws LastError;
+    public static native int getResA4Page(int w, int h, float fillfract)
+            throws LastError;
 
     /**
      * Original signature :
@@ -29786,7 +30234,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long ptaCreateFromNuma(@Ptr long nax, @Ptr long nay) throws LastError;
+    protected native static long ptaCreateFromNuma(@Ptr long nax, @Ptr long nay)
+            throws LastError;
 
     /**
      * Original signature : <code>void ptaDestroy(PTA**)</code><br>
@@ -29868,7 +30317,8 @@ public class LibLept {
         return ptaAddPt(Pointer.getPeer(pta), x, y);
     }
 
-    protected native static int ptaAddPt(@Ptr long pta, float x, float y) throws LastError;
+    protected native static int ptaAddPt(@Ptr long pta, float x, float y)
+            throws LastError;
 
     /**
      * Original signature :
@@ -29894,7 +30344,8 @@ public class LibLept {
         return ptaRemovePt(Pointer.getPeer(pta), index);
     }
 
-    protected native static int ptaRemovePt(@Ptr long pta, int index) throws LastError;
+    protected native static int ptaRemovePt(@Ptr long pta, int index)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 ptaGetRefcount(PTA*)</code><br>
@@ -29919,7 +30370,8 @@ public class LibLept {
         return ptaChangeRefcount(Pointer.getPeer(pta), delta);
     }
 
-    protected native static int ptaChangeRefcount(@Ptr long pta, int delta) throws LastError;
+    protected native static int ptaChangeRefcount(@Ptr long pta, int delta)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 ptaGetCount(PTA*)</code><br>
@@ -30150,7 +30602,8 @@ public class LibLept {
         return ptaaInitFull(Pointer.getPeer(ptaa), Pointer.getPeer(pta));
     }
 
-    protected native static int ptaaInitFull(@Ptr long ptaa, @Ptr long pta) throws LastError;
+    protected native static int ptaaInitFull(@Ptr long ptaa, @Ptr long pta)
+            throws LastError;
 
     /**
      * Original signature :
@@ -30264,7 +30717,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long ptaSubsample(@Ptr long ptas, int subfactor) throws LastError;
+    protected native static long ptaSubsample(@Ptr long ptas, int subfactor)
+            throws LastError;
 
     /**
      * Original signature :
@@ -30310,7 +30764,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long ptaReverse(@Ptr long ptas, int type) throws LastError;
+    protected native static long ptaReverse(@Ptr long ptas, int type)
+            throws LastError;
 
     /**
      * Original signature : <code>PTA* ptaTranspose(PTA*)</code><br>
@@ -30339,7 +30794,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long ptaCyclicPerm(@Ptr long ptas, int xs, int ys) throws LastError;
+    protected native static long ptaCyclicPerm(@Ptr long ptas, int xs, int ys)
+            throws LastError;
 
     /**
      * Original signature :
@@ -30405,7 +30861,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long ptaRemoveDuplicates(@Ptr long ptas, int factor) throws LastError;
+    protected native static long ptaRemoveDuplicates(@Ptr long ptas, int factor)
+            throws LastError;
 
     /**
      * Original signature : <code>PTAA* ptaaSortByIndex(PTAA*, NUMA*)</code><br>
@@ -30436,7 +30893,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long ptaGetBoundingRegion(@Ptr long pta) throws LastError;
+    protected native static long ptaGetBoundingRegion(@Ptr long pta)
+            throws LastError;
 
     /**
      * Original signature :
@@ -30470,7 +30928,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long ptaGetInsideBox(@Ptr long ptas, @Ptr long box) throws LastError;
+    protected native static long ptaGetInsideBox(@Ptr long ptas, @Ptr long box)
+            throws LastError;
 
     /**
      * Original signature : <code>PTA* pixFindCornerPixels(PIX*)</code><br>
@@ -30484,7 +30943,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixFindCornerPixels(@Ptr long pixs) throws LastError;
+    protected native static long pixFindCornerPixels(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature :
@@ -30497,7 +30957,8 @@ public class LibLept {
         return ptaContainsPt(Pointer.getPeer(pta), x, y);
     }
 
-    protected native static int ptaContainsPt(@Ptr long pta, int x, int y) throws LastError;
+    protected native static int ptaContainsPt(@Ptr long pta, int x, int y)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 ptaTestIntersection(PTA*, PTA*)</code><br>
@@ -30786,7 +31247,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixGenerateFromPta(@Ptr long pta, int w, int h) throws LastError;
+    protected native static long pixGenerateFromPta(@Ptr long pta, int w, int h)
+            throws LastError;
 
     /**
      * Original signature :
@@ -30801,7 +31263,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long ptaGetBoundaryPixels(@Ptr long pixs, int type) throws LastError;
+    protected native static long ptaGetBoundaryPixels(@Ptr long pixs, int type)
+            throws LastError;
 
     /**
      * Original signature :
@@ -30918,7 +31381,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixDisplayPtaa(@Ptr long pixs, @Ptr long ptaa) throws LastError;
+    protected native static long pixDisplayPtaa(@Ptr long pixs, @Ptr long ptaa)
+            throws LastError;
 
     /**
      * Original signature : <code>L_PTRA* ptraCreate(l_int32)</code><br>
@@ -30959,7 +31423,8 @@ public class LibLept {
         return ptraAdd(Pointer.getPeer(pa), Pointer.getPeer(item));
     }
 
-    protected native static int ptraAdd(@Ptr long pa, @Ptr long item) throws LastError;
+    protected native static int ptraAdd(@Ptr long pa, @Ptr long item)
+            throws LastError;
 
     /**
      * Original signature :
@@ -30990,7 +31455,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long ptraRemove(@Ptr long pa, int index, int flag) throws LastError;
+    protected native static long ptraRemove(@Ptr long pa, int index, int flag)
+            throws LastError;
 
     /**
      * Original signature : <code>void* ptraRemoveLast(L_PTRA*)</code><br>
@@ -31033,7 +31499,8 @@ public class LibLept {
         return ptraSwap(Pointer.getPeer(pa), index1, index2);
     }
 
-    protected native static int ptraSwap(@Ptr long pa, int index1, int index2) throws LastError;
+    protected native static int ptraSwap(@Ptr long pa, int index1, int index2)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 ptraCompactArray(L_PTRA*)</code><br>
@@ -31069,7 +31536,8 @@ public class LibLept {
         return ptraJoin(Pointer.getPeer(pa1), Pointer.getPeer(pa2));
     }
 
-    protected native static int ptraJoin(@Ptr long pa1, @Ptr long pa2) throws LastError;
+    protected native static int ptraJoin(@Ptr long pa1, @Ptr long pa2)
+            throws LastError;
 
     /**
      * Original signature :
@@ -31114,7 +31582,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long ptraGetPtrToItem(@Ptr long pa, int index) throws LastError;
+    protected native static long ptraGetPtrToItem(@Ptr long pa, int index)
+            throws LastError;
 
     /**
      * Original signature : <code>L_PTRAA* ptraaCreate(l_int32)</code><br>
@@ -31157,7 +31626,8 @@ public class LibLept {
         return ptraaGetSize(Pointer.getPeer(paa), Pointer.getPeer(psize));
     }
 
-    protected native static int ptraaGetSize(@Ptr long paa, @Ptr long psize) throws LastError;
+    protected native static int ptraaGetSize(@Ptr long paa, @Ptr long psize)
+            throws LastError;
 
     /**
      * Original signature :
@@ -31204,7 +31674,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long ptraaFlattenToPtra(@Ptr long paa) throws LastError;
+    protected native static long ptraaFlattenToPtra(@Ptr long paa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -31384,7 +31855,8 @@ public class LibLept {
         lqueueDestroy(Pointer.getPeer(plq), freeflag);
     }
 
-    protected native static void lqueueDestroy(@Ptr long plq, int freeflag) throws LastError;
+    protected native static void lqueueDestroy(@Ptr long plq, int freeflag)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 lqueueAdd(L_QUEUE*, void*)</code><br>
@@ -31396,7 +31868,8 @@ public class LibLept {
         return lqueueAdd(Pointer.getPeer(lq), Pointer.getPeer(item));
     }
 
-    protected native static int lqueueAdd(@Ptr long lq, @Ptr long item) throws LastError;
+    protected native static int lqueueAdd(@Ptr long lq, @Ptr long item)
+            throws LastError;
 
     /**
      * Original signature : <code>void* lqueueRemove(L_QUEUE*)</code><br>
@@ -31434,7 +31907,8 @@ public class LibLept {
         return lqueuePrint(Pointer.getPeer(fp), Pointer.getPeer(lq));
     }
 
-    protected native static int lqueuePrint(@Ptr long fp, @Ptr long lq) throws LastError;
+    protected native static int lqueuePrint(@Ptr long fp, @Ptr long lq)
+            throws LastError;
 
     /**
      * Original signature :
@@ -31502,7 +31976,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixMedianFilter(@Ptr long pixs, int wf, int hf) throws LastError;
+    protected native static long pixMedianFilter(@Ptr long pixs, int wf, int hf)
+            throws LastError;
 
     /**
      * Original signature :
@@ -31802,7 +32277,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixReadWithHint(@Ptr long filename, int hint) throws LastError;
+    protected native static long pixReadWithHint(@Ptr long filename, int hint)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixReadIndexed(SARRAY*, l_int32)</code><br>
@@ -31816,7 +32292,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixReadIndexed(@Ptr long sa, int index) throws LastError;
+    protected native static long pixReadIndexed(@Ptr long sa, int index)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixReadStream(FILE*, l_int32)</code><br>
@@ -31830,7 +32307,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixReadStream(@Ptr long fp, int hint) throws LastError;
+    protected native static long pixReadStream(@Ptr long fp, int hint)
+            throws LastError;
 
     /**
      * Original signature :
@@ -31926,7 +32404,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixReadMem(@Ptr long data, @Ptr long size) throws LastError;
+    protected native static long pixReadMem(@Ptr long data, @Ptr long size)
+            throws LastError;
 
     /**
      * Original signature :
@@ -31960,7 +32439,8 @@ public class LibLept {
         return ioFormatTest(Pointer.getPeer(filename));
     }
 
-    protected native static int ioFormatTest(@Ptr long filename) throws LastError;
+    protected native static int ioFormatTest(@Ptr long filename)
+            throws LastError;
 
     /**
      * Original signature :
@@ -31975,7 +32455,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long recogaCreateFromRecog(@Ptr long recog) throws LastError;
+    protected native static long recogaCreateFromRecog(@Ptr long recog)
+            throws LastError;
 
     /**
      * Original signature :
@@ -32024,7 +32505,8 @@ public class LibLept {
         recogaDestroy(Pointer.getPeer(precoga));
     }
 
-    protected native static void recogaDestroy(@Ptr long precoga) throws LastError;
+    protected native static void recogaDestroy(@Ptr long precoga)
+            throws LastError;
 
     /**
      * Original signature :
@@ -32038,7 +32520,8 @@ public class LibLept {
         return recogaAddRecog(Pointer.getPeer(recoga), Pointer.getPeer(recog));
     }
 
-    protected native static int recogaAddRecog(@Ptr long recoga, @Ptr long recog) throws LastError;
+    protected native static int recogaAddRecog(@Ptr long recoga, @Ptr long recog)
+            throws LastError;
 
     /**
      * Original signature :
@@ -32070,7 +32553,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long recogaGetRecog(@Ptr long recoga, int index) throws LastError;
+    protected native static long recogaGetRecog(@Ptr long recoga, int index)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 recogaGetCount(L_RECOGA*)</code><br>
@@ -32082,7 +32566,8 @@ public class LibLept {
         return recogaGetCount(Pointer.getPeer(recoga));
     }
 
-    protected native static int recogaGetCount(@Ptr long recoga) throws LastError;
+    protected native static int recogaGetCount(@Ptr long recoga)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 recogGetCount(L_RECOG*)</code><br>
@@ -32108,7 +32593,8 @@ public class LibLept {
         return recogGetIndex(Pointer.getPeer(recog), Pointer.getPeer(pindex));
     }
 
-    protected native static int recogGetIndex(@Ptr long recog, @Ptr long pindex) throws LastError;
+    protected native static int recogGetIndex(@Ptr long recog, @Ptr long pindex)
+            throws LastError;
 
     /**
      * Original signature : <code>L_RECOGA* recogGetParent(L_RECOG*)</code><br>
@@ -32122,7 +32608,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long recogGetParent(@Ptr long recog) throws LastError;
+    protected native static long recogGetParent(@Ptr long recog)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 recogSetBootflag(L_RECOG*)</code><br>
@@ -32134,7 +32621,8 @@ public class LibLept {
         return recogSetBootflag(Pointer.getPeer(recog));
     }
 
-    protected native static int recogSetBootflag(@Ptr long recog) throws LastError;
+    protected native static int recogSetBootflag(@Ptr long recog)
+            throws LastError;
 
     /**
      * Original signature :
@@ -32209,7 +32697,8 @@ public class LibLept {
         recogDestroy(Pointer.getPeer(precog));
     }
 
-    protected native static void recogDestroy(@Ptr long precog) throws LastError;
+    protected native static void recogDestroy(@Ptr long precog)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 recogAppend(L_RECOG*, L_RECOG*)</code><br>
@@ -32222,7 +32711,8 @@ public class LibLept {
         return recogAppend(Pointer.getPeer(recog1), Pointer.getPeer(recog2));
     }
 
-    protected native static int recogAppend(@Ptr long recog1, @Ptr long recog2) throws LastError;
+    protected native static int recogAppend(@Ptr long recog1, @Ptr long recog2)
+            throws LastError;
 
     /**
      * Original signature :
@@ -32301,7 +32791,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long recogaRead(@Ptr long filename) throws LastError;
+    protected native static long recogaRead(@Ptr long filename)
+            throws LastError;
 
     /**
      * Original signature : <code>L_RECOGA* recogaReadStream(FILE*)</code><br>
@@ -32316,7 +32807,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long recogaReadStream(@Ptr long fp) throws LastError;
+    protected native static long recogaReadStream(@Ptr long fp)
+            throws LastError;
 
     /**
      * Original signature :
@@ -32330,7 +32822,8 @@ public class LibLept {
         return recogaWrite(Pointer.getPeer(filename), Pointer.getPeer(recoga));
     }
 
-    protected native static int recogaWrite(@Ptr long filename, @Ptr long recoga) throws LastError;
+    protected native static int recogaWrite(@Ptr long filename, @Ptr long recoga)
+            throws LastError;
 
     /**
      * Original signature :
@@ -32404,7 +32897,8 @@ public class LibLept {
         return recogWrite(Pointer.getPeer(filename), Pointer.getPeer(recog));
     }
 
-    protected native static int recogWrite(@Ptr long filename, @Ptr long recog) throws LastError;
+    protected native static int recogWrite(@Ptr long filename, @Ptr long recog)
+            throws LastError;
 
     /**
      * Original signature :
@@ -32494,7 +32988,8 @@ public class LibLept {
         return recogCreateDid(Pointer.getPeer(recog), Pointer.getPeer(pixs));
     }
 
-    protected native static int recogCreateDid(@Ptr long recog, @Ptr long pixs) throws LastError;
+    protected native static int recogCreateDid(@Ptr long recog, @Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 recogDestroyDid(L_RECOG*)</code><br>
@@ -32506,7 +33001,8 @@ public class LibLept {
         return recogDestroyDid(Pointer.getPeer(recog));
     }
 
-    protected native static int recogDestroyDid(@Ptr long recog) throws LastError;
+    protected native static int recogDestroyDid(@Ptr long recog)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 recogDidExists(L_RECOG*)</code><br>
@@ -32518,7 +33014,8 @@ public class LibLept {
         return recogDidExists(Pointer.getPeer(recog));
     }
 
-    protected native static int recogDidExists(@Ptr long recog) throws LastError;
+    protected native static int recogDidExists(@Ptr long recog)
+            throws LastError;
 
     /**
      * Original signature : <code>L_RDID* recogGetDid(L_RECOG*)</code><br>
@@ -32694,7 +33191,8 @@ public class LibLept {
         return recogSkipIdentify(Pointer.getPeer(recog));
     }
 
-    protected native static int recogSkipIdentify(@Ptr long recog) throws LastError;
+    protected native static int recogSkipIdentify(@Ptr long recog)
+            throws LastError;
 
     /**
      * Original signature : <code>void rchaDestroy(L_RCHA**)</code><br>
@@ -32981,7 +33479,8 @@ public class LibLept {
         return recogAverageSamples(Pointer.getPeer(recog), debug);
     }
 
-    protected native static int recogAverageSamples(@Ptr long recog, int debug) throws LastError;
+    protected native static int recogAverageSamples(@Ptr long recog, int debug)
+            throws LastError;
 
     /**
      * Original signature :
@@ -33013,7 +33512,8 @@ public class LibLept {
         return recogTrainingFinished(Pointer.getPeer(recog), debug);
     }
 
-    protected native static int recogTrainingFinished(@Ptr long recog, int debug) throws LastError;
+    protected native static int recogTrainingFinished(@Ptr long recog, int debug)
+            throws LastError;
 
     /**
      * Original signature :
@@ -33059,7 +33559,8 @@ public class LibLept {
         return recogaFinishAveraging(Pointer.getPeer(recoga));
     }
 
-    protected native static int recogaFinishAveraging(@Ptr long recoga) throws LastError;
+    protected native static int recogaFinishAveraging(@Ptr long recoga)
+            throws LastError;
 
     /**
      * Original signature :
@@ -33093,7 +33594,8 @@ public class LibLept {
         return recogPadTrainingSet(Pointer.getPeer(precog), debug);
     }
 
-    protected native static int recogPadTrainingSet(@Ptr long precog, int debug) throws LastError;
+    protected native static int recogPadTrainingSet(@Ptr long precog, int debug)
+            throws LastError;
 
     /**
      * Original signature :
@@ -33200,7 +33702,8 @@ public class LibLept {
         return recogDebugAverages(Pointer.getPeer(recog), debug);
     }
 
-    protected native static int recogDebugAverages(@Ptr long recog, int debug) throws LastError;
+    protected native static int recogDebugAverages(@Ptr long recog, int debug)
+            throws LastError;
 
     /**
      * Original signature :
@@ -33213,7 +33716,8 @@ public class LibLept {
         return recogShowAverageTemplates(Pointer.getPeer(recog));
     }
 
-    protected native static int recogShowAverageTemplates(@Ptr long recog) throws LastError;
+    protected native static int recogShowAverageTemplates(@Ptr long recog)
+            throws LastError;
 
     /**
      * Original signature :
@@ -33927,7 +34431,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixRotateOrth(@Ptr long pixs, int quads) throws LastError;
+    protected native static long pixRotateOrth(@Ptr long pixs, int quads)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixRotate180(PIX*, PIX*)</code><br>
@@ -33942,7 +34447,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixRotate180(@Ptr long pixd, @Ptr long pixs) throws LastError;
+    protected native static long pixRotate180(@Ptr long pixd, @Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixRotate90(PIX*, l_int32)</code><br>
@@ -33956,7 +34462,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixRotate90(@Ptr long pixs, int direction) throws LastError;
+    protected native static long pixRotate90(@Ptr long pixs, int direction)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixFlipLR(PIX*, PIX*)</code><br>
@@ -33971,7 +34478,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixFlipLR(@Ptr long pixd, @Ptr long pixs) throws LastError;
+    protected native static long pixFlipLR(@Ptr long pixd, @Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixFlipTB(PIX*, PIX*)</code><br>
@@ -33986,7 +34494,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixFlipTB(@Ptr long pixd, @Ptr long pixs) throws LastError;
+    protected native static long pixFlipTB(@Ptr long pixd, @Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature :
@@ -34343,7 +34852,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long sarrayCreateWordsFromString(@Ptr long string) throws LastError;
+    protected native static long sarrayCreateWordsFromString(@Ptr long string)
+            throws LastError;
 
     /**
      * Original signature :
@@ -34432,7 +34942,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long sarrayRemoveString(@Ptr long sa, int index) throws LastError;
+    protected native static long sarrayRemoveString(@Ptr long sa, int index)
+            throws LastError;
 
     /**
      * Original signature :
@@ -34522,7 +35033,8 @@ public class LibLept {
         return sarrayGetRefcount(Pointer.getPeer(sa));
     }
 
-    protected native static int sarrayGetRefcount(@Ptr long sa) throws LastError;
+    protected native static int sarrayGetRefcount(@Ptr long sa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -34535,7 +35047,8 @@ public class LibLept {
         return sarrayChangeRefcount(Pointer.getPeer(sa), delta);
     }
 
-    protected native static int sarrayChangeRefcount(@Ptr long sa, int delta) throws LastError;
+    protected native static int sarrayChangeRefcount(@Ptr long sa, int delta)
+            throws LastError;
 
     /**
      * Original signature : <code>char* sarrayToString(SARRAY*, l_int32)</code><br>
@@ -34549,7 +35062,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long sarrayToString(@Ptr long sa, int addnlflag) throws LastError;
+    protected native static long sarrayToString(@Ptr long sa, int addnlflag)
+            throws LastError;
 
     /**
      * Original signature :
@@ -34581,7 +35095,8 @@ public class LibLept {
         return sarrayConcatenate(Pointer.getPeer(sa1), Pointer.getPeer(sa2));
     }
 
-    protected native static int sarrayConcatenate(@Ptr long sa1, @Ptr long sa2) throws LastError;
+    protected native static int sarrayConcatenate(@Ptr long sa1, @Ptr long sa2)
+            throws LastError;
 
     /**
      * Original signature :
@@ -34770,7 +35285,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long sarrayRead(@Ptr long filename) throws LastError;
+    protected native static long sarrayRead(@Ptr long filename)
+            throws LastError;
 
     /**
      * Original signature : <code>SARRAY* sarrayReadStream(FILE*)</code><br>
@@ -34785,7 +35301,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long sarrayReadStream(@Ptr long fp) throws LastError;
+    protected native static long sarrayReadStream(@Ptr long fp)
+            throws LastError;
 
     /**
      * Original signature :
@@ -34798,7 +35315,8 @@ public class LibLept {
         return sarrayWrite(Pointer.getPeer(filename), Pointer.getPeer(sa));
     }
 
-    protected native static int sarrayWrite(@Ptr long filename, @Ptr long sa) throws LastError;
+    protected native static int sarrayWrite(@Ptr long filename, @Ptr long sa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -34812,7 +35330,8 @@ public class LibLept {
         return sarrayWriteStream(Pointer.getPeer(fp), Pointer.getPeer(sa));
     }
 
-    protected native static int sarrayWriteStream(@Ptr long fp, @Ptr long sa) throws LastError;
+    protected native static int sarrayWriteStream(@Ptr long fp, @Ptr long sa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -34825,7 +35344,8 @@ public class LibLept {
         return sarrayAppend(Pointer.getPeer(filename), Pointer.getPeer(sa));
     }
 
-    protected native static int sarrayAppend(@Ptr long filename, @Ptr long sa) throws LastError;
+    protected native static int sarrayAppend(@Ptr long filename, @Ptr long sa)
+            throws LastError;
 
     /**
      * Original signature :
@@ -34900,7 +35420,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long getFilenamesInDirectory(@Ptr long dirname) throws LastError;
+    protected native static long getFilenamesInDirectory(@Ptr long dirname)
+            throws LastError;
 
     /**
      * Original signature :
@@ -34932,7 +35453,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixScaleToSize(@Ptr long pixs, int wd, int hd) throws LastError;
+    protected native static long pixScaleToSize(@Ptr long pixs, int wd, int hd)
+            throws LastError;
 
     /**
      * Original signature :
@@ -35000,7 +35522,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixScaleColor2xLI(@Ptr long pixs) throws LastError;
+    protected native static long pixScaleColor2xLI(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixScaleColor4xLI(PIX*)</code><br>
@@ -35014,7 +35537,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixScaleColor4xLI(@Ptr long pixs) throws LastError;
+    protected native static long pixScaleColor4xLI(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature :
@@ -35046,7 +35570,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixScaleGray2xLI(@Ptr long pixs) throws LastError;
+    protected native static long pixScaleGray2xLI(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixScaleGray4xLI(PIX*)</code><br>
@@ -35060,7 +35585,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixScaleGray4xLI(@Ptr long pixs) throws LastError;
+    protected native static long pixScaleGray4xLI(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature :
@@ -35236,7 +35762,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixScaleAreaMap2(@Ptr long pix) throws LastError;
+    protected native static long pixScaleAreaMap2(@Ptr long pix)
+            throws LastError;
 
     /**
      * Original signature :
@@ -35302,7 +35829,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixScaleToGray2(@Ptr long pixs) throws LastError;
+    protected native static long pixScaleToGray2(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixScaleToGray3(PIX*)</code><br>
@@ -35316,7 +35844,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixScaleToGray3(@Ptr long pixs) throws LastError;
+    protected native static long pixScaleToGray3(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixScaleToGray4(PIX*)</code><br>
@@ -35330,7 +35859,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixScaleToGray4(@Ptr long pixs) throws LastError;
+    protected native static long pixScaleToGray4(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixScaleToGray6(PIX*)</code><br>
@@ -35344,7 +35874,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixScaleToGray6(@Ptr long pixs) throws LastError;
+    protected native static long pixScaleToGray6(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixScaleToGray8(PIX*)</code><br>
@@ -35358,7 +35889,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixScaleToGray8(@Ptr long pixs) throws LastError;
+    protected native static long pixScaleToGray8(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixScaleToGray16(PIX*)</code><br>
@@ -35372,7 +35904,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixScaleToGray16(@Ptr long pixs) throws LastError;
+    protected native static long pixScaleToGray16(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature :
@@ -35422,7 +35955,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixExpandReplicate(@Ptr long pixs, int factor) throws LastError;
+    protected native static long pixExpandReplicate(@Ptr long pixs, int factor)
+            throws LastError;
 
     /**
      * Original signature :
@@ -35454,7 +35988,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixScaleGray2xLIDither(@Ptr long pixs) throws LastError;
+    protected native static long pixScaleGray2xLIDither(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature :
@@ -35486,7 +36021,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixScaleGray4xLIDither(@Ptr long pixs) throws LastError;
+    protected native static long pixScaleGray4xLIDither(@Ptr long pixs)
+            throws LastError;
 
     /**
      * Original signature :
@@ -35518,7 +36054,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixScaleGrayMinMax2(@Ptr long pixs, int type) throws LastError;
+    protected native static long pixScaleGrayMinMax2(@Ptr long pixs, int type)
+            throws LastError;
 
     /**
      * Original signature :
@@ -35551,7 +36088,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixScaleGrayRank2(@Ptr long pixs, int rank) throws LastError;
+    protected native static long pixScaleGrayRank2(@Ptr long pixs, int rank)
+            throws LastError;
 
     /**
      * Original signature :
@@ -36358,7 +36896,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixSeedspread(@Ptr long pixs, int connectivity) throws LastError;
+    protected native static long pixSeedspread(@Ptr long pixs, int connectivity)
+            throws LastError;
 
     /**
      * Original signature :
@@ -36609,7 +37148,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long selCreate(int height, int width, @Ptr long name) throws LastError;
+    protected native static long selCreate(int height, int width, @Ptr long name)
+            throws LastError;
 
     /**
      * Original signature : <code>void selDestroy(SEL**)</code><br>
@@ -36692,7 +37232,8 @@ public class LibLept {
 
     @Ptr
     @Name("create2dIntArray")
-    protected native static long create2dIntArray$2(int sy, int sx) throws LastError;
+    protected native static long create2dIntArray$2(int sy, int sx)
+            throws LastError;
 
     /**
      * Original signature :
@@ -36737,7 +37278,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long selaGetSel(@Ptr long sela, int i) throws LastError;
+    protected native static long selaGetSel(@Ptr long sela, int i)
+            throws LastError;
 
     /**
      * Original signature : <code>char* selGetName(SEL*)</code><br>
@@ -36764,7 +37306,8 @@ public class LibLept {
         return selSetName(Pointer.getPeer(sel), Pointer.getPeer(name));
     }
 
-    protected native static int selSetName(@Ptr long sel, @Ptr long name) throws LastError;
+    protected native static int selSetName(@Ptr long sel, @Ptr long name)
+            throws LastError;
 
     /**
      * Original signature :
@@ -36845,7 +37388,8 @@ public class LibLept {
         return selSetOrigin(Pointer.getPeer(sel), cy, cx);
     }
 
-    protected native static int selSetOrigin(@Ptr long sel, int cy, int cx) throws LastError;
+    protected native static int selSetOrigin(@Ptr long sel, int cy, int cx)
+            throws LastError;
 
     /**
      * Original signature :
@@ -36932,7 +37476,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long selaGetSelnames(@Ptr long sela) throws LastError;
+    protected native static long selaGetSelnames(@Ptr long sela)
+            throws LastError;
 
     /**
      * Original signature :
@@ -36967,7 +37512,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long selRotateOrth(@Ptr long sel, int quads) throws LastError;
+    protected native static long selRotateOrth(@Ptr long sel, int quads)
+            throws LastError;
 
     /**
      * Original signature : <code>SELA* selaRead(const char*)</code><br>
@@ -37036,7 +37582,8 @@ public class LibLept {
         return selaWrite(Pointer.getPeer(fname), Pointer.getPeer(sela));
     }
 
-    protected native static int selaWrite(@Ptr long fname, @Ptr long sela) throws LastError;
+    protected native static int selaWrite(@Ptr long fname, @Ptr long sela)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 selaWriteStream(FILE*, SELA*)</code><br>
@@ -37049,7 +37596,8 @@ public class LibLept {
         return selaWriteStream(Pointer.getPeer(fp), Pointer.getPeer(sela));
     }
 
-    protected native static int selaWriteStream(@Ptr long fp, @Ptr long sela) throws LastError;
+    protected native static int selaWriteStream(@Ptr long fp, @Ptr long sela)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 selWrite(const char*, SEL*)</code><br>
@@ -37062,7 +37610,8 @@ public class LibLept {
         return selWrite(Pointer.getPeer(fname), Pointer.getPeer(sel));
     }
 
-    protected native static int selWrite(@Ptr long fname, @Ptr long sel) throws LastError;
+    protected native static int selWrite(@Ptr long fname, @Ptr long sel)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 selWriteStream(FILE*, SEL*)</code><br>
@@ -37075,7 +37624,8 @@ public class LibLept {
         return selWriteStream(Pointer.getPeer(fp), Pointer.getPeer(sel));
     }
 
-    protected native static int selWriteStream(@Ptr long fp, @Ptr long sel) throws LastError;
+    protected native static int selWriteStream(@Ptr long fp, @Ptr long sel)
+            throws LastError;
 
     /**
      * Original signature :
@@ -37109,7 +37659,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long selPrintToString(@Ptr long sel) throws LastError;
+    protected native static long selPrintToString(@Ptr long sel)
+            throws LastError;
 
     /**
      * Original signature : <code>SELA* selaCreateFromFile(const char*)</code><br>
@@ -37123,7 +37674,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long selaCreateFromFile(@Ptr long filename) throws LastError;
+    protected native static long selaCreateFromFile(@Ptr long filename)
+            throws LastError;
 
     /**
      * Original signature :
@@ -37175,7 +37727,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long selReadFromColorImage(@Ptr long pathname) throws LastError;
+    protected native static long selReadFromColorImage(@Ptr long pathname)
+            throws LastError;
 
     /**
      * Original signature : <code>SEL* selCreateFromColorPix(PIX*, char*)</code><br>
@@ -37256,7 +37809,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long selaAddHitMiss(@Ptr long sela) throws LastError;
+    protected native static long selaAddHitMiss(@Ptr long sela)
+            throws LastError;
 
     /**
      * Original signature : <code>SELA* selaAddDwaLinear(SELA*)</code><br>
@@ -37270,7 +37824,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long selaAddDwaLinear(@Ptr long sela) throws LastError;
+    protected native static long selaAddDwaLinear(@Ptr long sela)
+            throws LastError;
 
     /**
      * Original signature : <code>SELA* selaAddDwaCombs(SELA*)</code><br>
@@ -37284,7 +37839,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long selaAddDwaCombs(@Ptr long sela) throws LastError;
+    protected native static long selaAddDwaCombs(@Ptr long sela)
+            throws LastError;
 
     /**
      * Original signature :
@@ -37674,7 +38230,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixDeskew(@Ptr long pixs, int redsearch) throws LastError;
+    protected native static long pixDeskew(@Ptr long pixs, int redsearch)
+            throws LastError;
 
     /**
      * Original signature :
@@ -37891,7 +38448,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixReadStreamSpix(@Ptr long fp) throws LastError;
+    protected native static long pixReadStreamSpix(@Ptr long fp)
+            throws LastError;
 
     /**
      * Original signature :
@@ -37967,7 +38525,8 @@ public class LibLept {
         return pixWriteStreamSpix(Pointer.getPeer(fp), Pointer.getPeer(pix));
     }
 
-    protected native static int pixWriteStreamSpix(@Ptr long fp, @Ptr long pix) throws LastError;
+    protected native static int pixWriteStreamSpix(@Ptr long fp, @Ptr long pix)
+            throws LastError;
 
     /**
      * Original signature :
@@ -37982,7 +38541,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixReadMemSpix(@Ptr long data, @Ptr long size) throws LastError;
+    protected native static long pixReadMemSpix(@Ptr long data, @Ptr long size)
+            throws LastError;
 
     /**
      * Original signature :
@@ -38060,7 +38620,8 @@ public class LibLept {
         lstackDestroy(Pointer.getPeer(plstack), freeflag);
     }
 
-    protected native static void lstackDestroy(@Ptr long plstack, int freeflag) throws LastError;
+    protected native static void lstackDestroy(@Ptr long plstack, int freeflag)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 lstackAdd(L_STACK*, void*)</code><br>
@@ -38072,7 +38633,8 @@ public class LibLept {
         return lstackAdd(Pointer.getPeer(lstack), Pointer.getPeer(item));
     }
 
-    protected native static int lstackAdd(@Ptr long lstack, @Ptr long item) throws LastError;
+    protected native static int lstackAdd(@Ptr long lstack, @Ptr long item)
+            throws LastError;
 
     /**
      * Original signature : <code>void* lstackRemove(L_STACK*)</code><br>
@@ -38085,7 +38647,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long lstackRemove(@Ptr long lstack) throws LastError;
+    protected native static long lstackRemove(@Ptr long lstack)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 lstackGetCount(L_STACK*)</code><br>
@@ -38097,7 +38660,8 @@ public class LibLept {
         return lstackGetCount(Pointer.getPeer(lstack));
     }
 
-    protected native static int lstackGetCount(@Ptr long lstack) throws LastError;
+    protected native static int lstackGetCount(@Ptr long lstack)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 lstackPrint(FILE*, L_STACK*)</code><br>
@@ -38110,7 +38674,8 @@ public class LibLept {
         return lstackPrint(Pointer.getPeer(fp), Pointer.getPeer(lstack));
     }
 
-    protected native static int lstackPrint(@Ptr long fp, @Ptr long lstack) throws LastError;
+    protected native static int lstackPrint(@Ptr long fp, @Ptr long lstack)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32* sudokuReadFile(const char*)</code><br>
@@ -38124,7 +38689,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long sudokuReadFile(@Ptr long filename) throws LastError;
+    protected native static long sudokuReadFile(@Ptr long filename)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32* sudokuReadString(const char*)</code><br>
@@ -38138,7 +38704,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long sudokuReadString(@Ptr long str) throws LastError;
+    protected native static long sudokuReadString(@Ptr long str)
+            throws LastError;
 
     /**
      * Original signature : <code>L_SUDOKU* sudokuCreate(l_int32*)</code><br>
@@ -38224,7 +38791,8 @@ public class LibLept {
         return sudokuOutput(Pointer.getPeer(sud), arraytype);
     }
 
-    protected native static int sudokuOutput(@Ptr long sud, int arraytype) throws LastError;
+    protected native static int sudokuOutput(@Ptr long sud, int arraytype)
+            throws LastError;
 
     /**
      * Original signature :
@@ -38432,7 +39000,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixReadTiff(@Ptr long filename, int n) throws LastError;
+    protected native static long pixReadTiff(@Ptr long filename, int n)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixReadStreamTiff(FILE*, l_int32)</code><br>
@@ -38447,7 +39016,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixReadStreamTiff(@Ptr long fp, int n) throws LastError;
+    protected native static long pixReadStreamTiff(@Ptr long fp, int n)
+            throws LastError;
 
     /**
      * Original signature :
@@ -38518,7 +39088,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixaReadMultipageTiff(@Ptr long filename) throws LastError;
+    protected native static long pixaReadMultipageTiff(@Ptr long filename)
+            throws LastError;
 
     /**
      * Original signature :
@@ -38579,7 +39150,8 @@ public class LibLept {
         return tiffGetCount(Pointer.getPeer(fp), Pointer.getPeer(pn));
     }
 
-    protected native static int tiffGetCount(@Ptr long fp, @Ptr long pn) throws LastError;
+    protected native static int tiffGetCount(@Ptr long fp, @Ptr long pn)
+            throws LastError;
 
     /**
      * Original signature :
@@ -38845,7 +39417,8 @@ public class LibLept {
         return stringCopy(Pointer.getPeer(dest), Pointer.getPeer(src), n);
     }
 
-    protected native static int stringCopy(@Ptr long dest, @Ptr long src, int n) throws LastError;
+    protected native static int stringCopy(@Ptr long dest, @Ptr long src, int n)
+            throws LastError;
 
     /**
      * Original signature :
@@ -38859,7 +39432,8 @@ public class LibLept {
         return stringReplace(Pointer.getPeer(pdest), Pointer.getPeer(src));
     }
 
-    protected native static int stringReplace(@Ptr long pdest, @Ptr long src) throws LastError;
+    protected native static int stringReplace(@Ptr long pdest, @Ptr long src)
+            throws LastError;
 
     /**
      * Original signature :
@@ -38872,7 +39446,8 @@ public class LibLept {
         return stringLength(Pointer.getPeer(src), size);
     }
 
-    protected native static int stringLength(@Ptr long src, @Ptr long size) throws LastError;
+    protected native static int stringLength(@Ptr long src, @Ptr long size)
+            throws LastError;
 
     /**
      * Original signature :
@@ -38904,7 +39479,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long stringJoin(@Ptr long src1, @Ptr long src2) throws LastError;
+    protected native static long stringJoin(@Ptr long src1, @Ptr long src2)
+            throws LastError;
 
     /**
      * Original signature : <code>char* stringReverse(const char*)</code><br>
@@ -39152,7 +39728,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long nbytesInFile(@Ptr long filename) throws LastError;
+    protected native static long nbytesInFile(@Ptr long filename)
+            throws LastError;
 
     /**
      * Original signature : <code>size_t fnbytesInFile(FILE*)</code><br>
@@ -39180,7 +39757,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long l_binaryCopy(@Ptr long datas, @Ptr long size) throws LastError;
+    protected native static long l_binaryCopy(@Ptr long datas, @Ptr long size)
+            throws LastError;
 
     /**
      * Original signature :
@@ -39193,7 +39771,8 @@ public class LibLept {
         return fileCopy(Pointer.getPeer(srcfile), Pointer.getPeer(newfile));
     }
 
-    protected native static int fileCopy(@Ptr long srcfile, @Ptr long newfile) throws LastError;
+    protected native static int fileCopy(@Ptr long srcfile, @Ptr long newfile)
+            throws LastError;
 
     /**
      * Original signature :
@@ -39248,7 +39827,8 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2368</i>
      */
-    public static native short convertOnLittleEnd16(short shortin) throws LastError;
+    public static native short convertOnLittleEnd16(short shortin)
+            throws LastError;
 
     /**
      * Original signature : <code>l_uint16 convertOnBigEnd16(l_uint16)</code><br>
@@ -39256,7 +39836,8 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2369</i>
      */
-    public static native short convertOnBigEnd16(short shortin) throws LastError;
+    public static native short convertOnBigEnd16(short shortin)
+            throws LastError;
 
     /**
      * Original signature : <code>l_uint32 convertOnLittleEnd32(l_uint32)</code><br>
@@ -39288,7 +39869,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long fopenReadStream(@Ptr long filename) throws LastError;
+    protected native static long fopenReadStream(@Ptr long filename)
+            throws LastError;
 
     /**
      * Original signature :
@@ -39324,7 +39906,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long lept_fopen(@Ptr long filename, @Ptr long mode) throws LastError;
+    protected native static long lept_fopen(@Ptr long filename, @Ptr long mode)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 lept_fclose(FILE*)</code><br>
@@ -39350,7 +39933,8 @@ public class LibLept {
 
     @Ptr
     @Name("lept_calloc")
-    protected native static long lept_calloc$2(@Ptr long nmemb, @Ptr long size) throws LastError;
+    protected native static long lept_calloc$2(@Ptr long nmemb, @Ptr long size)
+            throws LastError;
 
     /**
      * Original signature : <code>void lept_free(void*)</code><br>
@@ -39414,7 +39998,8 @@ public class LibLept {
         return lept_rm(Pointer.getPeer(subdir), Pointer.getPeer(filename));
     }
 
-    protected native static int lept_rm(@Ptr long subdir, @Ptr long filename) throws LastError;
+    protected native static int lept_rm(@Ptr long subdir, @Ptr long filename)
+            throws LastError;
 
     /**
      * Original signature :
@@ -39427,7 +40012,8 @@ public class LibLept {
         return lept_mv(Pointer.getPeer(srcfile), Pointer.getPeer(newfile));
     }
 
-    protected native static int lept_mv(@Ptr long srcfile, @Ptr long newfile) throws LastError;
+    protected native static int lept_mv(@Ptr long srcfile, @Ptr long newfile)
+            throws LastError;
 
     /**
      * Original signature :
@@ -39440,7 +40026,8 @@ public class LibLept {
         return lept_cp(Pointer.getPeer(srcfile), Pointer.getPeer(newfile));
     }
 
-    protected native static int lept_cp(@Ptr long srcfile, @Ptr long newfile) throws LastError;
+    protected native static int lept_cp(@Ptr long srcfile, @Ptr long newfile)
+            throws LastError;
 
     /**
      * Original signature :
@@ -39488,7 +40075,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pathJoin(@Ptr long dir, @Ptr long fname) throws LastError;
+    protected native static long pathJoin(@Ptr long dir, @Ptr long fname)
+            throws LastError;
 
     /**
      * Original signature :
@@ -39505,7 +40093,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long genPathname(@Ptr long dir, @Ptr long fname) throws LastError;
+    protected native static long genPathname(@Ptr long dir, @Ptr long fname)
+            throws LastError;
 
     /**
      * Original signature :
@@ -39656,7 +40245,8 @@ public class LibLept {
         return stopTimerNested(Pointer.getPeer(rusage_start));
     }
 
-    protected native static float stopTimerNested(@Ptr long rusage_start) throws LastError;
+    protected native static float stopTimerNested(@Ptr long rusage_start)
+            throws LastError;
 
     /**
      * Original signature :
@@ -39670,7 +40260,8 @@ public class LibLept {
         l_getCurrentTime(Pointer.getPeer(sec), Pointer.getPeer(usec));
     }
 
-    protected native static void l_getCurrentTime(@Ptr long sec, @Ptr long usec) throws LastError;
+    protected native static void l_getCurrentTime(@Ptr long sec, @Ptr long usec)
+            throws LastError;
 
     /**
      * Original signature : <code>char* l_getFormattedDate()</code><br>
@@ -39926,7 +40517,8 @@ public class LibLept {
         wshedDestroy(Pointer.getPeer(pwshed));
     }
 
-    protected native static void wshedDestroy(@Ptr long pwshed) throws LastError;
+    protected native static void wshedDestroy(@Ptr long pwshed)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 wshedApply(L_WSHED*)</code><br>
@@ -39968,7 +40560,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long wshedRenderFill(@Ptr long wshed) throws LastError;
+    protected native static long wshedRenderFill(@Ptr long wshed)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* wshedRenderColors(L_WSHED*)</code><br>
@@ -39982,7 +40575,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long wshedRenderColors(@Ptr long wshed) throws LastError;
+    protected native static long wshedRenderColors(@Ptr long wshed)
+            throws LastError;
 
     /**
      * Original signature : <code>PIX* pixReadStreamWebP(FILE*)</code><br>
@@ -39997,7 +40591,8 @@ public class LibLept {
     }
 
     @Ptr
-    protected native static long pixReadStreamWebP(@Ptr long fp) throws LastError;
+    protected native static long pixReadStreamWebP(@Ptr long fp)
+            throws LastError;
 
     /**
      * Original signature :
@@ -40174,7 +40769,8 @@ public class LibLept {
         return pixChooseOutputFormat(Pointer.getPeer(pix));
     }
 
-    protected native static int pixChooseOutputFormat(@Ptr long pix) throws LastError;
+    protected native static int pixChooseOutputFormat(@Ptr long pix)
+            throws LastError;
 
     /**
      * Original signature :
@@ -40187,7 +40783,8 @@ public class LibLept {
         return getImpliedFileFormat(Pointer.getPeer(filename));
     }
 
-    protected native static int getImpliedFileFormat(@Ptr long filename) throws LastError;
+    protected native static int getImpliedFileFormat(@Ptr long filename)
+            throws LastError;
 
     /**
      * Original signature : <code>char* getFormatExtension(l_int32)</code><br>
@@ -40202,7 +40799,8 @@ public class LibLept {
 
     @Ptr
     @Name("getFormatExtension")
-    protected native static long getFormatExtension$2(int format) throws LastError;
+    protected native static long getFormatExtension$2(int format)
+            throws LastError;
 
     /**
      * Original signature :
@@ -40231,7 +40829,8 @@ public class LibLept {
         return pixDisplay(Pointer.getPeer(pixs), x, y);
     }
 
-    protected native static int pixDisplay(@Ptr long pixs, int x, int y) throws LastError;
+    protected native static int pixDisplay(@Ptr long pixs, int x, int y)
+            throws LastError;
 
     /**
      * Original signature :
@@ -40260,7 +40859,8 @@ public class LibLept {
         return pixDisplayMultiple(Pointer.getPeer(filepattern));
     }
 
-    protected native static int pixDisplayMultiple(@Ptr long filepattern) throws LastError;
+    protected native static int pixDisplayMultiple(@Ptr long filepattern)
+            throws LastError;
 
     /**
      * Original signature : <code>l_int32 pixDisplayWrite(PIX*, l_int32)</code><br>
@@ -40272,7 +40872,8 @@ public class LibLept {
         return pixDisplayWrite(Pointer.getPeer(pixs), reduction);
     }
 
-    protected native static int pixDisplayWrite(@Ptr long pixs, int reduction) throws LastError;
+    protected native static int pixDisplayWrite(@Ptr long pixs, int reduction)
+            throws LastError;
 
     /**
      * Original signature :
@@ -40353,7 +40954,8 @@ public class LibLept {
      * C:\Users\Paul\Studium\Masterarbeit\Entwicklung\VS2013
      * \tesseract-vs2013\liblept\include\allheaders.h:2442</i>
      */
-    public static native void l_chooseDisplayProg(int selection) throws LastError;
+    public static native void l_chooseDisplayProg(int selection)
+            throws LastError;
 
     /**
      * Original signature :
