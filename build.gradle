@@ -6,8 +6,8 @@ apply plugin: 'signing'
 
 group = 'de.vorb'
 
-version = '0.0.1'
-sourceCompatibility = 1.7
+version = '0.0.2'
+sourceCompatibility = 1.6
 
 repositories {
   mavenCentral()
@@ -64,9 +64,9 @@ uploadArchives {
          url 'https://github.com/tesseract4java/jleptonica'
 
          scm {
-             url 'scm:git@github.com:tesseract4java/jleptonica.git'
-             connection 'scm:git@github.com:GradleFx/GradleFx.git'
-             developerConnection 'scm:git@github.com:GradleFx/GradleFx.git'
+             url 'https://github.com/tesseract4java/jleptonica'
+             connection 'scm:git://github.com:tesseract4java/jleptonica.git'
+             developerConnection 'scm:git@github.com:tesseract4java/jleptonica.git'
          }
 
          licenses {
@@ -81,6 +81,7 @@ uploadArchives {
           developer {
             id 'pvorb'
             name 'Paul Vorbach'
+            email 'paul@vorba.ch'
           }
         }
       }
