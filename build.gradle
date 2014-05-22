@@ -65,7 +65,7 @@ uploadArchives {
 
          scm {
              url 'https://github.com/tesseract4java/jleptonica'
-             connection 'scm:git://github.com:tesseract4java/jleptonica.git'
+             connection 'scm:git://github.com/tesseract4java/jleptonica.git'
              developerConnection 'scm:git@github.com:tesseract4java/jleptonica.git'
          }
 
