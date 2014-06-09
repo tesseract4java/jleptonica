@@ -43,6 +43,7 @@ LibLept.pixDestroy(Pointer.pointerToPointer(ppix));
 It is released under the same license as Leptonica, the 2-clause BSD license:
 
 ~~~
+Copyright (C) 2014 Paul Vorbach.
 Copyright (C) 2001 Leptonica.  All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
