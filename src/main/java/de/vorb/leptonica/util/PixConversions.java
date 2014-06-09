@@ -206,18 +206,12 @@ public class PixConversions {
 
         final ByteBuffer buf = ByteBuffer.wrap(bufData);
 
-        final boolean notMisaligned = width % 32 == 0;
-        final int misalignment;
-        if (notMisaligned)
-            misalignment = 0;
-        else
-            misalignment = (width % 32 + 7) / 8;
+        final int misalignment = width % 32;
+        final boolean misaligned = misalignment != 0;
+        final int lastMisalignedByte = 3 - (misalignment - 1) / 8;
 
-        final int bulkSize;
-        if (notMisaligned)
-            bulkSize = wpl * 4;
-        else
-            bulkSize = (wpl - 1) * 4;
+        // if the pix is misaligned, skip the last int
+        final int bulkSize = (misaligned ? wpl - 1 : wpl) * 4;
 
         // copy over data
         for (int y = 0; y < height; ++y, pixData = pixData.next(wpl)) {
@@ -235,12 +229,13 @@ public class PixConversions {
 
             buf.put(bulk, 0, bulkSize);
 
-            if (notMisaligned)
+            if (!misaligned) {
                 continue;
+            }
 
             // append the last int of a line
             final byte[] lastIntOfLine = pixData.next(wpl - 1).getBytes(4);
-            for (int b = misalignment; b > 0; --b) {
+            for (int b = 3; b >= lastMisalignedByte; --b) {
                 buf.put(lastIntOfLine[b]);
             }
         }
