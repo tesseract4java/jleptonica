@@ -97,17 +97,11 @@ public class PixConversions {
 
         switch (depth) {
         case 1:
-            final boolean notMisaligned = width % 32 == 0;
-            final int misalignment;
-            if (notMisaligned)
-                misalignment = 0;
-            else
-                misalignment = (width % 32 + 7) / 8;
+            final int misalignment = width % 32;
+            final boolean misaligned = misalignment != 0;
+            final int lastMisalignedByte = 3 - (misalignment - 1) / 8;
 
-            if (notMisaligned)
-                bulkSize = wpl * 4;
-            else
-                bulkSize = (wpl - 1) * 4;
+            bulkSize = (misaligned ? wpl - 1 : wpl) * 4;
 
             bulk = new byte[bulkSize];
             for (int y = 0; y < height; ++y, pixData = pixData.next(wpl)) {
@@ -117,20 +111,20 @@ public class PixConversions {
                 for (int b = 0; b < bulkSize; b += 4) {
                     final byte b0 = bulk[b];
                     final byte b1 = bulk[b + 1];
-                    bulk[b] = (byte) ~bulk[b + 3];
-                    bulk[b + 1] = (byte) ~bulk[b + 2];
-                    bulk[b + 2] = (byte) ~b1;
-                    bulk[b + 3] = (byte) ~b0;
+                    bulk[b] = (byte) bulk[b + 3];
+                    bulk[b + 1] = (byte) bulk[b + 2];
+                    bulk[b + 2] = (byte) b1;
+                    bulk[b + 3] = (byte) b0;
                 }
 
                 pixData.setBytes(bulk);
 
-                if (notMisaligned)
+                if (!misaligned)
                     continue;
 
                 final Pointer<Integer> lastIntOfLine = pixData.next(bulkSize / 4);
-                for (int b = misalignment; b > 0; --b) {
-                    lastIntOfLine.setByteAtIndex(b, (byte) ~bytes.get());
+                for (int b = 3; b >= lastMisalignedByte; --b) {
+                    lastIntOfLine.setByteAtIndex(b, (byte) bytes.get());
                 }
             }
             break;
@@ -176,7 +170,7 @@ public class PixConversions {
 
         switch (pix.d()) {
         case 1:
-            final byte[] arr = { (byte) 0xFF, (byte) 0x00 };
+            final byte[] arr = { (byte) 0x00, (byte) 0xFF };
 
             cm = new IndexColorModel(1, 2, arr, arr, arr);
             break;
