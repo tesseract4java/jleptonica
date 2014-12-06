@@ -28,7 +28,7 @@ import org.bridj.util.DefaultParameterizedType;
  * href="http://nativelibs4java.googlecode.com/">NativeLibs4Java</a> or <a
  * href="http://bridj.googlecode.com/">BridJ</a> .
  */
-@Library("leptonica")
+@Library("liblept170")
 @Runtime(CRuntime.class)
 public class LibLept {
     static {
