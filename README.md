@@ -1,5 +1,9 @@
 # BridJ bindings for Leptonica 1.70
 
+**This library is no longer maintained! Consider using [javacpp-presets/leptonica][jcpp-lept] instead.**
+
+[jcpp-lept]: https://github.com/bytedeco/javacpp-presets/tree/master/leptonica
+
 This library is a wrapper around Leptonica.
 
 
